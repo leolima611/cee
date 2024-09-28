@@ -8,7 +8,7 @@ if ($conn->connect_error) {
 
 $data = json_decode(file_get_contents('php://input'), true);
 $tiempo = $data['tiempo'];
-$usuario_id = 1; // Aquí puedes usar el ID del usuario autenticado
+$usuario_id = $data['exmneId'];
 
 $sql = "INSERT INTO tip (exmne_id, tiempo_total) VALUES ($usuario_id, $tiempo)
         ON DUPLICATE KEY UPDATE tiempo_total = tiempo_total + $tiempo";

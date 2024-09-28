@@ -52,12 +52,13 @@ if(!isset($_SESSION['examineeSession']['examineenakalogin']) == true) header("lo
     
 	<script>
     let startTime = Date.now();
+	let exmne_id = <?= $exmneId?>;
 
     window.addEventListener('beforeunload', function () {
         let endTime = Date.now();
         let timeSpent = Math.round((endTime - startTime) / 60000); // tiempo en segundos
 
-        navigator.sendBeacon('tiempos/tip/tip.php', JSON.stringify({ tiempo: timeSpent }));
+        navigator.sendBeacon('tiempos/tip/tip.php', JSON.stringify({ tiempo: timeSpent, exmneId: exmne_id}));
     });
 </script>
 
