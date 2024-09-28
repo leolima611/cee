@@ -9,22 +9,17 @@ $selAcc = $conn->query("SELECT * FROM examinee_tbl WHERE exmne_email='$username'
 $selAccRow = $selAcc->fetch(PDO::FETCH_ASSOC);
 
 
-if($selAcc->rowCount() > 0)
-{
-  $_SESSION['examineeSession'] = array(
-  	 'exmne_id' => $selAccRow['exmne_id'],
-  	 'examineenakalogin' => true
-  );
-  $res = array("res" => "success");
+if($selAcc->rowCount() > 0){
+	$_SESSION['last_activity'] = time();
+  	$_SESSION['examineeSession'] = array(
+  	 	'exmne_id' => $selAccRow['exmne_id'],
+  	 	'examineenakalogin' => true
+  	);
+  	$res = array("res" => "success");
 
-}
-else
-{
+}else{
   $res = array("res" => "invalid");
 }
-
-
-
 
  echo json_encode($res);
  ?>
