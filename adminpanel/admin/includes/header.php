@@ -62,11 +62,11 @@
                                 <div class="widget-content-left">
                                     <div class="btn-group">
                                         <a data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="p-0 btn">
-                                            Administrador
+                                            <?=$datosAd['name']?> <?=$datosAd['lastn']?>
                                             <i class="fa fa-angle-down ml-2 opacity-8"></i>
                                         </a>
                                         <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu dropdown-menu-right">
-                                            <button type="button" tabindex="0" class="dropdown-item">Cuenta de Administrador</button>
+                                            <button type="button" tabindex="0" class="dropdown-item"><?=$datosAd['rolename']?></button>
                                             <div tabindex="-1" class="dropdown-divider"></div>
                                             <a href="query/logoutExe.php" class="dropdown-item">SALIR</a>
                                         </div>

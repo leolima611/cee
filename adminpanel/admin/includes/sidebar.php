@@ -32,7 +32,10 @@
                         <div class="app-sidebar__inner">
                             <ul class="vertical-nav-menu">
                                 <li class="app-sidebar__heading"><a href="home.php">DASHBOARD</a></li>
-
+								
+								<?php
+								if($datosAd['role']==2){
+								?>
                                 <li class="app-sidebar__heading">MANEJO DE CURSOS</li>
                                 <li>
                                     <a href="#">
@@ -80,8 +83,33 @@
                                        
                                     </ul>
                                 </li>
-                           
-                         
+								
+								<?php
+								}
+								?>
+								
+								<?php
+								if($datosAd['role']==1){
+								?>
+								
+								<li class="app-sidebar__heading">Administradores</li>
+                                <li>
+                                    <a href="" data-toggle="modal" data-target="#modalForAddExaminee">
+                                        <i class="metismenu-icon pe-7s-add-user">
+                                        </i>AGREGAR ADMINISTRADOR
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="home.php?page=manage-examinee">
+                                        <i class="metismenu-icon pe-7s-users">
+                                        </i>ADMINISTRAR INTEGRANTES
+                                    </a>
+                                </li>
+								
+								<?php
+								}
+								?>
+								
                                 <li class="app-sidebar__heading">MANEJO DE ALUMNOS</li>
                                 <li>
                                     <a href="" data-toggle="modal" data-target="#modalForAddExaminee">
@@ -95,6 +123,11 @@
                                         </i>ADMINISTRAR ALUMNOS
                                     </a>
                                 </li>
+								
+								<?php
+								if($datosAd['role']==2){
+								?>
+								
                                 <li class="app-sidebar__heading">EVALUACIÓNES</li>
                                 <li>
                                     <a href="home.php?page=ranking-exam">
@@ -111,6 +144,9 @@
                                         </i>RESULTADOS
                                     </a>
                                 </li>
+								<?php
+								}
+								?>
                             </ul>
                         </div>
                     </div>

@@ -23,3 +23,9 @@ cambios en la base
 cambios:
 - mide tiempo par actividad y usuario
 - tiempo de inactividad y cierre 5min
+
+## 0.0.0.3
+cambios en la base 
+    se encuentra en carpeta bases, usar "cee_dbv3.sql"
+cambios:
+- seoaracion de roles admin y experto

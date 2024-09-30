@@ -1,11 +1,37 @@
 <?php 
+include("../../conn.php");
+
 session_start();
 
 if(!isset($_SESSION['admin']['adminnakalogin']) == true) header("location:index.php");
+$admin_idn =  $_SESSION['admin']['admin_id'];
 
+//recoleccion de datos del admin
+$selAcc = $conn->query("SELECT * FROM admin_acc WHERE admin_id=$admin_idn;  ");
+$selAccRow = $selAcc->fetch(PDO::FETCH_ASSOC);
+
+
+if($selAcc->rowCount() > 0){
+	switch ($selAccRow['role_id'])	{
+		case 1:
+			$role = "Administrador";
+			break;
+		case 2:
+			$role = "Experto";
+			break;
+	}
+  $datosAd = array(
+  	 'admin_id' => $admin_idn,
+  	 'name' => $selAccRow['name'],
+	 'lastn' => $selAccRow['apellidos'],
+	 'role' => $selAccRow['role_id'],
+	  'rolename' => $role
+  );
+  $res = array("res" => "success");
+
+}
 
  ?>
-<?php include("../../conn.php"); ?>
 
 <?php include("includes/header.php"); ?>      
 
