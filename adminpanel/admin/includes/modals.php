@@ -159,7 +159,7 @@
             <input type="password" name="password" id="password" class="form-control" placeholder="Ingresar Password" autocomplete="off" required="">
           </div>
 			 <div class="form-group">
-            	<label>Seleccionar Role</label>
+            	<label>Seleccionar Rol</label>
             	<select class="form-control" name="rolel" id="role">
               		<option value="0">Seleccionar</option>
               		<option value="1">Administrador</option>
