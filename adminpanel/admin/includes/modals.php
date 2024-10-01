@@ -90,7 +90,7 @@
           </div>
 
           <div class="form-group">
-            <label>Limite del Tiempo</label>
+            <label>L&iacute;mite del Tiempo</label>
             <select class="form-control" name="timeLimit" required="">
               <option value="0">Seleccionar tiempo</option>
               <option value="10">10 Minutos</option> 
@@ -103,7 +103,7 @@
           </div>
 
           <div class="form-group">
-            <label>Limite de Preguntas</label>
+            <label>L&iacute;mite de Preguntas</label>
             <input type="number" name="examQuestDipLimit" id="" class="form-control" placeholder="Ingresa el limite de preguntas">
           </div>
 
