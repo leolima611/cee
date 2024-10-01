@@ -94,13 +94,13 @@
 								
 								<li class="app-sidebar__heading">Administradores</li>
                                 <li>
-                                    <a href="" data-toggle="modal" data-target="#modalForAddExaminee">
+                                    <a href="" data-toggle="modal" data-target="#modalForAddAdmin">
                                         <i class="metismenu-icon pe-7s-add-user">
                                         </i>AGREGAR ADMINISTRADOR
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="home.php?page=manage-examinee">
+                                    <a href="home.php?page=manage-admin">
                                         <i class="metismenu-icon pe-7s-users">
                                         </i>ADMINISTRAR INTEGRANTES
                                     </a>
