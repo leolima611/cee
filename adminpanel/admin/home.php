@@ -62,6 +62,10 @@ if($selAcc->rowCount() > 0){
      {
       include("pages/manage-exam.php");
      }
+	 else if($page == "manage-admin")
+     {
+      include("pages/manage-admin.php");
+     }
      else if($page == "manage-examinee")
      {
       include("pages/manage-examinee.php");

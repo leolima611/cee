@@ -288,6 +288,68 @@ $(document).on("submit","#addQuestionFrm" , function(){
 });
 
 
+// Add admin
+$(document).on("submit","#addAdminFrm" , function(){
+  $.post("query/addAdminExe.php", $(this).serialize() , function(data){
+	if(data.res == "noRole")
+    {
+      Swal.fire(
+          'No role',
+          'Please select Role',
+          'error'
+       )
+    }
+    else if(data.res == "nameExist")
+    {
+      Swal.fire(
+          'name Already Exist',
+          data.msg + ' are already exist',
+          'error'
+       )
+    }
+	else if(data.res == "lastnameExist")
+    {
+      Swal.fire(
+          'lastname Already Exist',
+          data.msg + ' are already exist',
+          'error'
+       )
+    }
+    else if(data.res == "emailExist")
+    {
+      Swal.fire(
+          'Email Already Exist',
+          data.msg + ' are already exist',
+          'error'
+       )
+    }
+    else if(data.res == "success")
+    {
+      Swal.fire(
+          'Success',
+          data.msg + ' are now successfully added',
+          'success'
+       )
+        refreshDiv();
+        $('#addExamineeFrm')[0].reset();
+    }
+    else if(data.res == "failed")
+    {
+      Swal.fire(
+          "Something's Went Wrong",
+          '',
+          'error'
+       )
+    }
+
+
+    
+  },'json')
+  return false;
+});
+
+
+
 // Add Examinee
 $(document).on("submit","#addExamineeFrm" , function(){
   $.post("query/addExamineeExe.php", $(this).serialize() , function(data){

@@ -53,7 +53,7 @@
       </div>
      </form>
     </div>
-  </div>
+</div>
 
 
 <!-- Modal For Add Exam -->
@@ -132,10 +132,10 @@
 <!-- Modal For Add ADMIN -->
 <div class="modal fade" id="modalForAddAdmin" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
-   <form class="refreshFrm" id="addExamineeFrm" method="post">
+   <form class="refreshFrm" id="addAdminFrm" method="post">
      <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">AGREGAR ALUMNOS</h5>
+        <h5 class="modal-title" id="exampleModalLabel">AGREGAR ADMINISTRADOR</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -143,43 +143,13 @@
       <div class="modal-body">
         <div class="col-md-12">
           <div class="form-group">
-            <label>Ingresa Nombre Completo</label>
-            <input type="" name="fullname" id="fullname" class="form-control" placeholder="Ingresa Nombre Completo" autocomplete="off" required="">
+            <label>Ingresa Nombre</label>
+            <input type="" name="namem" id="namem" class="form-control" placeholder="Ingresa Nombre" autocomplete="off" required="">
           </div>
-          <div class="form-group">
-            <label>Fecha de Ingreso</label>
-            <input type="date" name="bdate" id="bdate" class="form-control" placeholder="Ingresa fecha de ingreso" autocomplete="off" >
-          </div>
-          <div class="form-group">
-            <label>Seleccionar Genero</label>
-            <select class="form-control" name="gender" id="gender">
-              <option value="0">Seleccionar Genero</option>
-              <option value="Masculino">Masculino</option>
-              <option value="femenino">Femenino</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label>Curso</label>
-            <select class="form-control" name="course" id="course">
-              <option value="0">Seleccionar Curso</option>
-              <?php 
-                $selCourse = $conn->query("SELECT * FROM course_tbl ORDER BY cou_id asc");
-                while ($selCourseRow = $selCourse->fetch(PDO::FETCH_ASSOC)) { ?>
-                  <option value="<?php echo $selCourseRow['cou_id']; ?>"><?php echo $selCourseRow['cou_name']; ?></option>
-                <?php }
-               ?>
-            </select>
-          </div>
-          <div class="form-group">
-            <label>Seleccionar A&ntilde;o</label>
-            <select class="form-control" name="year_level" id="year_level">
-              <option value="0">Seleccionar A&ntilde;o</option>
-              <option value="Primer Año">Primer A&ntilde;o</option>
-              <option value="Segundo Año">Segundo A&ntilde;o</option>
-              <option value="Tercer Año">Tercer A&ntilde;o</option>
-              <option value="Cuarto Año">Cuarto A&ntilde;o</option>
-            </select>
-          </div>
+			<div class="form-group">
+            	<label>Ingresa Apellidos</label>
+            	<input type="" name="apellidos" id="apellidos" class="form-control" placeholder="Ingresa apellidos" autocomplete="off" required="">
+          	</div>
           <div class="form-group">
             <label>Email</label>
             <input type="email" name="email" id="email" class="form-control" placeholder="Ingresar Email" autocomplete="off" required="">
@@ -188,6 +158,14 @@
             <label>Contrase&ntilde;a</label>
             <input type="password" name="password" id="password" class="form-control" placeholder="Ingresar Password" autocomplete="off" required="">
           </div>
+			 <div class="form-group">
+            	<label>Seleccionar Role</label>
+            	<select class="form-control" name="rolel" id="role">
+              		<option value="0">Seleccionar</option>
+              		<option value="1">Administrador</option>
+              		<option value="2">Experto</option>
+            	</select>
+          	</div>
         </div>
       </div>
       <div class="modal-footer">
