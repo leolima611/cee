@@ -48,7 +48,7 @@ if(!isset($_SESSION['admin']['adminnakalogin']) == true) header("location:index.
                   <div class="col-md-6">
                       <div class="main-card mb-3 card">
                           <div class="card-header">
-                            <i class="header-icon lnr-license icon-gradient bg-plum-plate"> </i>Información del Examen
+                            <i class="header-icon lnr-license icon-gradient bg-plum-plate"> </i>Informaci&oacute;n del Examen
                           </div>
                           <div class="card-body">
                            <form method="post" id="updateExamFrm">
@@ -72,12 +72,12 @@ if(!isset($_SESSION['admin']['adminnakalogin']) == true) header("location:index.
                               </div>  
 
                               <div class="form-group">
-                                <label>Descripción del Examen</label>
+                                <label>Descripci&oacute;n del Examen</label>
                                 <input type="" name="examDesc" class="form-control" required="" value="<?php echo $selExamRow['ex_description']; ?>">
                               </div>  
 
                               <div class="form-group">
-                                <label>Tiempo Limite</label>
+                                <label>Tiempo L&iacute;mite</label>
                                 <select class="form-control" name="examLimit" required="">
                                   <option value="<?php echo $selExamRow['ex_time_limit']; ?>"><?php echo $selExamRow['ex_time_limit']; ?> Minutos</option>
                                   <option value="10">10 Minutos</option> 
@@ -90,7 +90,7 @@ if(!isset($_SESSION['admin']['adminnakalogin']) == true) header("location:index.
                               </div>
 
                               <div class="form-group">
-                                <label>Limite de Preguntas</label>
+                                <label>L&iacute;mite de Preguntas</label>
                                 <input type="number" name="examQuestDipLimit" class="form-control" value="<?php echo $selExamRow['ex_questlimit_display']; ?>"> 
                               </div>
 

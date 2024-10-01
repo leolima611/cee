@@ -21,10 +21,10 @@
                                 <th>Genero</th>
                                 <th>Fecha de Ingreso</th>
                                 <th>Curso</th>
-                                <th>Año Escolar</th>
+                                <th>A&ntilde;o Escolar</th>
                                 <th>Email</th>
-                                <th>Password</th>
-                                <th>status</th>
+                                <th>Contrase&ntilde;a</th>
+                                <th>Estado</th>
                                 <th></th>
                             </tr>
                             </thead>
@@ -60,7 +60,7 @@
                                 { ?>
                                     <tr>
                                       <td colspan="2">
-                                        <h3 class="p-3">No Tiene Cursos</h3>
+                                        <h3 class="p-3">No tiene cursos</h3>
                                       </td>
                                     </tr>
                                 <?php }

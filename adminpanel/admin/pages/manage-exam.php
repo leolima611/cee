@@ -18,7 +18,7 @@
                             <tr>
                                 <th class="text-left pl-4">Examen</th>
                                 <th class="text-left ">Curso</th>
-                                <th class="text-left ">Descripcion</th>
+                                <th class="text-left ">Descripci&oacute;n</th>
                                 <th class="text-left ">Tiempo</th>  
                                 <th class="text-left ">Preguntas</th>  
                                 <th class="text-center" width="20%">Opciones</th>

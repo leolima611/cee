@@ -22,7 +22,7 @@
 			<div class="wrap-login100">
 				<div class="login100-form-title" style="background-image: url(login-ui/images/bg-01.jpg);">
 					<span class="login100-form-title-1">
-						INICIAR SESIÓN
+						INICIAR SESI&Oacute;N
 					</span>
 				</div>
 
@@ -34,7 +34,7 @@
 					</div>
 
 					<div class="wrap-input100 validate-input m-b-18" data-validate = "Password Requerido">
-						<span class="label-input100">Password</span>
+						<span class="label-input100">Contrase&ntilde;a</span>
 						<input class="input100" type="password" name="pass" placeholder="Ingresar Password">
 						<span class="focus-input100"></span>
 					</div>

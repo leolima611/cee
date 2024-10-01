@@ -18,7 +18,7 @@
                             <thead>
                             <tr>
                                 <th class="text-left pl-4">Cursos</th>
-                                <th class="text-center" width="20%">Status</th>
+                                <th class="text-center" width="20%">Estado</th>
                             </tr>
                             </thead>
                             <tbody>
