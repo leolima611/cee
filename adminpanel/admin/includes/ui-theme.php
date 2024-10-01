@@ -5,7 +5,7 @@
             <div class="theme-settings__inner">
                 <div class="scrollbar-container">
                     <div class="theme-settings__options-wrapper">
-                        <h3 class="themeoptions-heading">Layout Options
+                        <h3 class="themeoptions-heading">Opciones de dise&ntilde;o
                         </h3>
                         <div class="p-3">
                             <ul class="list-group">
@@ -20,9 +20,9 @@
                                                 </div>
                                             </div>
                                             <div class="widget-content-left">
-                                                <div class="widget-heading">Fixed Header
+                                                <div class="widget-heading">Encabezado fijo
                                                 </div>
-                                                <div class="widget-subheading">Makes the header top fixed, always visible!
+                                                <div class="widget-subheading">Hace que el encabezado fijo este siempre visible
                                                 </div>
                                             </div>
                                         </div>
@@ -39,9 +39,9 @@
                                                 </div>
                                             </div>
                                             <div class="widget-content-left">
-                                                <div class="widget-heading">Fixed Sidebar
+                                                <div class="widget-heading">Barra lateal fija
                                                 </div>
-                                                <div class="widget-subheading">Makes the sidebar left fixed, always visible!
+                                                <div class="widget-subheading">Hcae que la barra lateral fija este siempre visible
                                                 </div>
                                             </div>
                                         </div>
@@ -58,9 +58,9 @@
                                                 </div>
                                             </div>
                                             <div class="widget-content-left">
-                                                <div class="widget-heading">Fixed Footer
+                                                <div class="widget-heading">Pie de p&aacute;gina fijo
                                                 </div>
-                                                <div class="widget-subheading">Makes the app footer bottom fixed, always visible!
+                                                <div class="widget-subheading">Hace que el pie de p&aacute;gina fijo este siempre visible
                                                 </div>
                                             </div>
                                         </div>
@@ -70,16 +70,16 @@
                         </div>
                         <h3 class="themeoptions-heading">
                             <div>
-                                Header Options
+                                Opciones de encabezado
                             </div>
                             <button type="button" class="btn-pill btn-shadow btn-wide ml-auto btn btn-focus btn-sm switch-header-cs-class" data-class="">
-                                Restore Default
+                                Restablecer
                             </button>
                         </h3>
                         <div class="p-3">
                             <ul class="list-group">
                                 <li class="list-group-item">
-                                    <h5 class="pb-2">Choose Color Scheme
+                                    <h5 class="pb-2">Elija un esquema de color
                                     </h5>
                                     <div class="theme-settings-swatches">
                                         <div class="swatch-holder bg-primary switch-header-cs-class" data-class="bg-primary header-text-light">
@@ -161,15 +161,15 @@
                             </ul>
                         </div>
                         <h3 class="themeoptions-heading">
-                            <div>Sidebar Options</div>
+                            <div>Opciones de barra lateral</div>
                             <button type="button" class="btn-pill btn-shadow btn-wide ml-auto btn btn-focus btn-sm switch-sidebar-cs-class" data-class="">
-                                Restore Default
+                                Restablecer
                             </button>
                         </h3>
                         <div class="p-3">
                             <ul class="list-group">
                                 <li class="list-group-item">
-                                    <h5 class="pb-2">Choose Color Scheme
+                                    <h5 class="pb-2">Elija un esquema de color
                                     </h5>
                                     <div class="theme-settings-swatches">
                                         <div class="swatch-holder bg-primary switch-sidebar-cs-class" data-class="bg-primary sidebar-text-light">
@@ -251,22 +251,22 @@
                             </ul>
                         </div>
                         <h3 class="themeoptions-heading">
-                            <div>Main Content Options</div>
-                            <button type="button" class="btn-pill btn-shadow btn-wide ml-auto active btn btn-focus btn-sm">Restore Default
+                            <div>Opciones del contenido principal</div>
+                            <button type="button" class="btn-pill btn-shadow btn-wide ml-auto active btn btn-focus btn-sm">Restablecer
                             </button>
                         </h3>
                         <div class="p-3">
                             <ul class="list-group">
                                 <li class="list-group-item">
-                                    <h5 class="pb-2">Page Section Tabs
+                                    <h5 class="pb-2">Pesta&ntilde;as de sección de p&aacute;gina
                                     </h5>
                                     <div class="theme-settings-swatches">
                                         <div role="group" class="mt-2 btn-group">
                                             <button type="button" class="btn-wide btn-shadow btn-primary btn btn-secondary switch-theme-class" data-class="body-tabs-line">
-                                                Line
+                                                L&iacute;nea
                                             </button>
                                             <button type="button" class="btn-wide btn-shadow btn-primary active btn btn-secondary switch-theme-class" data-class="body-tabs-shadow">
-                                                Shadow
+                                                Sombra
                                             </button>
                                         </div>
                                     </div>

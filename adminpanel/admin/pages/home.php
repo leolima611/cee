@@ -10,7 +10,7 @@
                             <i class="pe-7s-car icon-gradient bg-mean-fruit">
                             </i>
                         </div>
-                        <div>DASHBOARD
+                        <div>PANEL
                             <div class="page-title-subheading">
                             </div>
                         </div>

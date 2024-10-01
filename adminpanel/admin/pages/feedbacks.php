@@ -3,22 +3,22 @@
                 <div class="app-page-title">
                 <div class="page-title-wrapper">
                     <div class="page-title-heading">
-                        <div><b>RANKING BY EXAM</b></div>
+                        <div><b>CALIFICACI&Oacute;N POR EXAMEN</b></div>
                     </div>
                 </div>
                 </div> 
 
                  <div class="col-md-12">
                 <div class="main-card mb-3 card">
-                    <div class="card-header">Feedback's List
+                    <div class="card-header">Lista de comentarios
                     </div>
                     <div class="table-responsive">
                         <table class="align-middle mb-0 table table-borderless table-striped table-hover" id="tableList">
                             <thead>
                             <tr>
-                                <th class="text-left pl-4" width="20%">Examinee</th>
-                                <th class="text-left ">Feedbacks</th>
-                                <th class="text-center" width="15%">Date</th>
+                                <th class="text-left pl-4" width="20%">Alumno</th>
+                                <th class="text-left ">Comentario</th>
+                                <th class="text-center" width="15%">Fecha</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -39,7 +39,7 @@
                                 { ?>
                                     <tr>
                                       <td colspan="5">
-                                        <h3 class="p-3">No Feedback found</h3>
+                                        <h3 class="p-3">No se encontraron comentarios</h3>
                                       </td>
                                     </tr>
                                 <?php }

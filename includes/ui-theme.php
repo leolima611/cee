@@ -70,7 +70,7 @@
                         </div>
                         <h3 class="themeoptions-heading">
                             <div>
-                                Opciones de emcabezado
+                                Opciones de encabezado
                             </div>
                             <button type="button" class="btn-pill btn-shadow btn-wide ml-auto btn btn-focus btn-sm switch-header-cs-class" data-class="">
                                 Restablecer

@@ -27,7 +27,7 @@
                                <span class="border" style="padding:10px;color:white;background-color: green;">Muy Bien</span>
                                <span class="border" style="padding:10px;color:white;background-color: blue;">Bien</span>
                                <span class="border" style="padding:10px;color:white;background-color: red;">Mal</span>
-                               <span class="border" style="padding:10px;color:black;background-color: #E9ECEE;">No Respondío</span>
+                               <span class="border" style="padding:10px;color:black;background-color: #E9ECEE;">No Respond&iacute;o</span>
                             </div>
                         </div>
                     </div>
@@ -38,7 +38,7 @@
                             <thead>
                                 <tr>
                                     <th width="25%">Nombre</th>
-                                    <th>Calificación</th>
+                                    <th>Calificaci&oacute;n</th>
                                     <th>Porcentaje</th>
                                 </tr>
                             </thead>
@@ -88,7 +88,7 @@
                                         <?php 
                                           if($selAttempt->rowCount() == 0)
                                           {
-                                            echo "No respondío";
+                                            echo "No respond&iacute;o";
                                           }
                                           else if($selScore->rowCount() > 0)
                                           {
@@ -112,7 +112,7 @@
                                           <?php 
                                                 if($selAttempt->rowCount() == 0)
                                                 {
-                                                  echo "No respondío";
+                                                  echo "No respond&iacute;o";
                                                 }
                                                 else
                                                 {
@@ -152,8 +152,8 @@
                             <tr>
                                 <th class="text-left pl-4">Examen</th>
                                 <th class="text-left ">Curso</th>
-                                <th class="text-left ">Descripción</th>
-                                <th class="text-center" width="8%">Opción</th>
+                                <th class="text-left ">Descripci&oacute;n</th>
+                                <th class="text-center" width="8%">Opci&oacute;n</th>
                             </tr>
                             </thead>
                             <tbody>
