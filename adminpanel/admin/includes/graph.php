@@ -4,11 +4,11 @@
                                     <div class="card-header-tab card-header-tab-animation card-header">
                                         <div class="card-header-title">
                                             <i class="header-icon lnr-apartment icon-gradient bg-love-kiss"> </i>
-                                            Sales Report
+                                            Reporte de ventas
                                         </div>
                                         <ul class="nav">
-                                            <li class="nav-item"><a href="javascript:void(0);" class="active nav-link">Last</a></li>
-                                            <li class="nav-item"><a href="javascript:void(0);" class="nav-link second-tab-toggle">Current</a></li>
+                                            <li class="nav-item"><a href="javascript:void(0);" class="active nav-link">&Uacute;ltimo</a></li>
+                                            <li class="nav-item"><a href="javascript:void(0);" class="nav-link second-tab-toggle">Actual</a></li>
                                         </ul>
                                     </div>
                                     <div class="card-body">
@@ -21,7 +21,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <h6 class="text-muted text-uppercase font-size-md opacity-5 font-weight-normal">Top Authors</h6>
+                                                <h6 class="text-muted text-uppercase font-size-md opacity-5 font-weight-normal">Autores principales</h6>
                                                 <div class="scroll-area-sm">
                                                     <div class="scrollbar-container">
                                                         <ul class="rm-list-borders rm-list-borders-scroll list-group list-group-flush">
@@ -33,7 +33,7 @@
                                                                         </div>
                                                                         <div class="widget-content-left">
                                                                             <div class="widget-heading">Ella-Rose Henry</div>
-                                                                            <div class="widget-subheading">Web Developer</div>
+                                                                            <div class="widget-subheading">Desarrollador web</div>
                                                                         </div>
                                                                         <div class="widget-content-right">
                                                                             <div class="font-size-xlg text-muted">
@@ -55,7 +55,7 @@
                                                                         </div>
                                                                         <div class="widget-content-left">
                                                                             <div class="widget-heading">Ruben Tillman</div>
-                                                                            <div class="widget-subheading">UI Designer</div>
+                                                                            <div class="widget-subheading">Dise&ntilde;ador de interfaces de usuario</div>
                                                                         </div>
                                                                         <div class="widget-content-right">
                                                                             <div class="font-size-xlg text-muted">
@@ -77,7 +77,7 @@
                                                                         </div>
                                                                         <div class="widget-content-left">
                                                                             <div class="widget-heading">Vinnie Wagstaff</div>
-                                                                            <div class="widget-subheading">Java Programmer</div>
+                                                                            <div class="widget-subheading">Programador Java</div>
                                                                         </div>
                                                                         <div class="widget-content-right">
                                                                             <div class="font-size-xlg text-muted">
@@ -99,7 +99,7 @@
                                                                         </div>
                                                                         <div class="widget-content-left">
                                                                             <div class="widget-heading">Ella-Rose Henry</div>
-                                                                            <div class="widget-subheading">Web Developer</div>
+                                                                            <div class="widget-subheading">Desarrollador web</div>
                                                                         </div>
                                                                         <div class="widget-content-right">
                                                                             <div class="font-size-xlg text-muted">
@@ -121,7 +121,7 @@
                                                                         </div>
                                                                         <div class="widget-content-left">
                                                                             <div class="widget-heading">Ruben Tillman</div>
-                                                                            <div class="widget-subheading">UI Designer</div>
+                                                                            <div class="widget-subheading">Dise&ntilde;ador web</div>
                                                                         </div>
                                                                         <div class="widget-content-right">
                                                                             <div class="font-size-xlg text-muted">
@@ -148,12 +148,12 @@
                                     <div class="card-header-tab card-header">
                                         <div class="card-header-title">
                                             <i class="header-icon lnr-rocket icon-gradient bg-tempting-azure"> </i>
-                                            Bandwidth Reports
+                                            Reportes de ancho de banda
                                         </div>
                                         <div class="btn-actions-pane-right">
                                             <div class="nav">
-                                                <a href="javascript:void(0);" class="border-0 btn-pill btn-wide btn-transition active btn btn-outline-alternate">Tab 1</a>
-                                                <a href="javascript:void(0);" class="ml-1 btn-pill btn-wide border-0 btn-transition  btn btn-outline-alternate second-tab-toggle-alt">Tab 2</a>
+                                                <a href="javascript:void(0);" class="border-0 btn-pill btn-wide btn-transition active btn btn-outline-alternate">Pesta&ntilde;a 1</a>
+                                                <a href="javascript:void(0);" class="ml-1 btn-pill btn-wide border-0 btn-transition  btn btn-outline-alternate second-tab-toggle-alt">Pesta&ntilde;a 2</a>
                                             </div>
                                         </div>
                                     </div>
@@ -167,7 +167,7 @@
                                                     <div class="widget-description mt-0 text-warning">
                                                         <i class="fa fa-arrow-left"></i>
                                                         <span class="pl-1">175.5%</span>
-                                                        <span class="text-muted opacity-8 pl-1">increased server resources</span>
+                                                        <span class="text-muted opacity-8 pl-1">incrementar recursos del servidor</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -181,7 +181,7 @@
                                                                         <div class="widget-numbers fsize-3 text-muted">63%</div>
                                                                     </div>
                                                                     <div class="widget-content-right">
-                                                                        <div class="text-muted opacity-6">Generated Leads</div>
+                                                                        <div class="text-muted opacity-6">Clientes potenciales</div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="widget-progress-wrapper mt-1">
@@ -200,7 +200,7 @@
                                                                         <div class="widget-numbers fsize-3 text-muted">32%</div>
                                                                     </div>
                                                                     <div class="widget-content-right">
-                                                                        <div class="text-muted opacity-6">Submitted Tickers</div>
+                                                                        <div class="text-muted opacity-6">Tickers enviados</div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="widget-progress-wrapper mt-1">
@@ -219,7 +219,7 @@
                                                                         <div class="widget-numbers fsize-3 text-muted">71%</div>
                                                                     </div>
                                                                     <div class="widget-content-right">
-                                                                        <div class="text-muted opacity-6">Server Allocation</div>
+                                                                        <div class="text-muted opacity-6">Asignacion de servidor</div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="widget-progress-wrapper mt-1">
@@ -238,7 +238,7 @@
                                                                         <div class="widget-numbers fsize-3 text-muted">41%</div>
                                                                     </div>
                                                                     <div class="widget-content-right">
-                                                                        <div class="text-muted opacity-6">Generated Leads</div>
+                                                                        <div class="text-muted opacity-6">Clientes potenciales</div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="widget-progress-wrapper mt-1">

@@ -27,7 +27,7 @@
                     <div class="page-title-actions mr-5" style="font-size: 20px;">
                         <form name="cd">
                           <input type="hidden" name="" id="timeExamLimit" value="<?php echo $selExamTimeLimit; ?>">
-                          <label>Remaining Time : </label>
+                          <label>Tiempo restante : </label>
                           <input style="border:none;background-color: transparent;color:blue;font-size: 25px;" name="disp" type="text" class="clock" id="txt" value="00:00" size="5" readonly="true" />
                       </form> 
                     </div>   
@@ -94,7 +94,7 @@
                 ?>
                        <tr>
                              <td style="padding: 20px;">
-                                 <button type="button" class="btn btn-xlg btn-warning p-3 pl-4 pr-4" id="resetExamFrm">Reset</button>
+                                 <button type="button" class="btn btn-xlg btn-warning p-3 pl-4 pr-4" id="resetExamFrm">Reiniciar</button>
                                  <input name="submit" type="submit" value="Submit" class="btn btn-xlg btn-primary p-3 pl-4 pr-4 float-right" id="submitAnswerFrmBtn">
                              </td>
                          </tr>
@@ -103,7 +103,7 @@
             }
             else
             { ?>
-                <b>No question at this moment</b>
+                <b>Sin dudas por el momento</b>
             <?php }
          ?>   
               </table>

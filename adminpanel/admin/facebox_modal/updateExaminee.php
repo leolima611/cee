@@ -8,7 +8,7 @@
  ?>
 
 <fieldset style="width:543px;" >
-	<legend><i class="facebox-header"><i class="edit large icon"></i>&nbsp;ACTUALIZAR INFORMACIÓN <b>( <?php echo strtoupper($selExmne['exmne_fullname']); ?> )</b></i></legend>
+	<legend><i class="facebox-header"><i class="edit large icon"></i>&nbsp;ACTUALIZAR INFORMACI&Oacute;N <b>( <?php echo strtoupper($selExmne['exmne_fullname']); ?> )</b></i></legend>
   <div class="col-md-12 mt-4">
 <form method="post" id="updateExamineeFrm">
      <div class="form-group">
@@ -49,7 +49,7 @@
      </div>
 
      <div class="form-group">
-        <legend>Actualizar año</legend>
+        <legend>Actualizar a&ntilde;o</legend>
         <input type="" name="exYrlvl" class="form-control" required="" value="<?php echo $selExmne['exmne_year_level']; ?>" >
      </div>
 
@@ -59,12 +59,12 @@
      </div>
 
      <div class="form-group">
-        <legend>Password</legend>
+        <legend>Contrase&ntilde;a</legend>
         <input type="" name="exPass" class="form-control" required="" value="<?php echo $selExmne['exmne_password']; ?>" >
      </div>
 
      <div class="form-group">
-        <legend>Status</legend>
+        <legend>Estado</legend>
         <input type="hidden" name="course_id" value="<?php echo $id; ?>">
         <input type="" name="newCourseName" class="form-control" required="" value="<?php echo $selExmne['exmne_status']; ?>" >
      </div>

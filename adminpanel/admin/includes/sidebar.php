@@ -31,7 +31,7 @@
                     </div>    <div class="scrollbar-sidebar">
                         <div class="app-sidebar__inner">
                             <ul class="vertical-nav-menu">
-                                <li class="app-sidebar__heading"><a href="home.php">DASHBOARD</a></li>
+                                <li class="app-sidebar__heading"><a href="home.php">Panle</a></li>
 								
 								<?php
 								if($datosAd['role']==2){
@@ -128,7 +128,7 @@
 								if($datosAd['role']==2){
 								?>
 								
-                                <li class="app-sidebar__heading">EVALUACIÓNES</li>
+                                <li class="app-sidebar__heading">EVALUACIONES</li>
                                 <li>
                                     <a href="home.php?page=ranking-exam">
                                         <i class="metismenu-icon pe-7s-cup">

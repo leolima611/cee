@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Content-Language" content="en">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>Analytics Dashboard - This is an example dashboard created using build-in elements and components.</title>
+    <title>Panel de an&aacute;lisis - Esto es un panel de ejemplo creado con los elementos y componentes incorporados.</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
     <meta name="description" content="This is an example dashboard created using build-in elements and components.">
     <meta name="msapplication-tap-highlight" content="no">
@@ -66,19 +66,19 @@
                         <li class="nav-item">
                             <a href="javascript:void(0);" class="nav-link">
                                 <i class="nav-link-icon fa fa-database"> </i>
-                                Statistics
+                                Estad&iacute;stica
                             </a>
                         </li>
                         <li class="btn-group nav-item">
                             <a href="javascript:void(0);" class="nav-link">
                                 <i class="nav-link-icon fa fa-edit"></i>
-                                Projects
+                                Proyectos
                             </a>
                         </li>
                         <li class="dropdown nav-item">
                             <a href="javascript:void(0);" class="nav-link">
                                 <i class="nav-link-icon fa fa-cog"></i>
-                                Settings
+                                Configuraci&oacute;n
                             </a>
                         </li>
                     </ul>        </div>
@@ -93,12 +93,12 @@
                                             <i class="fa fa-angle-down ml-2 opacity-8"></i>
                                         </a>
                                         <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu dropdown-menu-right">
-                                            <button type="button" tabindex="0" class="dropdown-item">User Account</button>
-                                            <button type="button" tabindex="0" class="dropdown-item">Settings</button>
-                                            <h6 tabindex="-1" class="dropdown-header">Header</h6>
-                                            <button type="button" tabindex="0" class="dropdown-item">Actions</button>
+                                            <button type="button" tabindex="0" class="dropdown-item">Cuenta de usuario</button>
+                                            <button type="button" tabindex="0" class="dropdown-item">Configuraci&oacute;n</button>
+                                            <h6 tabindex="-1" class="dropdown-header">Encabezado</h6>
+                                            <button type="button" tabindex="0" class="dropdown-item">Acciones</button>
                                             <div tabindex="-1" class="dropdown-divider"></div>
-                                            <button type="button" tabindex="0" class="dropdown-item">Dividers</button>
+                                            <button type="button" tabindex="0" class="dropdown-item">Divisores</button>
                                         </div>
                                     </div>
                                 </div>
@@ -107,7 +107,7 @@
                                         Alina Mclourd
                                     </div>
                                     <div class="widget-subheading">
-                                        VP People Manager
+                                        VP Gerente de Personal
                                     </div>
                                 </div>
                                 <div class="widget-content-right header-user-info ml-3">
@@ -126,7 +126,7 @@
             <div class="theme-settings__inner">
                 <div class="scrollbar-container">
                     <div class="theme-settings__options-wrapper">
-                        <h3 class="themeoptions-heading">Layout Options
+                        <h3 class="themeoptions-heading">Opciones de dise&ntilde;o
                         </h3>
                         <div class="p-3">
                             <ul class="list-group">
@@ -141,9 +141,9 @@
                                                 </div>
                                             </div>
                                             <div class="widget-content-left">
-                                                <div class="widget-heading">Fixed Header
+                                                <div class="widget-heading">Encabezado fijo
                                                 </div>
-                                                <div class="widget-subheading">Makes the header top fixed, always visible!
+                                                <div class="widget-subheading">Hace que el encabezado fijo este siempre visible
                                                 </div>
                                             </div>
                                         </div>
@@ -160,9 +160,9 @@
                                                 </div>
                                             </div>
                                             <div class="widget-content-left">
-                                                <div class="widget-heading">Fixed Sidebar
+                                                <div class="widget-heading">Barra lateral fija
                                                 </div>
-                                                <div class="widget-subheading">Makes the sidebar left fixed, always visible!
+                                                <div class="widget-subheading">Hace que la barra lateral fija este siempre visible
                                                 </div>
                                             </div>
                                         </div>
@@ -179,9 +179,9 @@
                                                 </div>
                                             </div>
                                             <div class="widget-content-left">
-                                                <div class="widget-heading">Fixed Footer
+                                                <div class="widget-heading">Pie de página fijo
                                                 </div>
-                                                <div class="widget-subheading">Makes the app footer bottom fixed, always visible!
+                                                <div class="widget-subheading">Hace que el pie de p&aacute;gina fijo este siempre visible
                                                 </div>
                                             </div>
                                         </div>
@@ -191,16 +191,16 @@
                         </div>
                         <h3 class="themeoptions-heading">
                             <div>
-                                Header Options
+                                Opciones de encabezado
                             </div>
                             <button type="button" class="btn-pill btn-shadow btn-wide ml-auto btn btn-focus btn-sm switch-header-cs-class" data-class="">
-                                Restore Default
+                                Restablecer
                             </button>
                         </h3>
                         <div class="p-3">
                             <ul class="list-group">
                                 <li class="list-group-item">
-                                    <h5 class="pb-2">Choose Color Scheme
+                                    <h5 class="pb-2">Elija el esquema de color
                                     </h5>
                                     <div class="theme-settings-swatches">
                                         <div class="swatch-holder bg-primary switch-header-cs-class" data-class="bg-primary header-text-light">
@@ -282,15 +282,15 @@
                             </ul>
                         </div>
                         <h3 class="themeoptions-heading">
-                            <div>Sidebar Options</div>
+                            <div>Opciones para la barra lateral</div>
                             <button type="button" class="btn-pill btn-shadow btn-wide ml-auto btn btn-focus btn-sm switch-sidebar-cs-class" data-class="">
-                                Restore Default
+                                Restablecer
                             </button>
                         </h3>
                         <div class="p-3">
                             <ul class="list-group">
                                 <li class="list-group-item">
-                                    <h5 class="pb-2">Choose Color Scheme
+                                    <h5 class="pb-2">Elija el esquema de color
                                     </h5>
                                     <div class="theme-settings-swatches">
                                         <div class="swatch-holder bg-primary switch-sidebar-cs-class" data-class="bg-primary sidebar-text-light">
@@ -372,22 +372,22 @@
                             </ul>
                         </div>
                         <h3 class="themeoptions-heading">
-                            <div>Main Content Options</div>
-                            <button type="button" class="btn-pill btn-shadow btn-wide ml-auto active btn btn-focus btn-sm">Restore Default
+                            <div>Opciones del contenido principal</div>
+                            <button type="button" class="btn-pill btn-shadow btn-wide ml-auto active btn btn-focus btn-sm">Restablecer
                             </button>
                         </h3>
                         <div class="p-3">
                             <ul class="list-group">
                                 <li class="list-group-item">
-                                    <h5 class="pb-2">Page Section Tabs
+                                    <h5 class="pb-2">Pesta&ntilde;as de seccion de página
                                     </h5>
                                     <div class="theme-settings-swatches">
                                         <div role="group" class="mt-2 btn-group">
                                             <button type="button" class="btn-wide btn-shadow btn-primary btn btn-secondary switch-theme-class" data-class="body-tabs-line">
-                                                Line
+                                                L&iacute;nea
                                             </button>
                                             <button type="button" class="btn-wide btn-shadow btn-primary active btn btn-secondary switch-theme-class" data-class="body-tabs-shadow">
-                                                Shadow
+                                                Sombra
                                             </button>
                                         </div>
                                     </div>
@@ -431,14 +431,14 @@
                     </div>    <div class="scrollbar-sidebar">
                         <div class="app-sidebar__inner">
                             <ul class="vertical-nav-menu">
-                                <li class="app-sidebar__heading">Dashboards</li>
+                                <li class="app-sidebar__heading">Panel</li>
                                 <li>
                                     <a href="index.html" class="mm-active">
                                         <i class="metismenu-icon pe-7s-rocket"></i>
-                                        Dashboard Example 1
+                                        Panel de ejemplo 1
                                     </a>
                                 </li>
-                                <li class="app-sidebar__heading">UI Components</li>
+                                <li class="app-sidebar__heading">Componentes de la interfaz de usuarios</li>
                                 <li
                                     
                                     
@@ -451,7 +451,7 @@
                                 >
                                     <a href="#">
                                         <i class="metismenu-icon pe-7s-diamond"></i>
-                                        Elements
+                                        Elementos
                                         <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
                                     </a>
                                     <ul
@@ -467,49 +467,49 @@
                                         <li>
                                             <a href="elements-buttons-standard.html">
                                                 <i class="metismenu-icon"></i>
-                                                Buttons
+                                                Botones
                                             </a>
                                         </li>
                                         <li>
                                             <a href="elements-dropdowns.html">
                                                 <i class="metismenu-icon">
-                                                </i>Dropdowns
+                                                </i>Men&uacute;s desplegables 
                                             </a>
                                         </li>
                                         <li>
                                             <a href="elements-icons.html">
                                                 <i class="metismenu-icon">
-                                                </i>Icons
+                                                </i>Iconos
                                             </a>
                                         </li>
                                         <li>
                                             <a href="elements-badges-labels.html">
                                                 <i class="metismenu-icon">
-                                                </i>Badges
+                                                </i>Insignias
                                             </a>
                                         </li>
                                         <li>
                                             <a href="elements-cards.html">
                                                 <i class="metismenu-icon">
-                                                </i>Cards
+                                                </i>Cartas
                                             </a>
                                         </li>
                                         <li>
                                             <a href="elements-list-group.html">
                                                 <i class="metismenu-icon">
-                                                </i>List Groups
+                                                </i>Listas de grupos
                                             </a>
                                         </li>
                                         <li>
                                             <a href="elements-navigation.html">
                                                 <i class="metismenu-icon">
-                                                </i>Navigation Menus
+                                                </i>Men&uacute;s de navegaci&oacute;n
                                             </a>
                                         </li>
                                         <li>
                                             <a href="elements-utilities.html">
                                                 <i class="metismenu-icon">
-                                                </i>Utilities
+                                                </i>Utilidades
                                             </a>
                                         </li>
                                     </ul>
@@ -529,7 +529,7 @@
                                 >
                                     <a href="#">
                                         <i class="metismenu-icon pe-7s-car"></i>
-                                        Components
+                                        Componentes
                                         <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
                                     </a>
                                     <ul
@@ -548,67 +548,67 @@
                                         <li>
                                             <a href="components-tabs.html">
                                                 <i class="metismenu-icon">
-                                                </i>Tabs
+                                                </i>Tabuladores/Pesta&ntilde;a
                                             </a>
                                         </li>
                                         <li>
                                             <a href="components-accordions.html">
                                                 <i class="metismenu-icon">
-                                                </i>Accordions
+                                                </i>Acordeon
                                             </a>
                                         </li>
                                         <li>
                                             <a href="components-notifications.html">
                                                 <i class="metismenu-icon">
-                                                </i>Notifications
+                                                </i>Notificaciones
                                             </a>
                                         </li>
                                         <li>
                                             <a href="components-modals.html">
                                                 <i class="metismenu-icon">
-                                                </i>Modals
+                                                </i>Modales
                                             </a>
                                         </li>
                                         <li>
                                             <a href="components-progress-bar.html">
                                                 <i class="metismenu-icon">
-                                                </i>Progress Bar
+                                                </i>Barra de progreso
                                             </a>
                                         </li>
                                         <li>
                                             <a href="components-tooltips-popovers.html">
                                                 <i class="metismenu-icon">
-                                                </i>Tooltips &amp; Popovers
+                                                </i>Informaci&oacute;n de las herramientas y Popovers
                                             </a>
                                         </li>
                                         <li>
                                             <a href="components-carousel.html">
                                                 <i class="metismenu-icon">
-                                                </i>Carousel
+                                                </i>Carrusel
                                             </a>
                                         </li>
                                         <li>
                                             <a href="components-calendar.html">
                                                 <i class="metismenu-icon">
-                                                </i>Calendar
+                                                </i>Calendario
                                             </a>
                                         </li>
                                         <li>
                                             <a href="components-pagination.html">
                                                 <i class="metismenu-icon">
-                                                </i>Pagination
+                                                </i>Paginaci&oacute;n
                                             </a>
                                         </li>
                                         <li>
                                             <a href="components-scrollable-elements.html">
                                                 <i class="metismenu-icon">
-                                                </i>Scrollable
+                                                </i>Desplazable
                                             </a>
                                         </li>
                                         <li>
                                             <a href="components-maps.html">
                                                 <i class="metismenu-icon">
-                                                </i>Maps
+                                                </i>Mapas
                                             </a>
                                         </li>
                                     </ul>
@@ -616,48 +616,48 @@
                                 <li  >
                                     <a href="tables-regular.html">
                                         <i class="metismenu-icon pe-7s-display2"></i>
-                                        Tables
+                                        Tablas
                                     </a>
                                 </li>
                                 <li class="app-sidebar__heading">Widgets</li>
                                 <li>
                                     <a href="dashboard-boxes.html">
                                         <i class="metismenu-icon pe-7s-display2"></i>
-                                        Dashboard Boxes
+                                        Panel de cajas
                                     </a>
                                 </li>
-                                <li class="app-sidebar__heading">Forms</li>
+                                <li class="app-sidebar__heading">Formularios</li>
                                 <li>
                                     <a href="forms-controls.html">
                                         <i class="metismenu-icon pe-7s-mouse">
-                                        </i>Forms Controls
+                                        </i>Formularios de Controles
                                     </a>
                                 </li>
                                 <li>
                                     <a href="forms-layouts.html">
                                         <i class="metismenu-icon pe-7s-eyedropper">
-                                        </i>Forms Layouts
+                                        </i>Formularios de dise&ntilde;os
                                     </a>
                                 </li>
                                 <li>
                                     <a href="forms-validation.html">
                                         <i class="metismenu-icon pe-7s-pendrive">
-                                        </i>Forms Validation
+                                        </i>Formularios de Validaci&oacute;n
                                     </a>
                                 </li>
-                                <li class="app-sidebar__heading">Charts</li>
+                                <li class="app-sidebar__heading">Gr&aacute;ficos</li>
                                 <li>
                                     <a href="charts-chartjs.html">
                                         <i class="metismenu-icon pe-7s-graph2">
-                                        </i>ChartJS
+                                        </i>Gr&aacute;ficos JS
                                     </a>
                                 </li>
-                                <li class="app-sidebar__heading">PRO Version</li>
+                                <li class="app-sidebar__heading">Versi&oacute;n PRO</li>
                                 <li>
                                     <a href="https://dashboardpack.com/theme-details/architectui-dashboard-html-pro/" target="_blank">
                                         <i class="metismenu-icon pe-7s-graph2">
                                         </i>
-                                        Upgrade to PRO
+                                        Mejorar a PRO
                                     </a>
                                 </li>
                             </ul>
@@ -672,8 +672,8 @@
                                         <i class="pe-7s-car icon-gradient bg-mean-fruit">
                                         </i>
                                     </div>
-                                    <div>Analytics Dashboard
-                                        <div class="page-title-subheading">This is an example dashboard created using build-in elements and components.
+                                    <div>Panel de an&aacute;lisis
+                                        <div class="page-title-subheading">Esto es un panel de ejemplo creado con los elementos y componentes incorporados.
                                         </div>
                                     </div>
                                 </div>
@@ -686,7 +686,7 @@
                                             <span class="btn-icon-wrapper pr-2 opacity-7">
                                                 <i class="fa fa-business-time fa-w-20"></i>
                                             </span>
-                                            Buttons
+                                            Botones
                                         </button>
                                         <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu dropdown-menu-right">
                                             <ul class="nav flex-column">
@@ -694,7 +694,7 @@
                                                     <a href="javascript:void(0);" class="nav-link">
                                                         <i class="nav-link-icon lnr-inbox"></i>
                                                         <span>
-                                                            Inbox
+                                                            Bandeja de entrada
                                                         </span>
                                                         <div class="ml-auto badge badge-pill badge-secondary">86</div>
                                                     </a>
@@ -703,7 +703,7 @@
                                                     <a href="javascript:void(0);" class="nav-link">
                                                         <i class="nav-link-icon lnr-book"></i>
                                                         <span>
-                                                            Book
+                                                            Libro
                                                         </span>
                                                         <div class="ml-auto badge badge-pill badge-danger">5</div>
                                                     </a>
@@ -712,7 +712,7 @@
                                                     <a href="javascript:void(0);" class="nav-link">
                                                         <i class="nav-link-icon lnr-picture"></i>
                                                         <span>
-                                                            Picture
+                                                            Imagen
                                                         </span>
                                                     </a>
                                                 </li>
@@ -720,7 +720,7 @@
                                                     <a disabled href="javascript:void(0);" class="nav-link disabled">
                                                         <i class="nav-link-icon lnr-file-empty"></i>
                                                         <span>
-                                                            File Disabled
+                                                            Archivo deshabilitado
                                                         </span>
                                                     </a>
                                                 </li>
@@ -733,8 +733,8 @@
                                 <div class="card mb-3 widget-content bg-midnight-bloom">
                                     <div class="widget-content-wrapper text-white">
                                         <div class="widget-content-left">
-                                            <div class="widget-heading">Total Orders</div>
-                                            <div class="widget-subheading">Last year expenses</div>
+                                            <div class="widget-heading">Total de ordenes</div>
+                                            <div class="widget-subheading">Gastos del &uacute;ltimo a&ntilde;o</div>
                                         </div>
                                         <div class="widget-content-right">
                                             <div class="widget-numbers text-white"><span>1896</span></div>
@@ -746,8 +746,8 @@
                                 <div class="card mb-3 widget-content bg-arielle-smile">
                                     <div class="widget-content-wrapper text-white">
                                         <div class="widget-content-left">
-                                            <div class="widget-heading">Clients</div>
-                                            <div class="widget-subheading">Total Clients Profit</div>
+                                            <div class="widget-heading">Clientes</div>
+                                            <div class="widget-subheading">Ganancia total de los clientes</div>
                                         </div>
                                         <div class="widget-content-right">
                                             <div class="widget-numbers text-white"><span>$ 568</span></div>
@@ -759,8 +759,8 @@
                                 <div class="card mb-3 widget-content bg-grow-early">
                                     <div class="widget-content-wrapper text-white">
                                         <div class="widget-content-left">
-                                            <div class="widget-heading">Followers</div>
-                                            <div class="widget-subheading">People Interested</div>
+                                            <div class="widget-heading">Seguidores</div>
+                                            <div class="widget-subheading">Personas interesadas</div>
                                         </div>
                                         <div class="widget-content-right">
                                             <div class="widget-numbers text-white"><span>46%</span></div>
@@ -772,8 +772,8 @@
                                 <div class="card mb-3 widget-content bg-premium-dark">
                                     <div class="widget-content-wrapper text-white">
                                         <div class="widget-content-left">
-                                            <div class="widget-heading">Products Sold</div>
-                                            <div class="widget-subheading">Revenue streams</div>
+                                            <div class="widget-heading">Productos vendidos</div>
+                                            <div class="widget-subheading">Fuente de ingresos</div>
                                         </div>
                                         <div class="widget-content-right">
                                             <div class="widget-numbers text-warning"><span>$14M</span></div>
@@ -788,11 +788,11 @@
                                     <div class="card-header-tab card-header-tab-animation card-header">
                                         <div class="card-header-title">
                                             <i class="header-icon lnr-apartment icon-gradient bg-love-kiss"> </i>
-                                            Sales Report
+                                            Reporte de ventas
                                         </div>
                                         <ul class="nav">
-                                            <li class="nav-item"><a href="javascript:void(0);" class="active nav-link">Last</a></li>
-                                            <li class="nav-item"><a href="javascript:void(0);" class="nav-link second-tab-toggle">Current</a></li>
+                                            <li class="nav-item"><a href="javascript:void(0);" class="active nav-link">&Uacute;ltimo</a></li>
+                                            <li class="nav-item"><a href="javascript:void(0);" class="nav-link second-tab-toggle">Actual</a></li>
                                         </ul>
                                     </div>
                                     <div class="card-body">
@@ -805,7 +805,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <h6 class="text-muted text-uppercase font-size-md opacity-5 font-weight-normal">Top Authors</h6>
+                                                <h6 class="text-muted text-uppercase font-size-md opacity-5 font-weight-normal">Autores principales</h6>
                                                 <div class="scroll-area-sm">
                                                     <div class="scrollbar-container">
                                                         <ul class="rm-list-borders rm-list-borders-scroll list-group list-group-flush">
@@ -817,7 +817,7 @@
                                                                         </div>
                                                                         <div class="widget-content-left">
                                                                             <div class="widget-heading">Ella-Rose Henry</div>
-                                                                            <div class="widget-subheading">Web Developer</div>
+                                                                            <div class="widget-subheading">Desarrollador web</div>
                                                                         </div>
                                                                         <div class="widget-content-right">
                                                                             <div class="font-size-xlg text-muted">
@@ -839,7 +839,7 @@
                                                                         </div>
                                                                         <div class="widget-content-left">
                                                                             <div class="widget-heading">Ruben Tillman</div>
-                                                                            <div class="widget-subheading">UI Designer</div>
+                                                                            <div class="widget-subheading">Dise&ntilde;ador de la interfaz de usuarios</div>
                                                                         </div>
                                                                         <div class="widget-content-right">
                                                                             <div class="font-size-xlg text-muted">
@@ -861,7 +861,7 @@
                                                                         </div>
                                                                         <div class="widget-content-left">
                                                                             <div class="widget-heading">Vinnie Wagstaff</div>
-                                                                            <div class="widget-subheading">Java Programmer</div>
+                                                                            <div class="widget-subheading">Programador Java</div>
                                                                         </div>
                                                                         <div class="widget-content-right">
                                                                             <div class="font-size-xlg text-muted">
@@ -883,7 +883,7 @@
                                                                         </div>
                                                                         <div class="widget-content-left">
                                                                             <div class="widget-heading">Ella-Rose Henry</div>
-                                                                            <div class="widget-subheading">Web Developer</div>
+                                                                            <div class="widget-subheading">Desarrollador web</div>
                                                                         </div>
                                                                         <div class="widget-content-right">
                                                                             <div class="font-size-xlg text-muted">
@@ -905,7 +905,7 @@
                                                                         </div>
                                                                         <div class="widget-content-left">
                                                                             <div class="widget-heading">Ruben Tillman</div>
-                                                                            <div class="widget-subheading">UI Designer</div>
+                                                                            <div class="widget-subheading">Dise&ntilde;ador de la interfaz de usuarios</div>
                                                                         </div>
                                                                         <div class="widget-content-right">
                                                                             <div class="font-size-xlg text-muted">
@@ -932,12 +932,12 @@
                                     <div class="card-header-tab card-header">
                                         <div class="card-header-title">
                                             <i class="header-icon lnr-rocket icon-gradient bg-tempting-azure"> </i>
-                                            Bandwidth Reports
+                                            Reportes del ancho de banda
                                         </div>
                                         <div class="btn-actions-pane-right">
                                             <div class="nav">
-                                                <a href="javascript:void(0);" class="border-0 btn-pill btn-wide btn-transition active btn btn-outline-alternate">Tab 1</a>
-                                                <a href="javascript:void(0);" class="ml-1 btn-pill btn-wide border-0 btn-transition  btn btn-outline-alternate second-tab-toggle-alt">Tab 2</a>
+                                                <a href="javascript:void(0);" class="border-0 btn-pill btn-wide btn-transition active btn btn-outline-alternate">Pesta&ntilde;a 1</a>
+                                                <a href="javascript:void(0);" class="ml-1 btn-pill btn-wide border-0 btn-transition  btn btn-outline-alternate second-tab-toggle-alt">Pesta&ntilde;a 2</a>
                                             </div>
                                         </div>
                                     </div>
@@ -951,7 +951,7 @@
                                                     <div class="widget-description mt-0 text-warning">
                                                         <i class="fa fa-arrow-left"></i>
                                                         <span class="pl-1">175.5%</span>
-                                                        <span class="text-muted opacity-8 pl-1">increased server resources</span>
+                                                        <span class="text-muted opacity-8 pl-1">incrementar los recursos del servidor</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -965,7 +965,7 @@
                                                                         <div class="widget-numbers fsize-3 text-muted">63%</div>
                                                                     </div>
                                                                     <div class="widget-content-right">
-                                                                        <div class="text-muted opacity-6">Generated Leads</div>
+                                                                        <div class="text-muted opacity-6">Clientes potenciales</div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="widget-progress-wrapper mt-1">
@@ -984,7 +984,7 @@
                                                                         <div class="widget-numbers fsize-3 text-muted">32%</div>
                                                                     </div>
                                                                     <div class="widget-content-right">
-                                                                        <div class="text-muted opacity-6">Submitted Tickers</div>
+                                                                        <div class="text-muted opacity-6">Tickers enviados</div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="widget-progress-wrapper mt-1">
@@ -1003,7 +1003,7 @@
                                                                         <div class="widget-numbers fsize-3 text-muted">71%</div>
                                                                     </div>
                                                                     <div class="widget-content-right">
-                                                                        <div class="text-muted opacity-6">Server Allocation</div>
+                                                                        <div class="text-muted opacity-6">Servidor de asgnaci&oacute;n</div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="widget-progress-wrapper mt-1">
@@ -1022,7 +1022,7 @@
                                                                         <div class="widget-numbers fsize-3 text-muted">41%</div>
                                                                     </div>
                                                                     <div class="widget-content-right">
-                                                                        <div class="text-muted opacity-6">Generated Leads</div>
+                                                                        <div class="text-muted opacity-6">Clientes potenciales</div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="widget-progress-wrapper mt-1">
@@ -1046,8 +1046,8 @@
                                     <div class="widget-content-outer">
                                         <div class="widget-content-wrapper">
                                             <div class="widget-content-left">
-                                                <div class="widget-heading">Total Orders</div>
-                                                <div class="widget-subheading">Last year expenses</div>
+                                                <div class="widget-heading">Total de ordenes</div>
+                                                <div class="widget-subheading">Gatos del &uacute;ltimo a&ntilde;o</div>
                                             </div>
                                             <div class="widget-content-right">
                                                 <div class="widget-numbers text-success">1896</div>
@@ -1061,8 +1061,8 @@
                                     <div class="widget-content-outer">
                                         <div class="widget-content-wrapper">
                                             <div class="widget-content-left">
-                                                <div class="widget-heading">Products Sold</div>
-                                                <div class="widget-subheading">Revenue streams</div>
+                                                <div class="widget-heading">Productos vendidos</div>
+                                                <div class="widget-subheading">Fuente de ingresos</div>
                                             </div>
                                             <div class="widget-content-right">
                                                 <div class="widget-numbers text-warning">$3M</div>
@@ -1076,8 +1076,8 @@
                                     <div class="widget-content-outer">
                                         <div class="widget-content-wrapper">
                                             <div class="widget-content-left">
-                                                <div class="widget-heading">Followers</div>
-                                                <div class="widget-subheading">People Interested</div>
+                                                <div class="widget-heading">Seguidores</div>
+                                                <div class="widget-subheading">Personas interesadas</div>
                                             </div>
                                             <div class="widget-content-right">
                                                 <div class="widget-numbers text-danger">45,9%</div>
@@ -1091,8 +1091,8 @@
                                     <div class="widget-content-outer">
                                         <div class="widget-content-wrapper">
                                             <div class="widget-content-left">
-                                                <div class="widget-heading">Income</div>
-                                                <div class="widget-subheading">Expected totals</div>
+                                                <div class="widget-heading">Ingreso</div>
+                                                <div class="widget-subheading">Totales esperados</div>
                                             </div>
                                             <div class="widget-content-right">
                                                 <div class="widget-numbers text-focus">$147</div>
@@ -1103,7 +1103,7 @@
                                                 <div class="progress-bar bg-info" role="progressbar" aria-valuenow="54" aria-valuemin="0" aria-valuemax="100" style="width: 54%;"></div>
                                             </div>
                                             <div class="progress-sub-label">
-                                                <div class="sub-label-left">Expenses</div>
+                                                <div class="sub-label-left">Esperado</div>
                                                 <div class="sub-label-right">100%</div>
                                             </div>
                                         </div>
@@ -1114,11 +1114,11 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="main-card mb-3 card">
-                                    <div class="card-header">Active Users
+                                    <div class="card-header">Usuarios activos
                                         <div class="btn-actions-pane-right">
                                             <div role="group" class="btn-group-sm btn-group">
-                                                <button class="active btn btn-focus">Last Week</button>
-                                                <button class="btn btn-focus">All Month</button>
+                                                <button class="active btn btn-focus">&Uacute;ltima semana</button>
+                                                <button class="btn btn-focus">Todo el mes</button>
                                             </div>
                                         </div>
                                     </div>
@@ -1127,10 +1127,10 @@
                                             <thead>
                                             <tr>
                                                 <th class="text-center">#</th>
-                                                <th>Name</th>
-                                                <th class="text-center">City</th>
-                                                <th class="text-center">Status</th>
-                                                <th class="text-center">Actions</th>
+                                                <th>Nombre</th>
+                                                <th class="text-center">Ciudad</th>
+                                                <th class="text-center">Estado</th>
+                                                <th class="text-center">Acciones</th>
                                             </tr>
                                             </thead>
                                             <tbody>
@@ -1146,17 +1146,17 @@
                                                             </div>
                                                             <div class="widget-content-left flex2">
                                                                 <div class="widget-heading">John Doe</div>
-                                                                <div class="widget-subheading opacity-7">Web Developer</div>
+                                                                <div class="widget-subheading opacity-7">Desarrollador web</div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </td>
                                                 <td class="text-center">Madrid</td>
                                                 <td class="text-center">
-                                                    <div class="badge badge-warning">Pending</div>
+                                                    <div class="badge badge-warning">Pendiente</div>
                                                 </td>
                                                 <td class="text-center">
-                                                    <button type="button" id="PopoverCustomT-1" class="btn btn-primary btn-sm">Details</button>
+                                                    <button type="button" id="PopoverCustomT-1" class="btn btn-primary btn-sm">Detalles</button>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -1178,10 +1178,10 @@
                                                 </td>
                                                 <td class="text-center">Berlin</td>
                                                 <td class="text-center">
-                                                    <div class="badge badge-success">Completed</div>
+                                                    <div class="badge badge-success">Completado</div>
                                                 </td>
                                                 <td class="text-center">
-                                                    <button type="button" id="PopoverCustomT-2" class="btn btn-primary btn-sm">Details</button>
+                                                    <button type="button" id="PopoverCustomT-2" class="btn btn-primary btn-sm">Detalles</button>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -1203,10 +1203,10 @@
                                                 </td>
                                                 <td class="text-center">London</td>
                                                 <td class="text-center">
-                                                    <div class="badge badge-danger">In Progress</div>
+                                                    <div class="badge badge-danger">En progreso</div>
                                                 </td>
                                                 <td class="text-center">
-                                                    <button type="button" id="PopoverCustomT-3" class="btn btn-primary btn-sm">Details</button>
+                                                    <button type="button" id="PopoverCustomT-3" class="btn btn-primary btn-sm">Detalles</button>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -1220,17 +1220,17 @@
                                                             </div>
                                                             <div class="widget-content-left flex2">
                                                                 <div class="widget-heading">Vinnie Wagstaff</div>
-                                                                <div class="widget-subheading opacity-7">UI Designer</div>
+                                                                <div class="widget-subheading opacity-7">Dise&ntilde;ador de interfaces</div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </td>
                                                 <td class="text-center">Amsterdam</td>
                                                 <td class="text-center">
-                                                    <div class="badge badge-info">On Hold</div>
+                                                    <div class="badge badge-info">En espera</div>
                                                 </td>
                                                 <td class="text-center">
-                                                    <button type="button" id="PopoverCustomT-4" class="btn btn-primary btn-sm">Details</button>
+                                                    <button type="button" id="PopoverCustomT-4" class="btn btn-primary btn-sm">Detalles</button>
                                                 </td>
                                             </tr>
                                             </tbody>
@@ -1238,7 +1238,7 @@
                                     </div>
                                     <div class="d-block text-center card-footer">
                                         <button class="mr-2 btn-icon btn-icon-only btn btn-outline-danger"><i class="pe-7s-trash btn-icon-wrapper"> </i></button>
-                                        <button class="btn-wide btn btn-success">Save</button>
+                                        <button class="btn-wide btn btn-success">Guardar</button>
                                     </div>
                                 </div>
                             </div>
@@ -1259,7 +1259,7 @@
                                                 </div>
                                             </div>
                                             <div class="widget-content-left fsize-1">
-                                                <div class="text-muted opacity-6">Income Target</div>
+                                                <div class="text-muted opacity-6">Objetivo de ingresos</div>
                                             </div>
                                         </div>
                                     </div>
@@ -1280,7 +1280,7 @@
                                                 </div>
                                             </div>
                                             <div class="widget-content-left fsize-1">
-                                                <div class="text-muted opacity-6">Expenses Target</div>
+                                                <div class="text-muted opacity-6">Objetivo de costos</div>
                                             </div>
                                         </div>
                                     </div>
@@ -1301,7 +1301,7 @@
                                                 </div>
                                             </div>
                                             <div class="widget-content-left fsize-1">
-                                                <div class="text-muted opacity-6">Spendings Target</div>
+                                                <div class="text-muted opacity-6">Objetivo de gastos</div>
                                             </div>
                                         </div>
                                     </div>
@@ -1322,7 +1322,7 @@
                                                 </div>
                                             </div>
                                             <div class="widget-content-left fsize-1">
-                                                <div class="text-muted opacity-6">Totals Target</div>
+                                                <div class="text-muted opacity-6">Objetivo total</div>
                                             </div>
                                         </div>
                                     </div>
@@ -1337,12 +1337,12 @@
                                     <ul class="nav">
                                         <li class="nav-item">
                                             <a href="javascript:void(0);" class="nav-link">
-                                                Footer Link 1
+                                                Enlace de pie de p&aacute;gina 1
                                             </a>
                                         </li>
                                         <li class="nav-item">
                                             <a href="javascript:void(0);" class="nav-link">
-                                                Footer Link 2
+                                                Enlace de pie de p&aacute;gina 2
                                             </a>
                                         </li>
                                     </ul>
@@ -1351,7 +1351,7 @@
                                     <ul class="nav">
                                         <li class="nav-item">
                                             <a href="javascript:void(0);" class="nav-link">
-                                                Footer Link 3
+                                                Enlace de pie de p&aacute;gina 3
                                             </a>
                                         </li>
                                         <li class="nav-item">
@@ -1359,7 +1359,7 @@
                                                 <div class="badge badge-success mr-1 ml-0">
                                                     <small>NEW</small>
                                                 </div>
-                                                Footer Link 4
+                                                Enlace de pie de p&aacute;gina 4
                                             </a>
                                         </li>
                                     </ul>

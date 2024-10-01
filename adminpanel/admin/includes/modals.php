@@ -113,7 +113,7 @@
           </div>
 
           <div class="form-group">
-            <label>Descripción del Examen</label>
+            <label>Descripci&oacute;n del Examen</label>
             <textarea name="examDesc" class="form-control" rows="4" placeholder="Agrega una descripción del examen" required=""></textarea>
           </div>
 
@@ -171,13 +171,13 @@
             </select>
           </div>
           <div class="form-group">
-            <label>Seleccionar Año</label>
+            <label>Seleccionar A&ntilde;o</label>
             <select class="form-control" name="year_level" id="year_level">
-              <option value="0">Seleccionar Año</option>
-              <option value="Primer Año">Primer Año</option>
-              <option value="Segundo Año">Segundo Año</option>
-              <option value="Tercer Año">Tercer Año</option>
-              <option value="Cuarto Año">Cuarto Año</option>
+              <option value="0">Seleccionar A&ntilde;o</option>
+              <option value="Primer Año">Primer A&ntilde;o</option>
+              <option value="Segundo Año">Segundo A&ntilde;o</option>
+              <option value="Tercer Año">Tercer A&ntilde;o</option>
+              <option value="Cuarto Año">Cuarto A&ntilde;o</option>
             </select>
           </div>
           <div class="form-group">
@@ -185,7 +185,7 @@
             <input type="email" name="email" id="email" class="form-control" placeholder="Ingresar Email" autocomplete="off" required="">
           </div>
           <div class="form-group">
-            <label>Password</label>
+            <label>Contrase&ntilde;a</label>
             <input type="password" name="password" id="password" class="form-control" placeholder="Ingresar Password" autocomplete="off" required="">
           </div>
         </div>
@@ -242,13 +242,13 @@
             </select>
           </div>
           <div class="form-group">
-            <label>Seleccionar Año</label>
+            <label>Seleccionar A&ntilde;o</label>
             <select class="form-control" name="year_level" id="year_level">
-              <option value="0">Seleccionar Año</option>
-              <option value="Primer Año">Primer Año</option>
-              <option value="Segundo Año">Segundo Año</option>
-              <option value="Tercer Año">Tercer Año</option>
-              <option value="Cuarto Año">Cuarto Año</option>
+              <option value="0">Seleccionar A&ntilde;o</option>
+              <option value="Primer Año">Primer A&ntilde;o</option>
+              <option value="Segundo Año">Segundo A&ntilde;o</option>
+              <option value="Tercer Año">Tercer A&ntilde;o</option>
+              <option value="Cuarto Año">Cuarto A&ntilde;o</option>
             </select>
           </div>
           <div class="form-group">
@@ -256,7 +256,7 @@
             <input type="email" name="email" id="email" class="form-control" placeholder="Ingresar Email" autocomplete="off" required="">
           </div>
           <div class="form-group">
-            <label>Password</label>
+            <label>Contrase&ntilde;a</label>
             <input type="password" name="password" id="password" class="form-control" placeholder="Ingresar Password" autocomplete="off" required="">
           </div>
         </div>
@@ -293,24 +293,24 @@
           </div>
 
           <fieldset>
-            <legend>Ingresa la opción a elegir</legend>
+            <legend>Ingresa la opci&oacute;n a elegir</legend>
             <div class="form-group">
-                <label>Opción A</label>
+                <label>Opci&oacute;n A</label>
                 <input type="" name="choice_A" id="choice_A" class="form-control" placeholder="Ingresar opción A" autocomplete="off">
             </div>
 
             <div class="form-group">
-                <label>Opción B</label>
+                <label>Opci&oacute;n B</label>
                 <input type="" name="choice_B" id="choice_B" class="form-control" placeholder="Ingresar opción B" autocomplete="off">
             </div>
 
             <div class="form-group">
-                <label>Opción C</label>
+                <label>Opci&oacute;n C</label>
                 <input type="" name="choice_C" id="choice_C" class="form-control" placeholder="Ingresar opción C" autocomplete="off">
             </div>
 
             <div class="form-group">
-                <label>Opción D</label>
+                <label>Opci&oacute;n D</label>
                 <input type="" name="choice_D" id="choice_D" class="form-control" placeholder="Ingresar opción D" autocomplete="off">
             </div>
 

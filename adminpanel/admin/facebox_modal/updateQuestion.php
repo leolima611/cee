@@ -20,19 +20,19 @@
 
 
       <div class="form-group">
-        <legend>Opción A</legend>
+        <legend>Opci&oacute;n A</legend>
         <input type="" name="exam_ch1" value="<?php echo $selCourse['exam_ch1']; ?>" class="form-control" required>
       </div>
       <div class="form-group">
-        <legend>Opción B</legend>
+        <legend>Opci&oacute;n B</legend>
         <input type="" name="exam_ch2" value="<?php echo $selCourse['exam_ch2']; ?>" class="form-control" required>
       </div>
       <div class="form-group">
-        <legend>Opción C</legend>
+        <legend>Opci&oacute;n C</legend>
         <input type="" name="exam_ch3" value="<?php echo $selCourse['exam_ch3']; ?>" class="form-control" required>
       </div>
       <div class="form-group">
-        <legend>Opción D</legend>
+        <legend>Opci&oacute;n D</legend>
         <input type="" name="exam_ch4" value="<?php echo $selCourse['exam_ch4']; ?>" class="form-control" required>
       </div>
 
