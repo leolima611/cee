@@ -152,15 +152,15 @@
           	</div>
           <div class="form-group">
             <label>Email</label>
-            <input type="email" name="email" id="email" class="form-control" placeholder="Ingresar Email" autocomplete="off" required="">
+            <input type="email" name="emailA" id="emailA" class="form-control" placeholder="Ingresar Email" autocomplete="off" required="">
           </div>
           <div class="form-group">
             <label>Contrase&ntilde;a</label>
-            <input type="password" name="password" id="password" class="form-control" placeholder="Ingresar Password" autocomplete="off" required="">
+            <input type="password" name="passwordA" id="passwordA" class="form-control" placeholder="Ingresar Password" autocomplete="off" required="">
           </div>
 			 <div class="form-group">
             	<label>Seleccionar Role</label>
-            	<select class="form-control" name="rolel" id="role">
+            	<select class="form-control" name="role" id="role">
               		<option value="0">Seleccionar</option>
               		<option value="1">Administrador</option>
               		<option value="2">Experto</option>

@@ -52,7 +52,7 @@
                                 { ?>
                                     <tr>
                                       <td colspan="2">
-                                        <h3 class="p-3">No Tiene Cursos</h3>
+                                        <h3 class="p-3">No Tiene Administradores</h3>
                                       </td>
                                     </tr>
                                 <?php }

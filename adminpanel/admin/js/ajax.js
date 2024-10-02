@@ -299,18 +299,10 @@ $(document).on("submit","#addAdminFrm" , function(){
           'error'
        )
     }
-    else if(data.res == "nameExist")
+    else if(data.res == "fullnameExist")
     {
       Swal.fire(
           'name Already Exist',
-          data.msg + ' are already exist',
-          'error'
-       )
-    }
-	else if(data.res == "lastnameExist")
-    {
-      Swal.fire(
-          'lastname Already Exist',
           data.msg + ' are already exist',
           'error'
        )
@@ -348,6 +340,28 @@ $(document).on("submit","#addAdminFrm" , function(){
   return false;
 });
 
+
+$(document).on("submit","#updateAdminFrm" , function(){
+	$.post("query/updateAdminExe.php", $(this).serialize() , function(data){
+		if(data.res == "success"){
+			Swal.fire(    
+				'Success'
+				,data.exFullname + ' <br>has been successfully updated!',
+				'success'
+			)
+			refreshDiv();
+		}
+		else if(data.res == "norole")
+		{
+			Swal.fire(
+				'No role',
+				'Please select Role',
+				'error'
+			)
+		}
+  },'json')
+  return false;
+});
 
 
 // Add Examinee
