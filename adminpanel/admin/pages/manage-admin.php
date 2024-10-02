@@ -19,8 +19,8 @@
                             <tr>
                                 <th>Nombre</th>
                                 <th>Email</th>
-                                <th>Password</th>
-                                <th>Role</th>
+                                <th>Contrase&ntilde;a</th>
+                                <th>Rol</th>
                                 <th></th>
                             </tr>
                             </thead>

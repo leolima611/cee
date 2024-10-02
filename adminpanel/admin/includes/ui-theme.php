@@ -41,7 +41,7 @@
                                             <div class="widget-content-left">
                                                 <div class="widget-heading">Barra lateal fija
                                                 </div>
-                                                <div class="widget-subheading">Hcae que la barra lateral fija este siempre visible
+                                                <div class="widget-subheading">Hace que la barra lateral fija este siempre visible
                                                 </div>
                                             </div>
                                         </div>

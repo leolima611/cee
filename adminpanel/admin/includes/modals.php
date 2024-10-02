@@ -90,7 +90,7 @@
           </div>
 
           <div class="form-group">
-            <label>Limite del Tiempo</label>
+            <label>L&iacute;mite del Tiempo</label>
             <select class="form-control" name="timeLimit" required="">
               <option value="0">Seleccionar tiempo</option>
               <option value="10">10 Minutos</option> 
@@ -103,7 +103,7 @@
           </div>
 
           <div class="form-group">
-            <label>Limite de Preguntas</label>
+            <label>L&iacute;mite de Preguntas</label>
             <input type="number" name="examQuestDipLimit" id="" class="form-control" placeholder="Ingresa el limite de preguntas">
           </div>
 
@@ -159,8 +159,13 @@
             <input type="password" name="passwordA" id="passwordA" class="form-control" placeholder="Ingresar Password" autocomplete="off" required="">
           </div>
 			 <div class="form-group">
+<<<<<<< HEAD
             	<label>Seleccionar Role</label>
             	<select class="form-control" name="role" id="role">
+=======
+            	<label>Seleccionar Rol</label>
+            	<select class="form-control" name="rolel" id="role">
+>>>>>>> refs/remotes/origin/master
               		<option value="0">Seleccionar</option>
               		<option value="1">Administrador</option>
               		<option value="2">Experto</option>
