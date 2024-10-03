@@ -152,14 +152,6 @@ $(document).on("submit","#addExamFrm" , function(){
           'error'
        )
     }
-    if(data.res == "noDisplayLimit")
-   {
-      Swal.fire(
-          'No Display Limit',
-          'Please input question display limit',
-          'error'
-       )
-    }
 
      else if(data.res == "exist")
     {

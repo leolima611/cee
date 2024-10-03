@@ -76,50 +76,20 @@ if($selAcc->rowCount() > 0){
                   <div class="col-md-6">
                       <div class="main-card mb-3 card">
                           <div class="card-header">
-                            <i class="header-icon lnr-license icon-gradient bg-plum-plate"> </i>Informaci&oacute;n del Examen
+                            <i class="header-icon lnr-license icon-gradient bg-plum-plate"> </i>Informaci&oacute;n del Curso
                           </div>
                           <div class="card-body">
-                           <form method="post" id="updateExamFrm">
-                               <div class="form-group">
+                           <form method="post" id="updateCourseFrm">
+
+                              <div class="form-group">
                                 <label>Curso</label>
-                                <select class="form-control" name="courseId" required="">
-                                  <option value="<?php echo $selExamRow['cou_id']; ?>"><?php echo $selCourse['courseName']; ?></option>
-                                  <?php 
-                                    $selAllCourse = $conn->query("SELECT * FROM course_tbl ORDER BY cou_id DESC");
-                                    while ($selAllCourseRow = $selAllCourse->fetch(PDO::FETCH_ASSOC)) { ?>
-                                      <option value="<?php echo $selAllCourseRow['cou_id']; ?>"><?php echo $selAllCourseRow['cou_name']; ?></option>
-                                    <?php }
-                                   ?>
-                                </select>
-                              </div>
-
-                              <div class="form-group">
-                                <label>Examen</label>
-                                <input type="hidden" name="examId" value="<?php echo $selExamRow['ex_id']; ?>">
-                                <input type="" name="examTitle" class="form-control" required="" value="<?php echo $selExamRow['ex_title']; ?>">
+                                <input type="hidden" name="course_id" value="<?php echo $selExamRow['cou_id']; ?>">
+                                <input type="" name="newCourseName" class="form-control" required="" value="<?php echo $selExamRow['cou_name']; ?>">
                               </div>  
 
                               <div class="form-group">
-                                <label>Descripci&oacute;n del Examen</label>
-                                <input type="" name="examDesc" class="form-control" required="" value="<?php echo $selExamRow['ex_description']; ?>">
-                              </div>  
-
-                              <div class="form-group">
-                                <label>Tiempo L&iacute;mite</label>
-                                <select class="form-control" name="examLimit" required="">
-                                  <option value="<?php echo $selExamRow['ex_time_limit']; ?>"><?php echo $selExamRow['ex_time_limit']; ?> Minutos</option>
-                                  <option value="10">10 Minutos</option> 
-                                  <option value="20">20 Minutos</option> 
-                                  <option value="30">30 Minutos</option> 
-                                  <option value="40">40 Minutos</option> 
-                                  <option value="50">50 Minutos</option> 
-                                  <option value="60">60 Minutos</option> 
-                                </select>
-                              </div>
-
-                              <div class="form-group">
-                                <label>L&iacute;mite de Preguntas</label>
-                                <input type="number" name="examQuestDipLimit" class="form-control" value="<?php echo $selExamRow['ex_questlimit_display']; ?>"> 
+                                <label>Fecha de creacion:</label>
+								<b><?php echo $selExamRow['cou_created']; ?></b>
                               </div>
 
                               <div class="form-group" align="right">
@@ -155,7 +125,7 @@ if($selAcc->rowCount() > 0){
                                     <table class="align-middle mb-0 table table-borderless table-striped table-hover" id="tableList">
                                         <thead>
                                         <tr>
-                                            <th class="text-left pl-1">Preguntas</th>
+                                            <th class="text-left pl-1">historia del curso</th>
                                             <th class="text-center" width="20%">Opciones</th>
                                         </tr>
                                         </thead>

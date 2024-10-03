@@ -117,11 +117,6 @@ if($selAcc->rowCount() > 0){
                                 </select>
                               </div>
 
-                              <div class="form-group">
-                                <label>L&iacute;mite de Preguntas</label>
-                                <input type="number" name="examQuestDipLimit" class="form-control" value="<?php echo $selExamRow['ex_questlimit_display']; ?>"> 
-                              </div>
-
                               <div class="form-group" align="right">
                                 <button type="submit" class="btn btn-primary btn-lg">Actualizar</button>
                               </div> 

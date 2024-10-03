@@ -20,7 +20,6 @@
                                 <th class="text-left ">Curso</th>
                                 <th class="text-left ">Descripci&oacute;n</th>
                                 <th class="text-left ">Tiempo</th>  
-                                <th class="text-left ">Preguntas</th>  
                                 <th class="text-center" width="20%">Opciones</th>
                             </tr>
                             </thead>
@@ -43,7 +42,6 @@
                                             </td>
                                             <td><?php echo $selExamRow['ex_description']; ?></td>
                                             <td><?php echo $selExamRow['ex_time_limit']; ?></td>
-                                            <td><?php echo $selExamRow['ex_questlimit_display']; ?></td>
                                             <td class="text-center">
                                              <a href="manage-exam.php?id=<?php echo $selExamRow['ex_id']; ?>" type="button" class="btn btn-primary btn-sm">Administrar</a>
                                              <button type="button" id="deleteExam" data-id='<?php echo $selExamRow['ex_id']; ?>'  class="btn btn-danger btn-sm">Eliminar</button>

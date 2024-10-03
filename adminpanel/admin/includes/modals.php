@@ -103,11 +103,6 @@
           </div>
 
           <div class="form-group">
-            <label>L&iacute;mite de Preguntas</label>
-            <input type="number" name="examQuestDipLimit" id="" class="form-control" placeholder="Ingresa el limite de preguntas">
-          </div>
-
-          <div class="form-group">
             <label>Nombre del Examen</label>
             <input type="" name="examTitle" class="form-control" placeholder="Ingresa el Nombre del Examen" required="">
           </div>
