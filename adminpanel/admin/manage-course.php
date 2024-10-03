@@ -48,11 +48,11 @@ if($selAcc->rowCount() > 0){
 <?php 
    $exId = $_GET['id'];
 
-   $selExam = $conn->query("SELECT * FROM exam_tbl WHERE ex_id='$exId' ");
+   $selExam = $conn->query("SELECT * FROM course_tbl WHERE cou_id='$exId' ");
    $selExamRow = $selExam->fetch(PDO::FETCH_ASSOC);
 
-   $courseId = $selExamRow['cou_id'];
-   $selCourse = $conn->query("SELECT cou_name as courseName FROM course_tbl WHERE cou_id='$courseId' ")->fetch(PDO::FETCH_ASSOC);
+   /*$courseId = $selExamRow['cou_id'];
+   $selCourse = $conn->query("SELECT cou_name as courseName FROM course_tbl WHERE cou_id='$courseId' ")->fetch(PDO::FETCH_ASSOC);*/
  ?>
 
 
@@ -61,9 +61,9 @@ if($selAcc->rowCount() > 0){
             <div class="app-page-title">
                 <div class="page-title-wrapper">
                      <div class="page-title-heading">
-                        <div> MANEJO DE EXMANES
+                        <div> MANEJO DE CURSO
                             <div class="page-title-subheading">
-                              Agregar Preguntas  al Examen <?php echo $selExamRow['ex_title']; ?>
+                              Administra el curso <?php echo $selExamRow['cou_name']; ?>
                             </div>
                         </div>
                     </div>
