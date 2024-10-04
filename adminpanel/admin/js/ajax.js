@@ -152,7 +152,14 @@ $(document).on("submit","#addExamFrm" , function(){
           'error'
        )
     }
-
+	  else if(data.res == "noTipe")
+    {
+      Swal.fire(
+        'No Tipe exam',
+          'Please select tipe exam',
+          'error'
+      )
+    }
      else if(data.res == "exist")
     {
       Swal.fire(

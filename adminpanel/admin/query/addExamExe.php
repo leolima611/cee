@@ -13,6 +13,10 @@
  {
  	$res = array("res" => "noSelectedTime");
  }
+ else if($examTipe == "0")
+ {
+ 	$res = array("res" => "noTipe");
+ }
  else if($selCourse->rowCount() > 0)
  {
 	$res = array("res" => "exist", "examTitle" => $examTitle);
@@ -20,7 +24,7 @@
  else
  {
     
-	$insExam = $conn->query("INSERT INTO exam_tbl(cou_id,ex_title,ex_time_limit,ex_description) VALUES('$courseSelected','$examTitle','$timeLimit','$examDesc') ");
+	$insExam = $conn->query("INSERT INTO exam_tbl(cou_id,ex_title,ex_time_limit,ex_description,id_tipe)VALUES('$courseSelected','$examTitle','$timeLimit','$examDesc','$examTipe') ");
 	if($insExam)
 	{
 		$res = array("res" => "success", "examTitle" => $examTitle);

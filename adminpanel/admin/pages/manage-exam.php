@@ -20,6 +20,7 @@
                                 <th class="text-left ">Curso</th>
                                 <th class="text-left ">Descripci&oacute;n</th>
                                 <th class="text-left ">Tiempo</th>  
+								<th class="text-left ">Tipo</th>  
                                 <th class="text-center" width="20%">Opciones</th>
                             </tr>
                             </thead>
@@ -42,6 +43,13 @@
                                             </td>
                                             <td><?php echo $selExamRow['ex_description']; ?></td>
                                             <td><?php echo $selExamRow['ex_time_limit']; ?></td>
+											<td><?php 
+                                                    $tipeId =  $selExamRow['id_tipe']; 
+                                                    $selCourse = $conn->query("SELECT * FROM exam_tipe WHERE id_tipe='$tipeId' ");
+                                                    while ($selCourseRow = $selCourse->fetch(PDO::FETCH_ASSOC)) {
+                                                        echo $selCourseRow['tipo'];
+                                                    }
+                                                ?></td>
                                             <td class="text-center">
                                              <a href="manage-exam.php?id=<?php echo $selExamRow['ex_id']; ?>" type="button" class="btn btn-primary btn-sm">Administrar</a>
                                              <button type="button" id="deleteExam" data-id='<?php echo $selExamRow['ex_id']; ?>'  class="btn btn-danger btn-sm">Eliminar</button>

@@ -117,6 +117,27 @@ if($selAcc->rowCount() > 0){
                                 </select>
                               </div>
 
+							  <div class="form-group">
+                                <label>Tipo de Examen</label>
+                                <select class="form-control" name="tipeExam" required="">
+									<?php 
+									$tipeId =  $selExamRow['id_tipe']; 
+                                    $selCourse = $conn->query("SELECT * FROM exam_tipe WHERE id_tipe='$tipeId' ");
+                                    while ($selCourseRow = $selCourse->fetch(PDO::FETCH_ASSOC)) {?>
+                                    	<option value="<?php echo $selCourseRow['id_tipe']; ?>"><?php echo $selCourseRow['tipo']; ?></option>
+									<?php
+									}
+                                    ?>
+                                  <?php 
+                                    $selAllCourse = $conn->query("SELECT * FROM exam_tipe ORDER BY id_tipe DESC");
+                                    while ($selAllCourseRow = $selAllCourse->fetch(PDO::FETCH_ASSOC)) { ?>
+                                      <option value="<?php echo $selAllCourseRow['id_tipe']; ?>"><?php echo $selAllCourseRow['tipo']; ?></option>
+                                    <?php 
+									}
+                                   ?>
+								</select>
+                              </div>
+								  
                               <div class="form-group" align="right">
                                 <button type="submit" class="btn btn-primary btn-lg">Actualizar</button>
                               </div> 

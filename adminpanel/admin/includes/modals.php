@@ -101,6 +101,15 @@
               <option value="60">60 Minutos</option> 
             </select>
           </div>
+			<div class="form-group">
+            <label>Tipo de Examen</label>
+            <select class="form-control" name="examTipe" required="">
+              <option value="0">Seleccionar tipo</option>
+              <option value="1">Diagnostico</option> 
+              <option value="2">De Actividad</option> 
+              <option value="3">Final</option>  
+            </select>
+          </div>
 
           <div class="form-group">
             <label>Nombre del Examen</label>
