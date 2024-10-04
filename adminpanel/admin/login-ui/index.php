@@ -33,9 +33,9 @@
 						<span class="focus-input100"></span>
 					</div>
 
-					<div class="wrap-input100 validate-input m-b-18" data-validate = "Password Requerido">
+					<div class="wrap-input100 validate-input m-b-18" data-validate = "Contrase&ntilde;a Requerida">
 						<span class="label-input100">Contrase&ntilde;a</span>
-						<input class="input100" type="password" name="pass" placeholder="Ingresar Password">
+						<input class="input100" type="password" name="pass" placeholder="Ingresar Contrase&ntilde;a">
 						<span class="focus-input100"></span>
 					</div>
 

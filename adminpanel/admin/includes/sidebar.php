@@ -31,7 +31,7 @@
                     </div>    <div class="scrollbar-sidebar">
                         <div class="app-sidebar__inner">
                             <ul class="vertical-nav-menu">
-                                <li class="app-sidebar__heading"><a href="home.php">PANEL</a></li>
+                                <li class="app-sidebar__heading"><a href="home.php">DASHBOARD</a></li>
 								
 								<?php
 								if($datosAd['role']==2){

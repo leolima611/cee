@@ -4,8 +4,8 @@ $(document).on("submit","#adminLoginFrm", function(){
       if(data.res == "invalid")
       {
         Swal.fire(
-          'Invalid',
-          'Please input valid username / password',
+          'Invalido',
+          'Coloque un usuario o contraseña valida porfavor',
           'error'
         )
       }
@@ -27,16 +27,16 @@ $(document).on("submit","#addCourseFrm" , function(){
   	if(data.res == "exist")
   	{
   		Swal.fire(
-  			'Already Exist',
-  			data.course_name.toUpperCase() + ' Already Exist',
+  			'Ya existe',
+  			data.course_name.toUpperCase() + '<br> Se sugiere que revise los cursos nuevamente',
   			'error'
   		)
   	}
   	else if(data.res == "success")
   	{
   		Swal.fire(
-  			'Success',
-  			data.course_name.toUpperCase() + ' Successfully Added',
+  			'Exitoso',
+  			data.course_name.toUpperCase() + ' Agregado correctamente',
   			'success'
   		)
           // $('#course_name').val("");
@@ -55,8 +55,8 @@ $(document).on("submit","#updateCourseFrm" , function(){
      if(data.res == "success")
      {
         Swal.fire(
-            'Success',
-            'Selected course has been successfully updated!',
+            'Exitoso',
+            'El curso seleccionado ha sido actualizado',
             'success'
           )
           refreshDiv();
@@ -80,8 +80,8 @@ $(document).on("click", "#deleteCourse", function(e){
         if(data.res == "success")
         {
           Swal.fire(
-            'Success',
-            'Selected Course successfully deleted',
+            'Exitoso',
+            'El curso seleccionado ha sido eliminado',
             'success'
           )
           refreshDiv();
@@ -113,8 +113,8 @@ $(document).on("click", "#deleteExam", function(e){
         if(data.res == "success")
         {
           Swal.fire(
-            'Success',
-            'Selected Course successfully deleted',
+            'Exitoso',
+            'El Examen seleccionado ha sido eliminado',
             'success'
           )
           refreshDiv();
@@ -139,16 +139,16 @@ $(document).on("submit","#addExamFrm" , function(){
     if(data.res == "noSelectedCourse")
    {
       Swal.fire(
-          'No Course',
-          'Please select course',
+          'No seleccionó un curso',
+          'Seleccione un curso porfavor',
           'error'
        )
     }
     if(data.res == "noSelectedTime")
    {
       Swal.fire(
-          'No Time Limit',
-          'Please select time limit',
+          'No seleccionó un limite de tiempo',
+          'Seleccione un limite de tiempo porfavor',
           'error'
        )
     }
@@ -163,16 +163,16 @@ $(document).on("submit","#addExamFrm" , function(){
      else if(data.res == "exist")
     {
       Swal.fire(
-        'Already Exist',
-        data.examTitle.toUpperCase() + '<br>Already Exist',
+        'Ya existe',
+        data.examTitle.toUpperCase() + '<br> Se sugiere que cambie el nombre',
         'error'
       )
     }
     else if(data.res == "success")
     {
       Swal.fire(
-        'Success',
-        data.examTitle.toUpperCase() + '<br>Successfully Added',
+        'Agregado',
+        data.examTitle.toUpperCase() + '<br>Se añadio correctamente',
         'success'
       )
           $('#addExamFrm')[0].reset();
@@ -191,8 +191,8 @@ $(document).on("submit","#updateExamFrm" , function(){
     if(data.res == "success")
     {
       Swal.fire(
-          'Update Successfully',
-          data.msg + ' <br>are now successfully updated',
+          'Actualizado',
+          data.msg + ' <br>Se ha actualizado correctamente',
           'success'
        )
           refreshDiv();
@@ -200,8 +200,8 @@ $(document).on("submit","#updateExamFrm" , function(){
     else if(data.res == "failed")
     {
       Swal.fire(
-        "Something's went wrong!",
-         'Somethings went wrong',
+        "Algo salio mal!",
+         'Algo salio mal, verifique los datos porfavor',
         'error'
       )
     }
@@ -216,8 +216,8 @@ $(document).on("submit","#updateQuestionFrm" , function(){
      if(data.res == "success")
      {
         Swal.fire(
-            'Success',
-            'Selected question has been successfully updated!',
+            'Exitoso',
+            'La pregunta seleccionada se ha actualizado correctamente',
             'success'
           )
           refreshDiv();
@@ -266,16 +266,16 @@ $(document).on("submit","#addQuestionFrm" , function(){
     if(data.res == "exist")
     {
       Swal.fire(
-          'Already Exist',
-          data.msg + ' question <br>already exist in this exam',
+          'Ya existe',
+          data.msg + '<br>Esta pregunta se realizó previamente en este examen',
           'error'
        )
     }
     else if(data.res == "success")
     {
       Swal.fire(
-        'Success',
-         data.msg + ' question <br>Successfully added',
+        'Exitoso',
+         data.msg + '<br>La pregunta se añadio correctamente',
         'success'
       )
         $('#addQuestionFrm')[0].reset();
@@ -293,32 +293,32 @@ $(document).on("submit","#addAdminFrm" , function(){
 	if(data.res == "noRole")
     {
       Swal.fire(
-          'No role',
-          'Please select Role',
+          'No hay un rol',
+          'Porfavor seleccione un rol',
           'error'
        )
     }
     else if(data.res == "fullnameExist")
     {
       Swal.fire(
-          'name Already Exist',
-          data.msg + ' are already exist',
+          'Ese nombre ya existe',
+          data.msg + ' ya se encuentra registrado',
           'error'
        )
     }
     else if(data.res == "emailExist")
     {
       Swal.fire(
-          'Email Already Exist',
-          data.msg + ' are already exist',
+          'Ese Email ya esixte',
+          data.msg + ' Ese Email ya se encuentra registrado',
           'error'
        )
     }
     else if(data.res == "success")
     {
       Swal.fire(
-          'Success',
-          data.msg + ' are now successfully added',
+          'Exitoso',
+          data.msg + 'Se ha añadido correctamente',
           'success'
        )
         refreshDiv();
@@ -327,8 +327,8 @@ $(document).on("submit","#addAdminFrm" , function(){
     else if(data.res == "failed")
     {
       Swal.fire(
-          "Something's Went Wrong",
-          '',
+          "Algo salio mal",
+          ' ',
           'error'
        )
     }
@@ -344,8 +344,8 @@ $(document).on("submit","#updateAdminFrm" , function(){
 	$.post("query/updateAdminExe.php", $(this).serialize() , function(data){
 		if(data.res == "success"){
 			Swal.fire(    
-				'Success'
-				,data.exFullname + ' <br>has been successfully updated!',
+				'Exitoso'
+				,data.exFullname + ' <br>Ha sido actualizado correctamente!',
 				'success'
 			)
 			refreshDiv();
@@ -353,8 +353,8 @@ $(document).on("submit","#updateAdminFrm" , function(){
 		else if(data.res == "norole")
 		{
 			Swal.fire(
-				'No role',
-				'Please select Role',
+				'No hay un rol',
+				'Seleccione un rol porfavor',
 				'error'
 			)
 		}
@@ -369,48 +369,48 @@ $(document).on("submit","#addExamineeFrm" , function(){
     if(data.res == "noGender")
     {
       Swal.fire(
-          'No Gender',
-          'Please select gender',
+          'No se selecciono el genero',
+          'Seleccione un genero porfavor',
           'error'
        )
     }
     else if(data.res == "noCourse")
     {
       Swal.fire(
-          'No Course',
-          'Please select course',
+          'No se selecciono un curso',
+          'Seleccione un curso porfavor',
           'error'
        )
     }
     else if(data.res == "noLevel")
     {
       Swal.fire(
-          'No Year Level',
-          'Please select year level',
+          'No se ha seleccionado el año',
+          'Seleccione un año porfavor',
           'error'
        )
     }
     else if(data.res == "fullnameExist")
     {
       Swal.fire(
-          'Fullname Already Exist',
-          data.msg + ' are already exist',
+          'El nombre completo ya existente',
+          data.msg + ' Ya se encuentra registrado',
           'error'
        )
     }
     else if(data.res == "emailExist")
     {
       Swal.fire(
-          'Email Already Exist',
-          data.msg + ' are already exist',
+          'Ese Email ya existe',
+          data.msg + ' Ya se encuentra registrado',
           'error'
        )
     }
     else if(data.res == "success")
     {
       Swal.fire(
-          'Success',
-          data.msg + ' are now successfully added',
+          'Exitoso',
+          data.msg + ' Se ha añadido correctamente',
           'success'
        )
         refreshDiv();
@@ -419,7 +419,7 @@ $(document).on("submit","#addExamineeFrm" , function(){
     else if(data.res == "failed")
     {
       Swal.fire(
-          "Something's Went Wrong",
+          "Algo salio mal",
           '',
           'error'
        )
@@ -439,8 +439,8 @@ $(document).on("submit","#updateExamineeFrm" , function(){
      if(data.res == "success")
      {
         Swal.fire(
-            'Success',
-            data.exFullname + ' <br>has been successfully updated!',
+            'Exitoso',
+            data.exFullname + ' <br>Ha sido actualizado correctamente',
             'success'
           )
           refreshDiv();
