@@ -227,6 +227,23 @@ $(document).on("submit","#updateQuestionFrm" , function(){
 });
 
 
+// Update Topic
+$(document).on("submit","#updateTopicFrm" , function(){
+  $.post("query/updateTopicExe.php", $(this).serialize() , function(data){
+     if(data.res == "success")
+     {
+        Swal.fire(
+            'Exitoso',
+            'El tema seleccionada se ha actualizado correctamente',
+            'success'
+          )
+          refreshDiv();
+     }
+  },'json')
+  return false;
+});
+
+
 // Delete Question
 $(document).on("click", "#deleteQuestion", function(e){
     e.preventDefault();
@@ -445,6 +462,57 @@ $(document).on("submit","#updateExamineeFrm" , function(){
           )
           refreshDiv();
      }
+  },'json')
+  return false;
+});
+
+
+// Add Topic 
+$(document).on("submit","#addTopicFrm" , function(){
+  $.post("query/addTopicExe.php", $(this).serialize() , function(data){
+    if(data.res == "nivelexist")
+    {
+      Swal.fire(
+          'Ya existe',
+          data.msg + '<br>este nivel de tema ya existe',
+          'error'
+       )
+    }
+    else if(data.res == "nivelno")
+    {
+      Swal.fire(
+        'error de nivel',
+         data.msg + '<br>los niveles de temas deven ser sucesivos',
+        'error'
+      )
+    }
+	else if(data.res == "nivelce")
+    {
+      Swal.fire(
+        'error de nivel',
+         data.msg + '<br>el nivel no puede ser 0',
+        'error'
+      )
+    }
+	 else if(data.res == "topicexist")
+    {
+      Swal.fire(
+          'error de nombre',
+         data.msg + '<br>El tema ya existe en este curso',
+        'error'
+       )
+    }
+	  else if(data.res == "success")
+    {
+      Swal.fire(
+        'Exitoso',
+         data.msg + '<br>El tema fue agregado exitosamente',
+        'success'
+      )
+        $('#addQuestionFrm')[0].reset();
+        refreshDiv();
+    }
+   
   },'json')
   return false;
 });
