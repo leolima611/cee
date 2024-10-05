@@ -28,7 +28,7 @@
 
 
 <!-- Modal For Update Course -->
-<div class="modal fade myModal" id="updateCourse-<?php echo $selCourseRow['cou_id']; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade myModal" id="updateCourse-<?php echo $selCourseRow['cou_id']; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" >
 	<div class="modal-dialog " role="document">
 		<form class="refreshFrm" id="addCourseFrm" method="post" >
 			<div class="modal-content myModal-content" >
@@ -383,6 +383,47 @@
                 				<label>SUBIR ARCHIVO PDF</label>
                 				<input type="file" name="pdf_file" id="pdf_file" class="form-control" accept="application/pdf" required>
 							</div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">CERRAR</button>
+                        <button type="submit" class="btn btn-primary">AGREGAR AHORA</button>
+                    </div>
+                </form>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<!-- Modal For Add Link -->
+<div class="modal fade" id="modalForAddLink" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <form class="refreshFrm" id="addLinkFrm" method="post">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">AGREGAR UN LINK<br><?php echo $selExamRow['cou_name']; ?></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form class="refreshFrm" method="post" id="addLinkFrm">
+                    <div class="modal-body">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label>NOMBRA EL URL</label>
+                                <input type="hidden" name="couId" value="<?php echo $exId; ?>">
+								<input type="hidden" name="tipeAc" value="3">
+                                <input type="" name="name" id="course_name" class="form-control" placeholder="Ingresar nombre" autocomplete="off" required>
+                            </div>
+							<div class="form-group">
+                                <label>NIVEL DE ACTIVIDAD</label>
+                                <input type="number" name="num" id="num" class="form-control" placeholder="Ingresar nivel de tema" autocomplete="off" required>
+                            </div>
+							<div class="form-group">
+                                <label>LINK</label>
+                                <input type="url" name="link" id="num" class="form-control" placeholder="Ingresar Link" autocomplete="off" required>
+                            </div>
                         </div>
                     </div>
                     <div class="modal-footer">

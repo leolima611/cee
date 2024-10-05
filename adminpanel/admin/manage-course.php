@@ -117,6 +117,9 @@ if($selAcc->rowCount() > 0){
 							 <div class="btn-actions-pane-left">
                                 <button class="btn btn-sm btn-primary " data-toggle="modal" data-target="#modalForAddpdf">Agregar PDF</button>
                               </div>
+							 <div class="btn-actions-pane-left">
+                                <button class="btn btn-sm btn-primary " data-toggle="modal" data-target="#modalForAddLink">Agregar Link</button>
+                              </div>
                           </div>
                           <div class="card-body" >
                             <div class="scroll-area-sm" style="min-height: 400px;">
@@ -143,7 +146,7 @@ if($selAcc->rowCount() > 0){
                                                while ($selQuestionRow = $selQuest->fetch(PDO::FETCH_ASSOC)) { 
 												   switch($selQuestionRow['acti_tipes']){
 													   case 1:
-														   $hrefac = "facebox_modal/updateTopic.php?id=";
+														   $hrefac = "facebox_modal/updateTopic.php?ac=1&id=";
 														   ?>
 													<tr>
                                                         <td >
@@ -153,13 +156,27 @@ if($selAcc->rowCount() > 0){
 															<?php
 														   break;
 													   case 2:
+														   $hrefac = "facebox_modal/updateTopic.php?ac=2&id=";
 														   ?>
 													<tr>
                                                         <td >
 															
-                                                            <b><?php echo $i++ ; ?> .- <?php echo $selQuestionRow['name']; ?></b>
+                                                            <b><?php echo $i++ ; ?> .- <?php echo $selQuestionRow['name']; ?> PDF</b>
 															<br>
-                                                                <span class="pl-4">B - <?php echo $selQuestionRow['exam_ch2']; ?></span>
+                                                                <span class="pl-4"> <?php echo $selQuestionRow['valor']; ?></span>
+															<br>
+                                                        </td>
+															<?php
+														   break;
+													   case 3:
+														   $hrefac = "facebox_modal/updateTopic.php?ac=3&id=";
+														   ?>
+													<tr>
+                                                        <td >
+															
+                                                            <b><?php echo $i++ ; ?> .- <?php echo $selQuestionRow['name']; ?> LINK</b>
+															<br>
+                                                                <span class="pl-4"> <?php echo $selQuestionRow['valor']; ?></span>
 															<br>
                                                         </td>
 															<?php

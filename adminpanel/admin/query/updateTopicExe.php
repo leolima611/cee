@@ -1,9 +1,19 @@
 <?php
- include("../../../conn.php");
- extract($_POST);
+include("../../../conn.php");
+extract($_POST);
 
 
-$updCourse = $conn->query("UPDATE topic_cou SET `name` = '$name', `activity_num` = '$num'  WHERE idtopic_cou = $topicid;");
+if($tipeAc == 1){
+	$updCourse = $conn->query("UPDATE topic_cou SET `name` = '$name', `activity_num` = '$num'  WHERE idtopic_cou = $topicid;");
+}
+elseif($tipeAc == 2){
+	$updCourse = $conn->query("UPDATE topic_cou SET `name` = '$name', `activity_num` = '$num'  WHERE idtopic_cou = $topicid;");
+}
+elseif($tipeAc == 3){
+	$updCourse = $conn->query("UPDATE topic_cou SET `name` = '$name', `activity_num` = '$num', `valor` = '$link'  WHERE idtopic_cou = $topicid;");
+}
+
+
 if($updCourse)
 {
 	   $res = array("res" => "success");
