@@ -277,6 +277,39 @@ $(document).on("click", "#deleteQuestion", function(e){
   });
 
 
+// Delete Topic
+$(document).on("click", "#deleteTopic", function(e){
+    e.preventDefault();
+    var id = $(this).data("id");
+     $.ajax({
+      type : "post",
+      url : "query/deleteTopicExe.php",
+      dataType : "json",  
+      data : {id:id},
+      cache : false,
+      success : function(data){
+        if(data.res == "success")
+        {
+          Swal.fire(
+            'Deleted Success',
+            'Selected Topic successfully deleted',
+            'success'
+          )
+          refreshDiv();
+        }
+      },
+      error : function(xhr, ErrorStatus, error){
+        console.log(status.error);
+      }
+
+    });
+    
+   
+
+    return false;
+  });
+
+
 // Add Question 
 $(document).on("submit","#addQuestionFrm" , function(){
   $.post("query/addQuestionExe.php", $(this).serialize() , function(data){
@@ -357,6 +390,7 @@ $(document).on("submit","#addAdminFrm" , function(){
 });
 
 
+//update admin
 $(document).on("submit","#updateAdminFrm" , function(){
 	$.post("query/updateAdminExe.php", $(this).serialize() , function(data){
 		if(data.res == "success"){
@@ -516,6 +550,59 @@ $(document).on("submit","#addTopicFrm" , function(){
   },'json')
   return false;
 });
+
+
+// Add Topic 
+$(document).on("submit", "#addPDFFrm", function (e) {
+    e.preventDefault();  // Evita el envío por defecto del formulario
+    var formData = new FormData(this);
+	alert("Hola, mundo!");
+    $.ajax({
+        url: "query/addTopicExe.php",
+        type: "POST",
+        data: formData,
+        contentType: false,
+        processData: false,
+        dataType: "json",
+        success: function (data) {
+            if (data.res == "nivelexist") {
+                Swal.fire(
+                    'Ya existe',
+                    data.msg + '<br>este nivel de tema ya existe',
+                    'error'
+                )
+            } else if (data.res == "nivelno") {
+                Swal.fire(
+                    'error de nivel',
+                    data.msg + '<br>los niveles de temas deven ser sucesivos',
+                    'error'
+                )
+            } else if (data.res == "nivelce") {
+                Swal.fire(
+                    'error de nivel',
+                    data.msg + '<br>el nivel no puede ser 0',
+                    'error'
+                )
+            }  else if (data.res == "error") {
+                Swal.fire(
+                    'error',
+                    data.msg + '',
+                    'error'
+                )
+            } else if (data.res == "success") {
+                Swal.fire(
+                    'Exitoso',
+                    data.msg + '<br>El tema fue agregado exitosamente',
+                    'success'
+                )
+                $('#addPDFFrm')[0].reset();
+                refreshDiv();
+            }
+        }
+    });
+    return false;
+});
+
 
 
 function refreshDiv()

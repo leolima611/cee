@@ -102,15 +102,20 @@ if($selAcc->rowCount() > 0){
                   </div>
                   <div class="col-md-6">
                     <?php 
-                        $selQuest = $conn->query("SELECT * FROM topic_cou WHERE cou_id='$exId' ORDER BY activity_num desc");
+                        $selQuest = $conn->query("SELECT * FROM topic_cou WHERE cou_id='$exId' ORDER BY activity_num asc");
                     ?>
                      <div class="main-card mb-3 card">
                           <div class="card-header"><i class="header-icon lnr-license icon-gradient bg-plum-plate"> </i>Temas y Actividades
                             <span class="badge badge-pill badge-primary ml-2">
                               <?php echo $selQuest->rowCount(); ?>
                             </span>
-                             <div class="btn-actions-pane-right">
+                          </div>
+						 <div class="card-header">
+                             <div class="btn-actions-pane-left">
                                 <button class="btn btn-sm btn-primary " data-toggle="modal" data-target="#modalForAddTopic">Agregar Tema</button>
+                              </div>
+							 <div class="btn-actions-pane-left">
+                                <button class="btn btn-sm btn-primary " data-toggle="modal" data-target="#modalForAddpdf">Agregar PDF</button>
                               </div>
                           </div>
                           <div class="card-body" >
