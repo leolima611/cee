@@ -20,8 +20,6 @@ $(document).on("submit","#examineeLoginFrm", function(){
 });
 
 
-
-
 // Submit Answer
 $(document).on('submit', '#submitAnswerFrm', function(){
   var examAction = $('#examAction').val();

@@ -113,13 +113,28 @@ if($selAcc->rowCount() > 0){
 						 <div class="card-header">
                              <div class="btn-actions-pane-left">
                                 <button class="btn btn-sm btn-primary " data-toggle="modal" data-target="#modalForAddTopic">Agregar Tema</button>
+								 <br>
                               </div>
+							 <br>
 							 <div class="btn-actions-pane-left">
                                 <button class="btn btn-sm btn-primary " data-toggle="modal" data-target="#modalForAddpdf">Agregar PDF</button>
                               </div>
+							 <br>
 							 <div class="btn-actions-pane-left">
                                 <button class="btn btn-sm btn-primary " data-toggle="modal" data-target="#modalForAddLink">Agregar Link</button>
                               </div>
+							 <br>
+							 <div class="btn-actions-pane-left">
+                                <button class="btn btn-sm btn-primary " data-toggle="modal" data-target="#modalForAddYoutube">Agregar Link YouTube</button>
+                             </div>
+							 <br>
+                          </div>
+						 <div class="card-header">
+                             <div class="btn-actions-pane-left">
+                                <button class="btn btn-sm btn-primary " data-toggle="modal" data-target="#modalForAddEmbed">Agregar Embed</button>
+								 <br>
+                              </div>
+							 <br>
                           </div>
                           <div class="card-body" >
                             <div class="scroll-area-sm" style="min-height: 400px;">
@@ -177,6 +192,35 @@ if($selAcc->rowCount() > 0){
                                                             <b><?php echo $i++ ; ?> .- <?php echo $selQuestionRow['name']; ?> LINK</b>
 															<br>
                                                                 <span class="pl-4"> <?php echo $selQuestionRow['valor']; ?></span>
+															<br>
+                                                        </td>
+															<?php
+														   break;
+														case 4:
+														   $hrefac = "facebox_modal/updateTopic.php?ac=4&id=";
+														   ?>
+													<tr>
+                                                        <td >
+															
+                                                            <b><?php echo $i++ ; ?> .- <?php echo $selQuestionRow['name']; ?> YOUTUBE LINK</b>
+															<br>
+                                                                <span class="pl-4"> <?php echo $selQuestionRow['valor']; ?></span>
+															<br>
+                                                        </td>
+															<?php
+														   break;
+														case 7:
+														   $hrefac = "facebox_modal/updateTopic.php?ac=7&id=";
+														   ?>
+													<tr>
+                                                        <td >
+															
+                                                            <b><?php echo $i++ ; ?> .- <?php echo $selQuestionRow['name']; ?> YOUTUBE LINK</b>
+															<br>
+                                                                <span class="pl-4"> <?php echo $selQuestionRow['valor']; ?></span>
+															<br>
+															<br>
+                                                                <span class="pl-4">Config: <?php echo $selQuestionRow['config']; ?></span>
 															<br>
                                                         </td>
 															<?php

@@ -28,12 +28,54 @@
                 </span>
             </button>
         </span>
-    </div>    <div class="scrollbar-sidebar">
+    </div>    
+	<div class="scrollbar-sidebar">
         <div class="app-sidebar__inner">
             <ul class="vertical-nav-menu">
+				
+				<li class="app-sidebar__heading"><?=$selCou['cou_name']?></li>
+				
+                <li class="app-sidebar__heading">Actividades disponibles</li>
+				<li>
+                <a href="#">
+                     <i class="metismenu-icon pe-7s-display2"></i>
+                     Todas las actividades
+                    <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                </a>
+                <ul >
+                    <?php 
+                        
+                        if($selTopic->rowCount() > 0)
+                        {
+                            while ($selTopicRow = $selTopic->fetch(PDO::FETCH_ASSOC)) { ?>
+                                 <li>
+                                 <a href="#" id="startQuiz" data-id="<?php echo $selTopicRow['idtopic_cou']; ?>"  >
+                                    <?php 
+                                        $lenthOfTxt = strlen($selTopicRow['name']);
+                                        if($lenthOfTxt >= 23)
+                                        { ?>
+                                            <?php echo substr($selTopicRow['name'], 0, 20);?>.....
+                                        <?php }
+                                        else
+                                        {
+                                            echo $selTopicRow['name'];
+                                        }
+                                     ?>
+                                 </a>
+                                 </li>
+                            <?php }
+                        }
+                        else
+                        { ?>
+                            <a href="#">
+                                <i class="metismenu-icon"></i>No hay examenes disponiles
+                            </a>
+                        <?php }
+                     ?>
 
-         
-                <li class="app-sidebar__heading">EXAMENES DISPONIBLES</li>
+
+                </ul>
+                </li>
                 <li>
                 <a href="#">
                      <i class="metismenu-icon pe-7s-display2"></i>

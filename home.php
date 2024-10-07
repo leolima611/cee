@@ -3,7 +3,7 @@ session_start();
 
 if(!isset($_SESSION['examineeSession']['examineenakalogin']) == true) header("location:index.php");
 
-$expireAfter = 5 * 60; //5 minutos de inactividad
+$expireAfter = 10 * 60; //5 minutos de inactividad
 // Verificar si la variable de tiempo de la última actividad está configurada
 if (isset($_SESSION['last_activity'])) {
     // Calcular el tiempo de inactividad

@@ -656,6 +656,57 @@ $(document).on("submit","#addLinkFrm" , function(){
 });
 
 
+// Add Link 
+$(document).on("submit","#addEmbedFrm" , function(){
+  $.post("query/addTopicExe.php", $(this).serialize() , function(data){
+    if(data.res == "nivelexist")
+    {
+      Swal.fire(
+          'Ya existe',
+          data.msg + '<br>este nivel de tema ya existe',
+          'error'
+       )
+    }
+    else if(data.res == "nivelno")
+    {
+      Swal.fire(
+        'error de nivel',
+         data.msg + '<br>los niveles de temas deven ser sucesivos',
+        'error'
+      )
+    }
+	else if(data.res == "nivelce")
+    {
+      Swal.fire(
+        'error de nivel',
+         data.msg + '<br>el nivel no puede ser 0',
+        'error'
+      )
+    }
+	 else if(data.res == "error")
+    {
+      Swal.fire(
+          'error',
+         data.msg + '',
+        'error'
+       )
+    }
+	  else if(data.res == "success")
+    {
+      Swal.fire(
+        'Exitoso',
+         data.msg + '<br>El tema fue agregado exitosamente',
+        'success'
+      )
+        $('#addQuestionFrm')[0].reset();
+        refreshDiv();
+    }
+   
+  },'json')
+  return false;
+});
+
+
 function refreshDiv()
 {
   $('#tableList').load(document.URL +  ' #tableList');
