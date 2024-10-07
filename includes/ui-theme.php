@@ -10,6 +10,23 @@
                         <div class="p-3">
                             <ul class="list-group">
                                 <li class="list-group-item">
+                                    <h5 class="pb-2">Modo preferido
+                                    </h5>
+                                    <div class="theme-settings-swatches"> 
+                                        <div class="swatch-holder bg-primary switch-header-cs-class" data-class="bg-primary header-text-light">
+                                        </div>
+                                        <div class="swatch-holder bg-secondary switch-header-cs-class" data-class="bg-secondary header-text-light">
+                                        </div>
+                                        <div class="swatch-holder bg-success switch-header-cs-class" data-class="bg-success header-text-dark">
+                                        </div> 
+                                    </div>
+                                </li>
+                            </ul>
+                        </div> 
+                        <!--   
+                        <div class="p-3">
+                            <ul class="list-group">
+                                <li class="list-group-item">
                                     <div class="widget-content p-0">
                                         <div class="widget-content-wrapper">
                                             <div class="widget-content-left mr-3">
@@ -68,7 +85,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <h3 class="themeoptions-heading">
+                       <h3 class="themeoptions-heading">
                             <div>
                                 Opciones de encabezado
                             </div>
@@ -81,7 +98,7 @@
                                 <li class="list-group-item">
                                     <h5 class="pb-2">Elija el esquema de color
                                     </h5>
-                                    <div class="theme-settings-swatches">
+                                    <div class="theme-settings-swatches"> 
                                         <div class="swatch-holder bg-primary switch-header-cs-class" data-class="bg-primary header-text-light">
                                         </div>
                                         <div class="swatch-holder bg-secondary switch-header-cs-class" data-class="bg-secondary header-text-light">
@@ -155,11 +172,11 @@
                                         <div class="swatch-holder bg-premium-dark switch-header-cs-class" data-class="bg-premium-dark header-text-light">
                                         </div>
                                         <div class="swatch-holder bg-happy-green switch-header-cs-class" data-class="bg-happy-green header-text-light">
-                                        </div>
+                                        </div> 
                                     </div>
                                 </li>
                             </ul>
-                        </div>
+                        </div> 
                         <h3 class="themeoptions-heading">
                             <div>Opciones de barra lateral</div>
                             <button type="button" class="btn-pill btn-shadow btn-wide ml-auto btn btn-focus btn-sm switch-sidebar-cs-class" data-class="">
@@ -272,7 +289,7 @@
                                     </div>
                                 </li>
                             </ul>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
