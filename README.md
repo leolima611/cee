@@ -17,6 +17,15 @@ para la actualizacion de el repo no olvidar los comandos:
 - git commit -m "ingresa un numero de version"
 - git push
 
+## 0.0.0.9d
+cambios en la base 
+    se encuentra en carpeta bases, usar "cee_dbv7.sql"
+    ubicada en la carpeta bases
+cambios:
+- nuevca base necesaria, se agrego nueva tabla para seguimiento de las actividades
+- ya se pueden visualizar los embed en la vista del alumno asi como la lista de actividades de su curso
+- cierre de cession tras tiempo de inactividad
+
 ## 0.0.0.8
 cambios en la base 
     se encuentra en carpeta bases, usar "cee_dbv5.sql"

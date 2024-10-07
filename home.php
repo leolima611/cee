@@ -49,6 +49,10 @@ $_SESSION['last_activity'] = time();
 		 $act=3;
        include("pages/exam.php");
      }
+	 elseif($page == "Topic"){
+		 $act=2;
+       include("pages/topic.php");
+	 }
      else if($page == "result")
      {
 		 $act=1;

@@ -47,6 +47,56 @@ $(document).on("click","#startQuiz", function(){
 })
 
 
+$(document).on("click","#startTopic", function(){
+	  var thisId = $(this).data('id');
+	  var thisCou = $(this).data('cou');
+	  var thisAct = $(this).data('ac');
+	  Swal.fire({
+      title: 'Are you sure?',
+      text: 'You want to take this Topic now, your time will start automaticaly',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes, start now!'
+ }).then((result) => {
+  if (result.value) {
+         $.ajax({
+          type : "post",
+          url : "query/selTopicAttemptExe.php",
+          dataType : "json",  
+          data : {thisId:thisId, thisCou:thisCou, thisAct:thisAct},
+          cache : false,
+          success : function(data){
+            if(data.res == "noList")
+            {
+              Swal.fire(
+                'Tema no listo ',
+                'aun te faltan temas por tomar',
+                'error'
+              )
+            }
+            else if(data.res == "takeNow")
+            {
+              window.location.href="home.php?page=Topic&id="+thisId;
+              return false;
+            }
+          },
+          error : function(xhr, ErrorStatus, error){
+            console.log(status.error);
+          }
+
+        });
+
+
+
+
+  }
+ });
+	return false;
+})
+
+
 
 // Reset Exam Form
 $(document).on("click","#resetExamFrm", function(){

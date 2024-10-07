@@ -49,7 +49,7 @@
                         {
                             while ($selTopicRow = $selTopic->fetch(PDO::FETCH_ASSOC)) { ?>
                                  <li>
-                                 <a href="#" id="startQuiz" data-id="<?php echo $selTopicRow['idtopic_cou']; ?>"  >
+                                 <a href="#" id="startTopic" data-id="<?php echo $selTopicRow['idtopic_cou']; ?>" data-cou="<?=$selcou['cou_id'];?>" data-ac="<?=$selcou['activity_num'];?>"  >
                                     <?php 
                                         $lenthOfTxt = strlen($selTopicRow['name']);
                                         if($lenthOfTxt >= 23)
