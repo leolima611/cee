@@ -155,8 +155,8 @@ $(document).on("submit","#addExamFrm" , function(){
 	  else if(data.res == "noTipe")
     {
       Swal.fire(
-        'No Tipe exam',
-          'Please select tipe exam',
+        'No seleccionó el tipo de examen',
+          'Seleccione un tipo de examen porfavor',
           'error'
       )
     }
@@ -258,8 +258,8 @@ $(document).on("click", "#deleteQuestion", function(e){
         if(data.res == "success")
         {
           Swal.fire(
-            'Deleted Success',
-            'Selected question successfully deleted',
+            'Se eliminó correctamente',
+            'La pregunta seleccionada se ha eliminado',
             'success'
           )
           refreshDiv();
@@ -291,8 +291,8 @@ $(document).on("click", "#deleteTopic", function(e){
         if(data.res == "success")
         {
           Swal.fire(
-            'Deleted Success',
-            'Selected Topic successfully deleted',
+            'Se eliminó correctamente',
+            'El tema seleccionado ha sido eliminado',
             'success'
           )
           refreshDiv();
@@ -420,7 +420,7 @@ $(document).on("submit","#addExamineeFrm" , function(){
     if(data.res == "noGender")
     {
       Swal.fire(
-          'No se selecciono el genero',
+          'No se seleccionó el genero',
           'Seleccione un genero porfavor',
           'error'
        )
@@ -428,7 +428,7 @@ $(document).on("submit","#addExamineeFrm" , function(){
     else if(data.res == "noCourse")
     {
       Swal.fire(
-          'No se selecciono un curso',
+          'No se seleccionó un curso',
           'Seleccione un curso porfavor',
           'error'
        )
@@ -508,30 +508,30 @@ $(document).on("submit","#addTopicFrm" , function(){
     {
       Swal.fire(
           'Ya existe',
-          data.msg + '<br>este nivel de tema ya existe',
+          data.msg + '<br>Este nivel de tema ya existe',
           'error'
        )
     }
     else if(data.res == "nivelno")
     {
       Swal.fire(
-        'error de nivel',
-         data.msg + '<br>los niveles de temas deven ser sucesivos',
+        'Error de nivel',
+         data.msg + '<br>Los niveles de temas deben ser sucesivos',
         'error'
       )
     }
 	else if(data.res == "nivelce")
     {
       Swal.fire(
-        'error de nivel',
-         data.msg + '<br>el nivel no puede ser 0',
+        'Error de nivel',
+         data.msg + '<br>El nivel no puede ser 0',
         'error'
       )
     }
 	 else if(data.res == "topicexist")
     {
       Swal.fire(
-          'error de nombre',
+          'Error de nombre',
          data.msg + '<br>El tema ya existe en este curso',
         'error'
        )
@@ -568,19 +568,19 @@ $(document).on("submit", "#addPDFFrm", function (e) {
             if (data.res == "nivelexist") {
                 Swal.fire(
                     'Ya existe',
-                    data.msg + '<br>este nivel de tema ya existe',
+                    data.msg + '<br>Este nivel de tema ya existe',
                     'error'
                 )
             } else if (data.res == "nivelno") {
                 Swal.fire(
-                    'error de nivel',
-                    data.msg + '<br>los niveles de temas deven ser sucesivos',
+                    'Error de nivel',
+                    data.msg + '<br>Los niveles de temas deben ser sucesivos',
                     'error'
                 )
             } else if (data.res == "nivelce") {
                 Swal.fire(
-                    'error de nivel',
-                    data.msg + '<br>el nivel no puede ser 0',
+                    'Error de nivel',
+                    data.msg + '<br>El nivel no puede ser 0',
                     'error'
                 )
             }  else if (data.res == "error") {
@@ -592,7 +592,7 @@ $(document).on("submit", "#addPDFFrm", function (e) {
             } else if (data.res == "success") {
                 Swal.fire(
                     'Exitoso',
-                    data.msg + '<br>El tema fue agregado exitosamente',
+                    data.msg + '<br>El nivel fue agregado exitosamente',
                     'success'
                 )
                 $('#addPDFFrm')[0].reset();
@@ -612,23 +612,23 @@ $(document).on("submit","#addLinkFrm" , function(){
     {
       Swal.fire(
           'Ya existe',
-          data.msg + '<br>este nivel de tema ya existe',
+          data.msg + '<br>Este nivel de tema ya existe',
           'error'
        )
     }
     else if(data.res == "nivelno")
     {
       Swal.fire(
-        'error de nivel',
-         data.msg + '<br>los niveles de temas deven ser sucesivos',
+        'Error de nivel',
+         data.msg + '<br>Los niveles de temas deben ser sucesivos',
         'error'
       )
     }
 	else if(data.res == "nivelce")
     {
       Swal.fire(
-        'error de nivel',
-         data.msg + '<br>el nivel no puede ser 0',
+        'Error de nivel',
+         data.msg + '<br>El nivel no puede ser 0',
         'error'
       )
     }
