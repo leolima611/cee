@@ -17,6 +17,9 @@ para la actualizacion de el repo no olvidar los comandos:
 - git commit -m "ingresa un numero de version"
 - git push
 
+## 0.0.0.9e
+no utilizar el boton de agregar examenb en curso
+
 ## 0.0.0.9d
 cambios en la base 
     se encuentra en carpeta bases, usar "cee_dbv7.sql"
