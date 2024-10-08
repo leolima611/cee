@@ -135,6 +135,11 @@ if($selAcc->rowCount() > 0){
 								 <br>
                               </div>
 							 <br>
+							 <div class="btn-actions-pane-left">
+                                <button class="btn btn-sm btn-primary " data-toggle="modal" data-target="#modalForAddExamA">Agregar Exam</button>
+								 <br>
+                              </div>
+							 <br>
                           </div>
                           <div class="card-body" >
                             <div class="scroll-area-sm" style="min-height: 400px;">

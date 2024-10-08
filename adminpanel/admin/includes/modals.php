@@ -522,3 +522,70 @@
         </form>
     </div>
 </div>
+
+
+<!-- Modal For Add ExamTopic -->
+<div class="modal fade" id="modalForAddExamA" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <form class="refreshFrm" id="addExamAFrm" method="post">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">AGREGAR UN LINK DE YOUTUBE<br><?php echo $selExamRow['cou_name']; ?></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form class="refreshFrm" method="post" id="addExamAFrm">
+                    <div class="modal-body">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label>NOMBRA EL EXAMEN</label>
+                                <input type="hidden" name="couId" value="<?php echo $exId; ?>">
+								<input type="hidden" name="tipeAc" value="8">
+                                <input type="" name="name" id="course_name" class="form-control" placeholder="Ingresar nombre" autocomplete="off" required>
+                            </div>
+							<div class="form-group">
+                                <label>NIVEL DE ACTIVIDAD</label>
+                                <input type="number" name="num" id="num" class="form-control" placeholder="Ingresar nivel de Actividad" autocomplete="off" required>
+                            </div>
+							<div class="form-group">
+                                <label>SELECCIONA EXAMEN</label>
+								<select class="form-control" name="courseSelected">
+									<option value="0">Seleccionar Examen</option>
+									<?php 
+									$selExamA = $conn->query("SELECT * FROM exam_tbl WHERE cou_id='$exId' ORDER BY ex_id DESC");
+									if($selExamA->rowCount() > 0){
+										while ($selExamARow = $selExamA->fetch(PDO::FETCH_ASSOC)) { 
+											if($selExamARow['id_tipe'] == 1){
+												$tipoE = "Diagnostico";
+											}elseif($selExamARow['id_tipe'] == 2){
+												$tipoE = "Actividad";
+											}elseif($selExamARow['id_tipe'] == 3){
+												$tipoE = "Final";
+											}
+									?>
+									<option value="<?php echo $selExamARow['ex_id']; ?>"><?=$tipoE;?> : <?php echo $selExamARow['ex_title']; ?></option>
+									<?php 
+										}
+									}
+									else{ 
+									?>
+									<option value="0">No hay Examenes</option>
+									<?php 
+									}
+									?>
+								</select>
+                            </div>
+							<div class="form-group">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">CERRAR</button>
+                        <button type="submit" class="btn btn-primary">AGREGAR AHORA</button>
+                    </div>
+                </form>
+            </div>
+        </form>
+    </div>
+</div>

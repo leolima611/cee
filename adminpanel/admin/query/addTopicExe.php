@@ -214,5 +214,37 @@ elseif($tipeAc == 7){
 	}
 	echo json_encode($res);
 }
+elseif($tipeAc == 8){
+	$numtemp = $num -1;
+	$topicnum = $conn->query("SELECT * FROM topic_cou WHERE activity_num='$num' AND cou_id='$couId' ");
+	$niveltopic = $conn->query("SELECT * FROM `topic_cou` WHERE cou_id = '$couId' AND activity_num = $numtemp;");
+	
+	if($topicnum->rowCount() > 0){
+		$res = array("res" => "nivelexist", "msg" => $num);
+	}elseif($num < 1){
+		$res = array("res" => "nivelce", "msg" => $num);
+	}elseif($num > 1){
+		if($niveltopic->rowCount() > 0){
+			$insQuest = $conn->query("INSERT INTO `topic_cou` (`idtopic_cou`, `cou_id`, `name`, `activity_num`, `valor`, `config`, `acti_tipes`) VALUES (NULL, '$couId', '$name', '$num', '$link', '$conf', '$tipeAc')");
+
+			if($insQuest){
+       			$res = array("res" => "success", "msg" => $name);
+			}else{
+       			$res = array("res" => "failed");
+			}
+		}else{		
+			$res = array("res" => "nivelno", "msg" => $num);
+		}
+	}else{
+		$insQuest = $conn->query("INSERT INTO `topic_cou` (`idtopic_cou`, `cou_id`, `name`, `activity_num`, `valor`, `config`, `acti_tipes`) VALUES (NULL, '$couId', '$name', '$num', '$link', '$conf', '$tipeAc')");
+
+		if($insQuest){
+			$res = array("res" => "success", "msg" => $name);
+		}else{
+			$res = array("res" => "failed");
+		}
+	}
+	echo json_encode($res);
+}
 ?>
 
