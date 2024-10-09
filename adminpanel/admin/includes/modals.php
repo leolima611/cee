@@ -163,13 +163,10 @@
             <input type="password" name="passwordA" id="passwordA" class="form-control" placeholder="Ingresar Password" autocomplete="off" required="">
           </div>
 			 <div class="form-group">
-<<<<<<< HEAD
-            	<label>Seleccionar Role</label>
-            	<select class="form-control" name="role" id="role">
-=======
+
             	<label>Seleccionar Rol</label>
-            	<select class="form-control" name="rolel" id="role">
->>>>>>> refs/remotes/origin/master
+            	<select class="form-control" name="role" id="role">
+
               		<option value="0">Seleccionar</option>
               		<option value="1">Administrador</option>
               		<option value="2">Experto</option>
