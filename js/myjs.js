@@ -2,13 +2,13 @@
 $(document).on("click","#startQuiz", function(){
 	  var thisId = $(this).data('id');
 	  Swal.fire({
-      title: 'Are you sure?',
-      text: 'You want to take this exam now, your time will start automaticaly',
+      title: '¿Está seguro?',
+      text: 'Desea tomar este examen ahora, el tiempo iniciará automaticamente',
       icon: 'warning',
       showCancelButton: true,
       confirmButtonColor: '#3085d6',
       cancelButtonColor: '#d33',
-      confirmButtonText: 'Yes, start now!'
+      confirmButtonText: 'Si, iniciar ahora'
  }).then((result) => {
   if (result.value) {
          $.ajax({
@@ -21,8 +21,8 @@ $(document).on("click","#startQuiz", function(){
             if(data.res == "alreadyExam")
             {
               Swal.fire(
-                'Already Taken ',
-                'you already take this exam',
+                'Ya lo ha tomado',
+                'Ya has tomado este examen',
                 'error'
               )
             }
@@ -52,13 +52,13 @@ $(document).on("click","#startTopic", function(){
 	  var thisCou = $(this).data('cou');
 	  var thisAct = $(this).data('ac');
 	  Swal.fire({
-      title: 'Are you sure?',
-      text: 'You want to take this Topic now, your time will start automaticaly',
+      title: '¿Está seguro?',
+      text: 'Desea tomar este tema ahora, el tiempo iniciará automaticamente',
       icon: 'warning',
       showCancelButton: true,
       confirmButtonColor: '#3085d6',
       cancelButtonColor: '#d33',
-      confirmButtonText: 'Yes, start now!'
+      confirmButtonText: 'Si, iniciar ahora'
  }).then((result) => {
   if (result.value) {
          $.ajax({
@@ -72,7 +72,7 @@ $(document).on("click","#startTopic", function(){
             {
               Swal.fire(
                 'Tema no listo ',
-                'aun te faltan temas por tomar',
+                'Aun te faltan temas por tomar',
                 'error'
               )
             }

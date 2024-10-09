@@ -4,8 +4,8 @@ $(document).on("submit","#examineeLoginFrm", function(){
       if(data.res == "invalid")
       {
         Swal.fire(
-          'Invalid',
-          'Please input valid email / password',
+          'Invalido',
+          'Coloque un usuario o contraseña valida porfavor',
           'error'
         )
       }
@@ -27,8 +27,8 @@ $(document).on('submit', '#submitAnswerFrm', function(){
   if(examAction != "")
   {
     Swal.fire({
-    title: 'Time Out',
-    text: "your time is over, please click ok",
+    title: 'Sin tiempo',
+    text: "El tiempo se acabo, Pulsa OK porfavor",
     icon: 'warning',
     showCancelButton: false,
     allowOutsideClick: false,
@@ -43,8 +43,8 @@ if (result.value) {
     if(data.res == "alreadyTaken")
     {
        Swal.fire(
-         'Already Taken',
-         "you already take this exam",
+         'Ya lo ha tomado',
+         "Ya has tomado este examen",
          'error'
        ) 
     }
@@ -52,7 +52,7 @@ if (result.value) {
     {
         Swal.fire({
             title: 'Success',
-            text: "your answer successfully submitted!",
+            text: "La respuesta se ha enviado",
             icon: 'success',
             allowOutsideClick: false,
             confirmButtonColor: '#3085d6',
@@ -72,7 +72,7 @@ if (result.value) {
     {
      Swal.fire(
          'Error',
-         "Something;s went wrong",
+         "Algo salio mal",
          'error'
        ) 
     }
@@ -85,14 +85,14 @@ if (result.value) {
   else
   {
       Swal.fire({
-    title: 'Are you sure?',
-    text: "you want to submit your answer now?",
+    title: '¿Está seguro?',
+    text: "¿Desea enviar esa respuesta?",
     icon: 'warning',
     showCancelButton: true,
     allowOutsideClick: false,
     confirmButtonColor: '#3085d6',
     cancelButtonColor: '#d33',
-    confirmButtonText: 'Yes, submit now!'
+    confirmButtonText: 'Si, enviar'
 }).then((result) => {
 if (result.value) {
 
@@ -101,16 +101,16 @@ if (result.value) {
     if(data.res == "alreadyTaken")
     {
        Swal.fire(
-         'Already Taken',
-         "you already take this exam",
+         'Ya tomado',
+         "Ya tomaste este examen",
          'error'
        ) 
     }
     else if(data.res == "success")
     {
         Swal.fire({
-            title: 'Success',
-            text: "your answer successfully submitted!",
+            title: 'Exitoso',
+            text: "La respuesta se ha enviado",
             icon: 'success',
             allowOutsideClick: false,
             confirmButtonColor: '#3085d6',
@@ -130,7 +130,7 @@ if (result.value) {
     {
      Swal.fire(
          'Error',
-         "Something;s went wrong",
+         "Algo salio mal",
          'error'
        ) 
     }
@@ -159,7 +159,7 @@ $(document).on("submit","#addFeebacks", function(){
       {
         Swal.fire(
           'Error',
-          'You reached the 3 limit maximum for feedbacks',
+          'Has alcanzado el límite máximo de comentarios (3)',
           'error'
         )
       }
@@ -167,7 +167,7 @@ $(document).on("submit","#addFeebacks", function(){
       {
         Swal.fire(
           'Success',
-          'your feedbacks has been submitted successfully',
+          'Tu comentario ha sido enviado',
           'success'
         )
           $('#addFeebacks')[0].reset();
