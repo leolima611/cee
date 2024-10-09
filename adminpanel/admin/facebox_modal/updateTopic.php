@@ -108,7 +108,8 @@ elseif($act == 4){
 	</div>
 </fieldset>
 <?php
-}elseif($act == 7){
+}
+elseif($act == 7){
 ?>
 <fieldset style="width:543px;" >
 	<legend><i class="facebox-header"><i class="edit large icon"></i>&nbsp;ACTUALIZAR TEMA</i></legend>
@@ -137,6 +138,13 @@ elseif($act == 4){
 			</div>
 		</form>
 	</div>
+</fieldset>
+<?php
+}
+elseif($act == 8){
+?>
+<fieldset style="width:543px;" >
+	<legend><i class="facebox-header"><i class="edit large icon"></i>&nbsp;LOS EXAMENES NO SON EDITABLES</i></legend>
 </fieldset>
 <?php
 }

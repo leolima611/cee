@@ -218,6 +218,31 @@ elseif($tipeAc == 8){
 	$numtemp = $num -1;
 	$topicnum = $conn->query("SELECT * FROM topic_cou WHERE activity_num='$num' AND cou_id='$couId' ");
 	$niveltopic = $conn->query("SELECT * FROM `topic_cou` WHERE cou_id = '$couId' AND activity_num = $numtemp;");
+	$examInfo = $conn->query("SELECT * FROM exam_tbl WHERE ex_id='$selectExam' ")->fetch(PDO::FETCH_ASSOC);
+	$ban = 0;
+	
+	if($examInfo['id_tipe'] == 1){
+		$comp = $conn->query("SELECT * FROM `topic_cou` WHERE cou_id = '$couId' ORDER BY activity_num DESC LIMIT 1");
+		if($comp->rowCount() > 0){
+			$compcom = $comp->fetch(PDO::FETCH_ASSOC);
+			if($compcom['activity_num'] < 3){
+				$ban = 1;
+			}else{
+				$mess = "El Examen diagnostico, debe ser la primer o segunda actvidad";
+			}
+		}else{
+			$ban = 1;
+		}
+	}elseif($examInfo['id_tipe'] == 2){
+		$ban = 1;
+	}elseif($examInfo['id_tipe'] == 3){
+		$comp = $conn->query("SELECT * FROM `topic_cou` WHERE cou_id = '$couId'");
+		if($comp->rowCount() > 0){
+			$ban = 1;
+		}else{
+			$mess = "el examen final no puede ser la unica actividad de curso";
+		}
+	}
 	
 	if($topicnum->rowCount() > 0){
 		$res = array("res" => "nivelexist", "msg" => $num);
@@ -225,23 +250,29 @@ elseif($tipeAc == 8){
 		$res = array("res" => "nivelce", "msg" => $num);
 	}elseif($num > 1){
 		if($niveltopic->rowCount() > 0){
-			$insQuest = $conn->query("INSERT INTO `topic_cou` (`idtopic_cou`, `cou_id`, `name`, `activity_num`, `valor`, `config`, `acti_tipes`) VALUES (NULL, '$couId', '$name', '$num', '$link', '$conf', '$tipeAc')");
-
-			if($insQuest){
-       			$res = array("res" => "success", "msg" => $name);
+			if($ban == 1){
+				$insExam = $conn->query("INSERT INTO `topic_cou` (`idtopic_cou`, `cou_id`, `name`, `activity_num`, `valor`, `config`, `acti_tipes`) VALUES (NULL, '$couId', '$name', '$num', '$selectExam', NULL, 8)");
+				if($insExam){
+       				$res = array("res" => "success", "msg" => $name);
+				}else{
+       				$res = array("res" => "failed");
+				}
 			}else{
-       			$res = array("res" => "failed");
+				$res = array("res" => "error", "msg" => $mess);
 			}
 		}else{		
 			$res = array("res" => "nivelno", "msg" => $num);
 		}
 	}else{
-		$insQuest = $conn->query("INSERT INTO `topic_cou` (`idtopic_cou`, `cou_id`, `name`, `activity_num`, `valor`, `config`, `acti_tipes`) VALUES (NULL, '$couId', '$name', '$num', '$link', '$conf', '$tipeAc')");
-
-		if($insQuest){
-			$res = array("res" => "success", "msg" => $name);
+		if($ban == 1){
+			$insExam = $conn->query("INSERT INTO `topic_cou` (`idtopic_cou`, `cou_id`, `name`, `activity_num`, `valor`, `config`, `acti_tipes`) VALUES (NULL, '$couId', '$name', '$num', '$selectExam', NULL, 8)");
+			if($insExam){
+       			$res = array("res" => "success", "msg" => $name);
+			}else{
+   				$res = array("res" => "failed");
+			}
 		}else{
-			$res = array("res" => "failed");
+			$res = array("res" => "error", "msg" => $mess);
 		}
 	}
 	echo json_encode($res);

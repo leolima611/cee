@@ -550,7 +550,7 @@
                             </div>
 							<div class="form-group">
                                 <label>SELECCIONA EXAMEN</label>
-								<select class="form-control" name="courseSelected">
+								<select class="form-control" name="selectExam">
 									<option value="0">Seleccionar Examen</option>
 									<?php 
 									$selExamA = $conn->query("SELECT * FROM exam_tbl WHERE cou_id='$exId' ORDER BY ex_id DESC");

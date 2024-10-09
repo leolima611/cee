@@ -110,6 +110,19 @@ if($selAcc->rowCount() > 0){
                               <?php echo $selQuest->rowCount(); ?>
                             </span>
                           </div>
+						<?php
+						 $couid = $selExamRow['cou_id'];
+						 $comp = $conn->query("SELECT * FROM `topic_cou` WHERE cou_id = '$couid' ORDER BY activity_num DESC LIMIT 1")->fetch(PDO::FETCH_ASSOC);
+						 $bane = 0;	
+						 if($comp['acti_tipes'] == 8){
+							 $infoEa = $conn->query("SELECT * FROM `exam_tbl` WHERE ex_id = ".$comp['valor']." ")->fetch(PDO::FETCH_ASSOC);
+						 	if($infoEa['id_tipe'] != 3){
+								$bane = 1;
+							}
+						 }else{$bane = 1;}
+						 
+						 if($bane == 1){
+						 ?>
 						 <div class="card-header">
                              <div class="btn-actions-pane-left">
                                 <button class="btn btn-sm btn-primary " data-toggle="modal" data-target="#modalForAddTopic">Agregar Tema</button>
@@ -141,6 +154,15 @@ if($selAcc->rowCount() > 0){
                               </div>
 							 <br>
                           </div>
+						 <?php
+						 }else{
+						 ?>
+						 <div class="card-header">
+							 Has agregado un el examen final no puedes agreegar mas actividades
+						 </div>
+						 <?php
+						 }
+						 ?>
                           <div class="card-body" >
                             <div class="scroll-area-sm" style="min-height: 400px;">
                                <div class="scrollbar-container">
@@ -226,6 +248,19 @@ if($selAcc->rowCount() > 0){
 															<br>
 															<br>
                                                                 <span class="pl-4">Config: <?php echo $selQuestionRow['config']; ?></span>
+															<br>
+                                                        </td>
+															<?php
+														   break;
+														case 8:
+														    $hrefac = "facebox_modal/updateTopic.php?ac=8&id=";
+														   ?>
+													<tr>
+                                                        <td >
+															
+                                                            <b><?php echo $i++ ; ?> .- <?php echo $selQuestionRow['name']; ?> EXAMEN</b>
+															<br>
+                                                                <span class="pl-4"> <?php echo $selQuestionRow['valor']; ?></span>
 															<br>
                                                         </td>
 															<?php
