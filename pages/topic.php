@@ -10,6 +10,9 @@
     //$exDisplayLimit = $selExam['ex_questlimit_display'];
 	$tipeac = $selTopic['acti_tipes'];
 	$selTipe = $conn->query("SELECT * FROM acti_tipes WHERE idacti_tipes='$tipeac' ")->fetch(PDO::FETCH_ASSOC);
+
+	$idexnee = $selExmneeData['exmne_id'];
+	$couid = $selCou['cou_id'];
  ?>
 
 
@@ -59,5 +62,19 @@
 		}
 		?>
     </div>
+	<div class="col-md-12">
+        	<div class="page-title-wrapper">
+            	<div class="page-title-heading">
+					<div>
+                        <div class="page-title-subheading pl-4">
+							<a href="#" data-idT="<?=$TopicId?>" data-idE="<?=$idexnee?>" data-idC="<?=$couid?>" type="button" class="btn btn-primary btn-sm" id="actComplete">Marcar Como completado</a>
+							<a type="button" href="home.php" type="button" class="btn btn-danger btn-sm">cerrar</a>
+                        </div>
+					</div>
+				</div>
+                <div class="page-title-actions mr-5" style="font-size: 20px;">
+				</div>   
+			</div>
+	</div>
 </div>
  

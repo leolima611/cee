@@ -87,15 +87,63 @@ $(document).on("click","#startTopic", function(){
           }
 
         });
-
-
-
-
   }
  });
 	return false;
 })
 
+
+$(document).on("click","#actComplete", function(){
+	  var thisIdt = $(this).data('idt');
+	  var thisIde = $(this).data('ide');
+	  var thisIdc = $(this).data('idc');
+	  Swal.fire({
+      title: '¿Está seguro?',
+      text: 'Desea marcar este tema como completado?',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Si, marcar como completado'
+ }).then((result) => {
+  if (result.value) {
+         $.ajax({
+          type : "post",
+          url : "query/selCompleteTopic.php",
+          dataType : "json",  
+          data : {thisIdt:thisIdt, thisIde:thisIde, thisIdc:thisIdc},
+          cache : false,
+          success : function(data){
+            if(data.res == "error")
+            {
+              Swal.fire(
+                'Error ',
+                'no se pudo registrar tu avance',
+                'error'
+              )
+            }
+            else if(data.res == "registrado")
+            {
+				if(data.topico == "a"){
+					Swal.fire(
+                		'Felicidades ',
+                		'has concluido el curso'
+              		)
+				}else{
+					window.location.href="home.php?page=Topic&id="+data.topico;
+              		return false;
+				}
+            }
+          },
+          error : function(xhr, ErrorStatus, error){
+            console.log(status.error);
+          }
+
+        });
+  }
+ });
+	return false;
+})
 
 
 // Reset Exam Form
