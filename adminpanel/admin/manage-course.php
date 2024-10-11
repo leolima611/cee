@@ -114,7 +114,7 @@ if($selAcc->rowCount() > 0){
 						 $couid = $selExamRow['cou_id'];
 						 $comp = $conn->query("SELECT * FROM `topic_cou` WHERE cou_id = '$couid' ORDER BY activity_num DESC LIMIT 1")->fetch(PDO::FETCH_ASSOC);
 						 $bane = 0;	
-						 if($comp['acti_tipes'] == 8){
+						 if(isset($comp['acti_tipes']) && $comp['acti_tipes'] == 8){
 							 $infoEa = $conn->query("SELECT * FROM `exam_tbl` WHERE ex_id = ".$comp['valor']." ")->fetch(PDO::FETCH_ASSOC);
 						 	if($infoEa['id_tipe'] != 3){
 								$bane = 1;

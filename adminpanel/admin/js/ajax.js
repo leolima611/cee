@@ -132,6 +132,69 @@ $(document).on("click", "#deleteExam", function(e){
   });
 
 
+// Delete Admin
+$(document).on("click", "#deleteAdmin", function(e){
+    e.preventDefault();
+    var id = $(this).data("id");
+     $.ajax({
+      type : "post",
+      url : "query/deleteAdminExe.php",
+      dataType : "json",  
+      data : {id:id},
+      cache : false,
+      success : function(data){
+        if(data.res == "success")
+        {
+          Swal.fire(
+            'Exitoso',
+            'La cuenta ha sido eliminada',
+            'success'
+          )
+          refreshDiv();
+        }
+      },
+      error : function(xhr, ErrorStatus, error){
+        console.log(status.error);
+      }
+
+    });
+    
+   
+
+    return false;
+  });
+
+
+// Delete file
+$(document).on("click", "#deleteFile", function(e){
+    e.preventDefault();
+    var file = $(this).data("file");
+     $.ajax({
+      type : "post",
+      url : "query/deleteFileExe.php",
+      dataType : "json",  
+      data : {file:file},
+      cache : false,
+      success : function(data){
+        if(data.res == "success")
+        {
+          Swal.fire(
+            'Exitoso',
+            'El archivo ha sido eliminado',
+            'success'
+          )
+          refreshDiv();
+        }
+      },
+      error : function(xhr, ErrorStatus, error){
+        console.log(status.error);
+      }
+
+    });
+	
+  return false;
+  });
+
 
 // Add Exam 
 $(document).on("submit","#addExamFrm" , function(){
@@ -556,7 +619,6 @@ $(document).on("submit","#addTopicFrm" , function(){
 $(document).on("submit", "#addPDFFrm", function (e) {
     e.preventDefault();  // Evita el envío por defecto del formulario
     var formData = new FormData(this);
-	alert("Hola, mundo!");
     $.ajax({
         url: "query/addTopicExe.php",
         type: "POST",

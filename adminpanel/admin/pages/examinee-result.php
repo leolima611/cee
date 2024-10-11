@@ -47,9 +47,9 @@
                                                 <span>
                                                     <?php echo $selScore->rowCount(); ?>
                                                     <?php 
-                                                        $over  = $selExName['ex_questlimit_display'];
+                                                        //$over  = $selExName['ex_questlimit_display'];
                                                      ?>
-                                                </span> / <?php echo $over; ?>
+                                                </span> / <?php //echo $over; ?>
                                            </td>
                                            <td>
                                               <?php 
@@ -58,7 +58,7 @@
                                                 <span>
                                                     <?php 
                                                         $score = $selScore->rowCount();
-                                                        $ans = $score / $over * 100;
+                                                        $ans = $score / 100;
                                                         echo number_format($ans,2);
                                                         // echo "$ans";
                                                         echo "%";

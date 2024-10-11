@@ -4,6 +4,7 @@ include("../../conn.php");
 session_start();
 
 if(!isset($_SESSION['admin']['adminnakalogin']) == true) header("location:index.php");
+
 $admin_idn =  $_SESSION['admin']['admin_id'];
 
 //recoleccion de datos del admin
@@ -82,8 +83,14 @@ if($selAcc->rowCount() > 0){
      {
       include("pages/examinee-result.php");
      }
-
-       
+	 else if($page == "ranking-time")
+     {
+      include("pages/manage-time.php");
+     }
+	   else if($page == "manage-files")
+     {
+      include("pages/manage-files.php");
+     }
    }
  
    else

@@ -43,6 +43,7 @@
                                             </td>
                                            <td>
                                                <a rel="facebox" href="facebox_modal/updateAdmin.php?id=<?php echo $selExmneRow['admin_id']; ?>" class="btn btn-sm btn-primary">Actualizar</a>
+											   <button type="button" id="deleteAdmin" data-id='<?php echo $selExmneRow['admin_id']; ?>'  class="btn btn-danger btn-sm">Eliminar</button>
 
                                            </td>
                                         </tr>

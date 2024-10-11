@@ -61,7 +61,7 @@ elseif($tipeAc == 2){
 	}
 
 	// Check file size
-	if ($_FILES["pdf_file"]["size"] > 500000) {  // 500KB máximo
+	if ($_FILES["pdf_file"]["size"] > 1000000) {  // 500KB máximo
     	echo json_encode(['res' => 'error', 'msg' => 'Lo siento, tu archivo es demasiado grande.']);
     	$uploadOk = 0;
     	exit;

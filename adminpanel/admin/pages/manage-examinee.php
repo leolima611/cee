@@ -23,7 +23,6 @@
                                 <th>Curso</th>
                                 <th>A&ntilde;o Escolar</th>
                                 <th>Email</th>
-                                <th>Contrase&ntilde;a</th>
                                 <th>Estado</th>
                                 <th></th>
                             </tr>
@@ -47,11 +46,10 @@
                                             </td>
                                            <td><?php echo $selExmneRow['exmne_year_level']; ?></td>
                                            <td><?php echo $selExmneRow['exmne_email']; ?></td>
-                                           <td><?php echo $selExmneRow['exmne_password']; ?></td>
                                            <td><?php echo $selExmneRow['exmne_status']; ?></td>
                                            <td>
+											   <a href="home.php?page=ranking-time&exme=<?php echo $selExmneRow['exmne_id']; ?>" class="btn btn-sm btn-info">Tiempos</a>
                                                <a rel="facebox" href="facebox_modal/updateExaminee.php?id=<?php echo $selExmneRow['exmne_id']; ?>" class="btn btn-sm btn-primary">Actualizar</a>
-
                                            </td>
                                         </tr>
                                     <?php }

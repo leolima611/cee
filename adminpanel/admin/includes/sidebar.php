@@ -106,6 +106,14 @@
                                     </a>
                                 </li>
 								
+								<li class="app-sidebar__heading">Administradores</li>
+                                <li>
+                                    <a href="home.php?page=manage-files">
+                                        <i class="metismenu-icon pe-7s-folder">
+                                        </i>ADMINISTRAR ARCHIVOS PDF
+                                    </a>
+                                </li>
+								
 								<?php
 								}
 								?>

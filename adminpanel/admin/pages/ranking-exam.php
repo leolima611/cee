@@ -50,11 +50,11 @@
 
                                               $selAttempt = $conn->query("SELECT * FROM exam_attempt WHERE exmne_id='$exmneId' AND exam_id='$exam_id' ");
 
-                                             $over = $selEx['ex_questlimit_display']  ;    
+                                             //$over = $selEx['ex_questlimit_display']  ;    
 
 
                                               @$score = $selScore->rowCount();
-                                                @$ans = $score / $over * 100;
+                                                @$ans = $score / 100;
 
                                          ?>
                                        <tr style="<?php 
@@ -94,13 +94,11 @@
                                           {
                                             echo $totScore =  $selScore->rowCount();
                                             echo " / ";
-                                            echo $over;
                                           }
                                           else
                                           {
                                             echo $totScore =  $selScore->rowCount();
                                             echo " / ";
-                                            echo $over;
                                           }
 
                                             
