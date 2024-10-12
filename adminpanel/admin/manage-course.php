@@ -88,7 +88,7 @@ if($selAcc->rowCount() > 0){
                               </div>  
 
                               <div class="form-group">
-                                <label>Fecha de creacion:</label>
+                                <label>Fecha de creaci&oacute;n:</label>
 								<b><?php echo $selExamRow['cou_created']; ?></b>
                               </div>
 
@@ -175,7 +175,7 @@ if($selAcc->rowCount() > 0){
                                     <table class="align-middle mb-0 table table-borderless table-striped table-hover" id="tableList">
                                         <thead>
                                         <tr>
-                                            <th class="text-left pl-1">historia del curso</th>
+                                            <th class="text-left pl-1">Historia del curso</th>
                                             <th class="text-center" width="20%">Opciones</th>
                                         </tr>
                                         </thead>
@@ -242,7 +242,7 @@ if($selAcc->rowCount() > 0){
 													<tr>
                                                         <td >
 															
-                                                            <b><?php echo $i++ ; ?> .- <?php echo $selQuestionRow['name']; ?> YOUTUBE LINK</b>
+                                                            <b><?php echo $i++ ; ?> .- <?php echo $selQuestionRow['name']; ?> EMBED</b>
 															<br>
                                                                 <span class="pl-4"> <?php echo $selQuestionRow['valor']; ?></span>
 															<br>

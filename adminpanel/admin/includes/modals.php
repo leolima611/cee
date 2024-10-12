@@ -481,7 +481,7 @@
         <form class="refreshFrm" id="addEmbedFrm" method="post">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">AGREGAR UN LINK DE YOUTUBE<br><?php echo $selExamRow['cou_name']; ?></h5>
+                    <h5 class="modal-title" id="exampleModalLabel">AGREGAR UN EMBED<br><?php echo $selExamRow['cou_name']; ?></h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -505,7 +505,7 @@
                             </div>
 							<div class="form-group">
                                 <label>CONFIGURACIONES EXTRAS</label><br>
-								<spam>agrega configuraciones para el embed como por ejemplo: width="600" height="400" type="application/pdf"</spam>
+								<spam>agrega configuraciones para el EMBED como por ejemplo: width="600" height="400" type="application/pdf"</spam>
                                 <input type="text" name="conf" id="conf" class="form-control" placeholder="Ingresar Link" autocomplete="off" required>
                             </div>
                         </div>
@@ -527,7 +527,7 @@
         <form class="refreshFrm" id="addExamAFrm" method="post">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">AGREGAR UN LINK DE YOUTUBE<br><?php echo $selExamRow['cou_name']; ?></h5>
+                    <h5 class="modal-title" id="exampleModalLabel">AGREGAR UN EXAMEN<br><?php echo $selExamRow['cou_name']; ?></h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
