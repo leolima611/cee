@@ -7,7 +7,7 @@
     $examId = $_GET['id'];
     $selExam = $conn->query("SELECT * FROM exam_tbl WHERE ex_id='$examId' ")->fetch(PDO::FETCH_ASSOC);
     $selExamTimeLimit = $selExam['ex_time_limit'];
-    $exDisplayLimit = $selExam['ex_questlimit_display'];
+    //$exDisplayLimit = $selExam['ex_questlimit_display'];
  ?>
 
 
@@ -41,7 +41,7 @@
             <input type="hidden" name="examAction" id="examAction" >
         <table class="align-middle mb-0 table table-borderless table-striped table-hover" id="tableList">
         <?php 
-            $selQuest = $conn->query("SELECT * FROM exam_question_tbl WHERE exam_id='$examId' ORDER BY rand() LIMIT $exDisplayLimit ");
+            $selQuest = $conn->query("SELECT * FROM exam_question_tbl WHERE exam_id='$examId' ");
             if($selQuest->rowCount() > 0)
             {
                 $i = 1;
