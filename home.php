@@ -65,7 +65,7 @@ $_SESSION['last_activity'] = time();
      }
      
    }
-   // Else ang home nga page mo display
+   // home
    else
    {
      include("pages/home.php"); 
@@ -90,7 +90,7 @@ $_SESSION['last_activity'] = time();
     });
 </script>
 
-<!-- MAO NI IYA FOOTER -->
+<!-- FOOTER -->
 <?php include("includes/footer.php"); ?>
 
 <?php include("includes/modals.php"); ?>

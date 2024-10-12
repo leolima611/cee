@@ -34,14 +34,14 @@ if($selAcc->rowCount() > 0){
 
  ?>
 <?php include("../../conn.php"); ?>
-<!-- MAO NI ANG HEADER -->
+<!-- HEADER -->
 <?php include("includes/header.php"); ?>      
 
-<!-- UI THEME DIRI -->
+<!-- UI THEME  -->
 <?php include("includes/ui-theme.php"); ?>
 
 <div class="app-main">
-<!-- sidebar diri  -->
+<!-- sidebar   -->
 <?php include("includes/sidebar.php"); ?>
 
 

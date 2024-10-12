@@ -1,9 +1,9 @@
 <div class="ui-theme-settings">
-            <button type="button" id="TooltipDemo" class="btn-open-options btn btn-warning" style="top:110px">
+           <!--  <button type="button" id="TooltipDemo" class="btn-open-options btn btn-warning" style="top:110px">
                 <i class="fa fa-cog fa-w-16 fa-spin fa-2x"></i>
             </button>
             <div class="theme-settings__inner">
-                   <div class="scrollbar-container">  <!-- -->
+                   <div class="scrollbar-container">  
                     <div class="theme-settings__options-wrapper">
                         <h3 class="themeoptions-heading">Opciones de dise&ntilde;o
                         </h3>
@@ -12,7 +12,7 @@
                                 <link rel="stylesheet" href="modosc.css">
                                     <button type="button" id="dark-mode-toggle">Modo oscuro</button>
                             <script src="mmosc.js"></script>
-                        </div>
+                        </div>-->
                         <!-- 
                         <div class="p-3">
                             <ul class="list-group">
@@ -297,8 +297,8 @@
                                     </div>
                                 </li>
                             </ul>
-                        </div> -->
+                        </div> 
                     </div>
                 </div>
-            </div>
+            </div>-->
         </div> 
