@@ -8,6 +8,11 @@ $selCourse = $conn->query("SELECT COUNT(cou_id) as totCourse FROM course_tbl ")-
 $selExam = $conn->query("SELECT COUNT(ex_id) as totExam FROM exam_tbl ")->fetch(PDO::FETCH_ASSOC);
 
 
+// Count All Examine
+$selExaneS = $conn->query("SELECT COUNT(exmne_id) as totExane FROM examinee_tbl;")->fetch(PDO::FETCH_ASSOC);
+
+// Count All Activitis
+$selActT = $conn->query("SELECT COUNT(idtopic_cou) as totAct FROM topic_cou;")->fetch(PDO::FETCH_ASSOC);
 
 
  ?>
