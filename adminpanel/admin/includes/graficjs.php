@@ -1,12 +1,16 @@
 <!-- Styles-->
 <style>
+	#chartdiv3 {
+  width: 100%;
+  height: 500px;
+}
 #chartdiv2 {
   width: 100%;
   height: 400px;
 }
 #chartdiv1 {
   width: 100%;
-  height: 500px;
+  height: 400px;
 }
 </style>
 
@@ -188,6 +192,159 @@ series.data.setAll([
 	]);
 
 series.appear(1000, 100);
+
+}); // end am5.ready()
+</script>
+
+<!-- Chart code grafica 3 -->
+<script>
+am5.ready(function() {
+
+
+// Create root element
+// https://www.amcharts.com/docs/v5/getting-started/#Root_element
+var root3 = am5.Root.new("chartdiv3");
+
+
+var myTheme3 = am5.Theme.new(root3);
+
+myTheme3.rule("Grid", ["base"]).setAll({
+  strokeOpacity: 0.1
+});
+
+
+// Set themes
+// https://www.amcharts.com/docs/v5/concepts/themes/
+root3.setThemes([
+  am5themes_Animated.new(root3),
+  myTheme3
+]);
+
+
+// Create chart
+// https://www.amcharts.com/docs/v5/charts/xy-chart/
+var chart3 = root3.container.children.push(am5xy.XYChart.new(root3, {
+  panX: false,
+  panY: false,
+  wheelX: "panY",
+  wheelY: "zoomY",
+  paddingLeft: 0,
+  layout: root3.verticalLayout
+}));
+
+// Add scrollbar
+// https://www.amcharts.com/docs/v5/charts/xy-chart/scrollbars/
+chart3.set("scrollbarY", am5.Scrollbar.new(root3, {
+  orientation: "vertical"
+}));
+
+var data3 = [
+	<?php 
+	$selGrafic3 = $conn->query("SELECT * FROM course_tbl ");
+    if($selGrafic3->rowCount() > 0){
+        while ($selGrafic3row = $selGrafic3->fetch(PDO::FETCH_ASSOC)) {
+			$valueg3 = "{curso: \"".$selGrafic3row['cou_name']."\",";
+			
+			$selGrafic = $conn->query("SELECT acti_tipes, COUNT(*) AS total FROM topic_cou WHERE cou_id = ".$selGrafic3row['cou_id']." GROUP BY acti_tipes;");
+    		if($selGrafic->rowCount() > 0){
+        		while ($selGraficrow = $selGrafic->fetch(PDO::FETCH_ASSOC)) {
+					$valueg3 .= " \"".$selGraficrow['acti_tipes']."\": ".$selGraficrow['total'].",";
+				}
+			}
+			$valueg3 .= "},";
+			echo ($valueg3);
+			
+		}
+	} 
+	?>
+	]
+
+
+// Create axes
+// https://www.amcharts.com/docs/v5/charts/xy-chart/axes/
+var yRenderer3 = am5xy.AxisRendererY.new(root3, {});
+var yAxis3 = chart3.yAxes.push(am5xy.CategoryAxis.new(root3, {
+  categoryField: "curso",
+  renderer: yRenderer3,
+  tooltip: am5.Tooltip.new(root3, {})
+}));
+
+yRenderer3.grid.template.setAll({
+  location: 1
+})
+
+yAxis3.data.setAll(data3);
+
+var xAxis3 = chart3.xAxes.push(am5xy.ValueAxis.new(root3, {
+  min: 0,
+  maxPrecision: 0,
+  renderer: am5xy.AxisRendererX.new(root3, {
+    minGridDistance: 40,
+    strokeOpacity: 0.1
+  })
+}));
+
+// Add legend
+// https://www.amcharts.com/docs/v5/charts/xy-chart/legend-xy-series/
+var legend3 = chart3.children.push(am5.Legend.new(root3, {
+  centerX: am5.p50,
+  x: am5.p50
+}));
+
+
+// Add series
+// https://www.amcharts.com/docs/v5/charts/xy-chart/series/
+function makeSeries3(name, fieldName) {
+  var series3 = chart3.series.push(am5xy.ColumnSeries.new(root3, {
+    name: name,
+    stacked: true,
+    xAxis: xAxis3,
+    yAxis: yAxis3,
+    baseAxis: yAxis3,
+    valueXField: fieldName,
+    categoryYField: "curso"
+  }));
+
+  series3.columns.template.setAll({
+    tooltipText: "{name}, {categoryY}: {valueX}",
+    tooltipY: am5.percent(90)
+  });
+  series3.data.setAll(data3);
+
+  // Make stuff animate on load
+  // https://www.amcharts.com/docs/v5/concepts/animations/
+  series3.appear();
+
+  series3.bullets.push(function () {
+    return am5.Bullet.new(root3, {
+      sprite: am5.Label.new(root3, {
+        text: "{valueX}",
+        fill: root3.interfaceColors.get("alternativeText"),
+        centerY: am5.p50,
+        centerX: am5.p50,
+        populateText: true
+      })
+    });
+  });
+
+  legend3.data.push(series3);
+}
+	
+
+<?php 
+$makeS3 = $conn->query("SELECT * FROM acti_tipes ");
+if($makeS3->rowCount() > 0){
+	while ($makeS3row = $makeS3->fetch(PDO::FETCH_ASSOC)) {
+?>
+makeSeries3("<?=$makeS3row['tipo']?>","<?=$makeS3row['idacti_tipes']?>");	
+<?php
+	}
+}
+?>
+
+// Make stuff animate on load
+// https://www.amcharts.com/docs/v5/concepts/animations/
+chart3.appear(1000, 100);
 
 }); // end am5.ready()
 </script>

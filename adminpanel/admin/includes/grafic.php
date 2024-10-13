@@ -2,6 +2,34 @@
 	<?php
 	include("includes/graficjs.php");
 	?>
+	<!--Grafica 2-->
+	<div class="col-md-12 col-lg-6">
+        <div class="mb-3 card">
+            <div class="card-header-tab card-header-tab-animation card-header">
+                <div class="card-header-title">
+                    <i class="header-icon lnr-apartment icon-gradient bg-love-kiss"> </i>
+                    tiempo en plataforma
+                </div>
+                <ul class="nav">
+                    <!--<li class="nav-item"><a href="javascript:void(0);" class="active nav-link">&Uacute;ltimo</a></li>
+                    <li class="nav-item"><a href="javascript:void(0);" class="nav-link second-tab-toggle">Actual</a></li>-->
+                </ul>
+            </div>
+            <div class="card-body">
+                <div class="tab-content">
+                    <div class="tab-pane fade show active" id="tabs-eg-77">
+                        <div class="card mb-3 widget-chart widget-chart2 text-left w-100">
+                            <div class="widget-chat-wrapper-outer">
+                                <div class="widget-chart-wrapper widget-chart-wrapper-lg opacity-10 m-0">
+									<div id="chartdiv2"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 	<!--Grafica 1-->
     <div class="col-md-12 col-lg-6">
         <div class="mb-3 card">
@@ -25,6 +53,7 @@
                                 </div>
                             </div>
                         </div>
+						<!--
                         <h6 class="text-muted text-uppercase font-size-md opacity-5 font-weight-normal">Actividades por curso</h6>
                         <div class="scroll-area-sm">
                             <div class="scrollbar-container">
@@ -59,19 +88,20 @@
 									?>
                                 </ul>
                             </div>
-                        </div>
+                        </div>	
+						-->
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!--Grafica 2-->
+	<!--Grafica 3-->
 	<div class="col-md-12 col-lg-6">
         <div class="mb-3 card">
             <div class="card-header-tab card-header-tab-animation card-header">
                 <div class="card-header-title">
                     <i class="header-icon lnr-apartment icon-gradient bg-love-kiss"> </i>
-                    tiempo en plataforma
+                    Actividades por curso
                 </div>
                 <ul class="nav">
                     <!--<li class="nav-item"><a href="javascript:void(0);" class="active nav-link">&Uacute;ltimo</a></li>
@@ -84,7 +114,76 @@
                         <div class="card mb-3 widget-chart widget-chart2 text-left w-100">
                             <div class="widget-chat-wrapper-outer">
                                 <div class="widget-chart-wrapper widget-chart-wrapper-lg opacity-10 m-0">
-									<div id="chartdiv2"></div>
+									<div id="chartdiv3"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	<!--Grafica 3-->
+	<div class="col-md-12 col-lg-6">
+        <div class="mb-3 card">
+            <div class="card-header-tab card-header-tab-animation card-header">
+                <div class="card-header-title">
+                    <i class="header-icon lnr-apartment icon-gradient bg-love-kiss"> </i>
+                    Comentarios
+                </div>
+                <ul class="nav">
+                    <!--<li class="nav-item"><a href="javascript:void(0);" class="active nav-link">&Uacute;ltimo</a></li>
+                    <li class="nav-item"><a href="javascript:void(0);" class="nav-link second-tab-toggle">Actual</a></li>-->
+                </ul>
+            </div>
+            <div class="card-body">
+                <div class="tab-content">
+                    <div class="tab-pane fade show active" id="tabs-eg-77">
+                        <div class="card mb-3 widget-chart widget-chart2 text-left w-100">
+                            <div class="widget-chat-wrapper-outer">
+                                <div class="widget-chart-wrapper widget-chart-wrapper-lg opacity-10 m-0">
+									 <div class="table-responsive">
+										 <table class="align-middle mb-0 table table-borderless table-striped table-hover" id="tableList">
+                            				<thead>
+                            					<tr>
+                                					<th class="text-left pl-4">Usuario</th>
+                                					<th class="text-center" width="20%" height="60%">Comentario</th>
+													<th class="text-left pl-4">fecha</th>
+                            					</tr>
+                            				</thead>
+                            				<tbody>
+                              				<?php 
+												$selFeedback = $conn->query("SELECT * FROM `feedbacks_tbl` ORDER BY `feedbacks_tbl`.`fb_date` DESC");
+												if($selFeedback->rowCount() > 0){
+													while ($selFeedRow = $selFeedback->fetch(PDO::FETCH_ASSOC)) { 
+											?>
+                                        		<tr>
+                                            		<td class="pl-4">
+                                                	<?php echo $selFeedRow['fb_exmne_as']; ?>
+                                            		</td>
+                                            		<td class="text-center">
+													<?=$selFeedRow['fb_feedbacks']?>
+													</td>
+													<td class="text-center">
+													<?=$selFeedRow['fb_date']?>
+													</td>
+                                        		</tr>
+
+                                    		<?php 
+													}
+												}else{ 
+											?>
+                                    			<tr>
+                                      				<td colspan="2">
+                                        				<h3 class="p-3">No hay Comentarios</h3>
+                                      				</td>
+                                    			</tr>
+                                			<?php 
+												}
+											?>
+                            				</tbody>
+                        				</table>
+                    				</div>
                                 </div>
                             </div>
                         </div>
