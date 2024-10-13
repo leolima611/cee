@@ -163,6 +163,6 @@
                     </div>
                 </div>
             </div> -->
-            <!-- <?php include("includes/graph.php"); ?> -->
+            <?php include("includes/grafic.php"); ?>
         </div>
     </div>
