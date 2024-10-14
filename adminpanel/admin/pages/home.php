@@ -50,11 +50,13 @@
                     <div class="card mb-3 widget-content bg-grow-early">
                         <div class="widget-content-wrapper text-white">
                             <div class="widget-content-left">
-                                <div class="widget-heading">Total Evaluados</div>
+                                <div class="widget-heading">Total Examenes Realizados</div>
                                 <div class="widget-subheading" style="color:transparent;">.</div>
                             </div>
                             <div class="widget-content-right">
-                                <div class="widget-numbers text-white"><span>46%</span></div>
+                                <div class="widget-numbers text-white">
+									<span><?=$selExto['totTom'];?></span>
+								</div>
                             </div>
                         </div>
                     </div>

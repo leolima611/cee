@@ -14,5 +14,7 @@ $selExaneS = $conn->query("SELECT COUNT(exmne_id) as totExane FROM examinee_tbl;
 // Count All Activitis
 $selActT = $conn->query("SELECT COUNT(idtopic_cou) as totAct FROM topic_cou;")->fetch(PDO::FETCH_ASSOC);
 
+// Count All Activitis
+$selExto = $conn->query("SELECT COUNT(examat_id) as totTom FROM exam_attempt;")->fetch(PDO::FETCH_ASSOC);
 
  ?>

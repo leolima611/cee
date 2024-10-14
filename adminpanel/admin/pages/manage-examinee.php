@@ -48,7 +48,7 @@
                                            <td><?php echo $selExmneRow['exmne_email']; ?></td>
                                            <td><?php echo $selExmneRow['exmne_status']; ?></td>
                                            <td>
-											   <a href="home.php?page=ranking-time&exme=<?php echo $selExmneRow['exmne_id']; ?>" class="btn btn-sm btn-info">Tiempos</a>
+											   <a href="home.php?page=ranking-time&exme=<?php echo $selExmneRow['exmne_id']; ?>" class="btn btn-sm btn-info">M&aacute;s</a>
                                                <a rel="facebox" href="facebox_modal/updateExaminee.php?id=<?php echo $selExmneRow['exmne_id']; ?>" class="btn btn-sm btn-primary">Actualizar</a>
                                            </td>
                                         </tr>

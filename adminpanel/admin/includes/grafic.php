@@ -123,7 +123,7 @@
             </div>
         </div>
     </div>
-	<!--Grafica 3-->
+	<!--Comentarios-->
 	<div class="col-md-12 col-lg-6">
         <div class="mb-3 card">
             <div class="card-header-tab card-header-tab-animation card-header">
