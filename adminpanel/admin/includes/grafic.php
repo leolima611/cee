@@ -8,7 +8,7 @@
             <div class="card-header-tab card-header-tab-animation card-header">
                 <div class="card-header-title">
                     <i class="header-icon lnr-apartment icon-gradient bg-love-kiss"> </i>
-                    tiempo en plataforma
+                    Tiempo en plataforma
                 </div>
                 <ul class="nav">
                     <!--<li class="nav-item"><a href="javascript:void(0);" class="active nav-link">&Uacute;ltimo</a></li>
