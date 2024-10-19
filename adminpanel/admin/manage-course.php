@@ -254,7 +254,7 @@ if($selAcc->rowCount() > 0){
 									  <div class="card mb-3 widget-content bg-tempting-azure">
 										  <div class="widget-content-wrapper text-white">
 											  <div class="widget-content-left">
-												  <div class="widget-heading text-black-50">Total Cursos</div>
+												  <div class="widget-heading text-black-50">Total Actividades</div>
 												  <div class="widget-subheading" style="color:transparent;">.</div>
 											  </div>
 											  <div class="widget-content-right">

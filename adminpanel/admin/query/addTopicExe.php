@@ -17,7 +17,7 @@ if($tipeAc == 1){
 		$res = array("res" => "nivelce", "msg" => $num);
 	}elseif($num > 1){
 		if($niveltopic->rowCount() > 0){
-			$insQuest = $conn->query("INSERT INTO `topic_cou` (`idtopic_cou`, `cou_id`, `name`, `activity_num`, `valor`, `config`, `acti_tipes`) VALUES (NULL, '$couId', '$name', '$num', NULL, NULL, '$tipeAc')");
+			$insQuest = $conn->query("INSERT INTO `topic_cou` (`idtopic_cou`, `cou_id`, `name`, `activity_num`, `valor`, `config`, `acti_tipes`) VALUES (NULL, '$couId', '$name', '$num', '$text', NULL, '$tipeAc')");
 
 			if($insQuest){
        			$res = array("res" => "success", "msg" => $name);
@@ -28,7 +28,7 @@ if($tipeAc == 1){
 			$res = array("res" => "nivelno", "msg" => $num);
 		}
 	}else{
-		$insQuest = $conn->query("INSERT INTO `topic_cou` (`idtopic_cou`, `cou_id`, `name`, `activity_num`, `valor`, `config`, `acti_tipes`) VALUES (NULL, '$couId', '$name', '$num', NULL, NULL, '$tipeAc')");
+		$insQuest = $conn->query("INSERT INTO `topic_cou` (`idtopic_cou`, `cou_id`, `name`, `activity_num`, `valor`, `config`, `acti_tipes`) VALUES (NULL, '$couId', '$name', '$num', '$text', NULL, '$tipeAc')");
 
 		if($insQuest){
 			$res = array("res" => "success", "msg" => $name);

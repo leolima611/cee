@@ -273,22 +273,6 @@ $(document).on("submit","#updateExamFrm" , function(){
   return false;
 });
 
-// Update Question
-$(document).on("submit","#updateQuestionFrm" , function(){
-  $.post("query/updateQuestionExe.php", $(this).serialize() , function(data){
-     if(data.res == "success")
-     {
-        Swal.fire(
-            'Exitoso',
-            'La pregunta seleccionada se ha actualizado correctamente',
-            'success'
-          )
-          refreshDiv();
-     }
-  },'json')
-  return false;
-});
-
 
 // Update Topic
 $(document).on("submit","#updateTopicFrm" , function(){
@@ -374,13 +358,13 @@ $(document).on("click", "#deleteTopic", function(e){
 
 
 // Add Question 
-$(document).on("submit","#addQuestionFrm" , function(){
+$(document).on("submit","#addQuestion1Frm" , function(){
   $.post("query/addQuestionExe.php", $(this).serialize() , function(data){
-    if(data.res == "exist")
+    if(data.res == "error")
     {
       Swal.fire(
-          'Ya existe',
-          data.msg + '<br>Esta pregunta se realizó previamente en este examen',
+          'Error',
+          data.msg + '<br>',
           'error'
        )
     }
@@ -815,6 +799,23 @@ $(document).on("submit","#addExamAFrm" , function(){
         refreshDiv();
     }
    
+  },'json')
+  return false;
+});
+
+
+// Update Question
+$(document).on("submit","#updateQuestionFrm" , function(){
+  $.post("query/updateQuestionExe.php", $(this).serialize() , function(data){
+     if(data.res == "success")
+     {
+        Swal.fire(
+            'Exitoso',
+            'La pregunta seleccionada se ha actualizado correctamente',
+            'success'
+          )
+          refreshDiv();
+     }
   },'json')
   return false;
 });

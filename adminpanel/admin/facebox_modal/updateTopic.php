@@ -15,11 +15,15 @@ if($act == 1){
       <div class="form-group">
         <legend>Nombre</legend>
 		  <input type="hidden" name="topicid" value="<?php echo $id; ?>">
-		  <input type="hidden" name="tipeAc" value="2">
+		  <input type="hidden" name="tipeAc" value="1">
         <input type="" name="name" class="form-control" placeholder="Ingresar Tema" autocomplete="off" value="<?=$selTopic['name']; ?>" required>
       </div>
 		<div class="form-group">
             <input type="hidden" name="num" id="num" class="form-control" placeholder="Ingresar nivel de tema" autocomplete="off" value="<?=$selTopic['activity_num']; ?>" required>
+		</div>
+		<div class="form-group">
+			<label>Texto Tema</label>
+			<textarea name="text" class="form-control" rows="2" required=""><?=$selTopic['valor']; ?></textarea>
 		</div>
       <div class="form-group" align="right">
         <button type="submit" class="btn btn-sm btn-primary">ACTUALIZAR AHORA</button>

@@ -4,7 +4,7 @@ extract($_POST);
 
 
 if($tipeAc == 1){
-	$updCourse = $conn->query("UPDATE topic_cou SET `name` = '$name', `activity_num` = '$num'  WHERE idtopic_cou = $topicid;");
+	$updCourse = $conn->query("UPDATE topic_cou SET `name` = '$name', `activity_num` = '$num', `valor` = '$text' WHERE idtopic_cou = $topicid;");
 }
 elseif($tipeAc == 2){
 	$updCourse = $conn->query("UPDATE topic_cou SET `name` = '$name', `activity_num` = '$num'  WHERE idtopic_cou = $topicid;");

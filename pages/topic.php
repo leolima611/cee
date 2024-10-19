@@ -42,7 +42,26 @@
 
     <div class="col-md-12 p-0 mb-4">
 		<?php
-		if($tipeac == 2){
+		if($tipeac == 1){
+		?>
+        <div class="mb-3 card">
+            <div class="card-header-tab card-header-tab-animation card-header">
+                <div class="card-header-title">
+                    <i class="header-icon lnr-apartment icon-gradient bg-love-kiss"> </i>
+                    <?php echo $selTopic['name']; ?>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="tab-content">
+                    <div class="tab-pane fade show active" id="tabs-eg-77">
+						<p><?php echo $selTopic['valor']; ?></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+		<?php
+		}
+		elseif($tipeac == 2){
 		?>
 		<embed src="pdf/<?=$selTopic['valor'];?>" type="application/pdf" width="100%" height="600">
 		<?php

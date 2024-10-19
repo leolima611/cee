@@ -2,9 +2,9 @@
 $exmevar = $_GET['exme']; 
 $selExmne = $conn->query("SELECT * FROM examinee_tbl WHERE exmne_id = '$exmevar' ")->fetch(PDO::FETCH_ASSOC);
 
-$plataforma = $conn->query("SELECT SUM(tiempo_total) AS total_tiempo FROM tip WHERE exmne_id = '$exmevar' AND tiempo_total = 1;")->fetch(PDO::FETCH_ASSOC);
-$actividad = $conn->query("SELECT SUM(tiempo_total) AS total_tiempo FROM tip WHERE exmne_id = '$exmevar' AND tiempo_total = 2;")->fetch(PDO::FETCH_ASSOC);
-$examen = $conn->query("SELECT SUM(tiempo_total) AS total_tiempo FROM tip WHERE exmne_id = '$exmevar' AND tiempo_total = 3;")->fetch(PDO::FETCH_ASSOC);
+$plataforma = $conn->query("SELECT SUM(tiempo_total) AS total_tiempo FROM tip WHERE exmne_id = '$exmevar' AND actividad_id = 1;")->fetch(PDO::FETCH_ASSOC);
+$actividad = $conn->query("SELECT SUM(tiempo_total) AS total_tiempo FROM tip WHERE exmne_id = '$exmevar' AND actividad_id = 2;")->fetch(PDO::FETCH_ASSOC);
+$examen = $conn->query("SELECT SUM(tiempo_total) AS total_tiempo FROM tip WHERE exmne_id = '$exmevar' AND actividad_id = 3;")->fetch(PDO::FETCH_ASSOC);
 
 //porcentaje de avance
 $Tact = $conn->query("SELECT COUNT(*) AS total FROM topic_cou WHERE cou_id = ".$selExmne['exmne_course'].";")->fetch(PDO::FETCH_ASSOC);

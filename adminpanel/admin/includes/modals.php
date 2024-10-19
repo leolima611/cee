@@ -33,7 +33,7 @@
 		<form class="refreshFrm" id="addCourseFrm" method="post" >
 			<div class="modal-content myModal-content" >
 				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalLabel">ACTUALIZAR ( <?php echo $selCourseRow['cou_name']; ?> )</h5>
+					<h5 class="modal-title" id="exampleModalLabel">ACTUALIZAR (<?php echo $selCourseRow['cou_name'];?>)</h5>
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					</button>
@@ -255,52 +255,57 @@
 </div>
 
 
-
 <!-- Modal For Add Question -->
-<div class="modal fade" id="modalForAddQuestion" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="modalForAddQuestion1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
-   <form class="refreshFrm" id="addQuestionFrm" method="post">
+   <form class="refreshFrm" id="addQuestion1Frm" method="post">
      <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">AGREGAR PREGUNTAS <br><?php echo $selExamRow['ex_title']; ?></h5>
+        <h5 class="modal-title" id="exampleModalLabel">AGREGAR PREGUNTA <br><?php echo $selExamRow['ex_title']; ?></h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <form class="refreshFrm" method="post" id="addQuestionFrm">
+      <form class="refreshFrm" method="post" id="addQuestion1Frm">
       <div class="modal-body">
         <div class="col-md-12">
           <div class="form-group">
             <label>PREGUNTAS</label>
             <input type="hidden" name="examId" value="<?php echo $exId; ?>">
-            <input type="" name="question" id="course_name" class="form-control" placeholder="Ingresar preguntas" autocomplete="off">
+			  <input type="hidden" name="AnsId" value="1">
+            <input type="" name="question" id="course_name" class="form-control" placeholder="Ingresar preguntas" autocomplete="off" required>
           </div>
 
           <fieldset>
             <legend>Ingresa la opci&oacute;n a elegir</legend>
             <div class="form-group">
                 <label>Opci&oacute;n A</label>
-                <input type="" name="choice_A" id="choice_A" class="form-control" placeholder="Ingresar opción A" autocomplete="off">
+                <input type="" name="choice_A" id="choice_A" class="form-control" placeholder="Ingresar opción A" autocomplete="off" required>
             </div>
 
             <div class="form-group">
                 <label>Opci&oacute;n B</label>
-                <input type="" name="choice_B" id="choice_B" class="form-control" placeholder="Ingresar opción B" autocomplete="off">
+                <input type="" name="choice_B" id="choice_B" class="form-control" placeholder="Ingresar opción B" autocomplete="off" required>
             </div>
 
             <div class="form-group">
                 <label>Opci&oacute;n C</label>
-                <input type="" name="choice_C" id="choice_C" class="form-control" placeholder="Ingresar opción C" autocomplete="off">
+                <input type="" name="choice_C" id="choice_C" class="form-control" placeholder="Ingresar opción C" autocomplete="off" required>
             </div>
 
             <div class="form-group">
                 <label>Opci&oacute;n D</label>
-                <input type="" name="choice_D" id="choice_D" class="form-control" placeholder="Ingresar opción D" autocomplete="off">
+                <input type="" name="choice_D" id="choice_D" class="form-control" placeholder="Ingresar opción D" autocomplete="off" required>
             </div>
 
             <div class="form-group">
                 <label>Respuesta Correcta</label>
-                <input type="" name="correctAnswer" id="" class="form-control" placeholder="Ingresar opción correcta" autocomplete="off">
+				<select class="form-control" name="correctAnswer" required>
+					<option value="1">A</option>
+					<option value="2">B</option>
+					<option value="3">C</option>
+					<option value="4">D</option>
+				</select>
             </div>
           </fieldset>
         </div>
@@ -314,6 +319,227 @@
    </form>
   </div>
 </div>
+
+
+<!-- Modal For Add Question2 -->
+<div class="modal fade" id="modalForAddQuestion2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+   <form class="refreshFrm" id="addQuestion1Frm" method="post">
+     <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">AGREGAR PREGUNTA RESPUESTA CORTA<br><?php echo $selExamRow['ex_title']; ?></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <form class="refreshFrm" method="post" id="addQuestion1Frm">
+      <div class="modal-body">
+        <div class="col-md-12">
+          <div class="form-group">
+            <label>PREGUNTA</label>
+            <input type="hidden" name="examId" value="<?php echo $exId; ?>">
+			  <input type="hidden" name="AnsId" value="2">
+            <input type="" name="question" id="course_name" class="form-control" placeholder="Ingresar preguntas" autocomplete="off" required>
+          </div>
+
+          <fieldset>
+            <legend>Ingresa la opci&oacute;n a elegir</legend>
+            <div class="form-group">
+                <label>Respuesta</label>
+                <input type="" name="choice_A" id="choice_A" class="form-control" placeholder="Ingresar Respuesta" autocomplete="off" required>
+            </div>
+          </fieldset>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">CERRAR</button>
+        <button type="submit" class="btn btn-primary">AGREGAR AHORA</button>
+      </div>
+      </form>
+    </div>
+   </form>
+  </div>
+</div>
+
+
+<!-- Modal For Add Question3 -->
+<div class="modal fade" id="modalForAddQuestion3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+   <form class="refreshFrm" id="addQuestion1Frm" method="post">
+     <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">AGREGAR PREGUNTA RESPUESTA LARGA<br><?php echo $selExamRow['ex_title']; ?></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <form class="refreshFrm" method="post" id="addQuestion1Frm">
+      <div class="modal-body">
+        <div class="col-md-12">
+			<label>Este tipo de preguntas requieren revision manual</label>
+          <div class="form-group">
+            <label>PREGUNTA</label>
+            <input type="hidden" name="examId" value="<?php echo $exId; ?>">
+			  <input type="hidden" name="AnsId" value="3">
+            <input type="" name="question" id="course_name" class="form-control" placeholder="Ingresar pregunta" autocomplete="off" required>
+          </div>
+
+          <fieldset>
+            <legend>Ingresa la opci&oacute;n a elegir</legend>
+            <div class="form-group">
+                <label>Respuesta</label>
+				<textarea name="choice_A" id="choice_A" class="form-control" placeholder="Ingresar Respuesta" autocomplete="off" style="resize: both;" required></textarea>
+            </div>
+          </fieldset>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">CERRAR</button>
+        <button type="submit" class="btn btn-primary">AGREGAR AHORA</button>
+      </div>
+      </form>
+    </div>
+   </form>
+  </div>
+</div>
+
+
+<!-- Modal For Add Question4 -->
+<div class="modal fade" id="modalForAddQuestion4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+   <form class="refreshFrm" id="addQuestion1Frm" method="post">
+     <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">AGREGAR PREGUNTA LISTA DESPLEGABLE<br><?php echo $selExamRow['ex_title']; ?></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <form class="refreshFrm" method="post" id="addQuestion1Frm">
+      <div class="modal-body">
+        <div class="col-md-12">
+          <div class="form-group">
+            <label>PREGUNTA</label>
+            <input type="hidden" name="examId" value="<?php echo $exId; ?>">
+			  <input type="hidden" name="AnsId" value="4">
+            <input type="" name="question" id="course_name" class="form-control" placeholder="Ingresar pregunta" autocomplete="off" required>
+          </div>
+
+          <fieldset>
+            <legend>Ingresa la opci&oacute;n a elegir</legend>
+            <div class="form-group">
+                <label>Opci&oacute;n 1</label>
+                <input type="" name="choice_A" id="choice_A" class="form-control" placeholder="Ingresar opción 1" autocomplete="off" required>
+            </div>
+
+            <div class="form-group">
+                <label>Opci&oacute;n 2</label>
+                <input type="" name="choice_B" id="choice_B" class="form-control" placeholder="Ingresar opción 2" autocomplete="off" required>
+            </div>
+
+            <div class="form-group">
+                <label>Opci&oacute;n 3</label>
+                <input type="" name="choice_C" id="choice_C" class="form-control" placeholder="Ingresar opción 3" autocomplete="off" required>
+            </div>
+
+            <div class="form-group">
+                <label>Opci&oacute;n 4</label>
+                <input type="" name="choice_D" id="choice_D" class="form-control" placeholder="Ingresar opción 4" autocomplete="off" required>
+            </div>
+
+            <div class="form-group">
+                <label>Respuesta Correcta</label>
+				<select class="form-control" name="correctAnswer" required>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+				</select>
+            </div>
+          </fieldset>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">CERRAR</button>
+        <button type="submit" class="btn btn-primary">AGREGAR AHORA</button>
+      </div>
+      </form>
+    </div>
+   </form>
+  </div>
+</div>
+
+
+<!-- Modal For Add Question5 -->
+<div class="modal fade" id="modalForAddQuestion5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <form class="refreshFrm" id="addQuestion1Frm" method="post">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">AGREGAR PREGUNTA (VARIAS OPCIONES)<br><?php echo $selExamRow['ex_title']; ?></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form class="refreshFrm" method="post" id="addQuestion1Frm">
+                    <div class="modal-body">
+                        <div class="col-md-12">
+                            <label>Marque las check box de las respuestas correctas</label>
+                            <div class="form-group">
+                                <label>PREGUNTA</label>
+                                <input type="hidden" name="examId" value="<?php echo $exId; ?>">
+                                <input type="hidden" name="AnsId" value="5">
+                                <input type="" name="question" id="course_name" class="form-control" placeholder="Ingresar pregunta" autocomplete="off" required>
+                            </div>
+
+                            <fieldset>
+                                <legend>Ingresa la opci&oacute;n a elegir</legend>
+                                <div class="form-group">
+                                    <label>Opci&oacute;n 1</label>
+                                    <input type="checkbox" name="status_A" id="exampleCheckbox">
+                                    <input type="" name="choice_A" id="choice_A" class="form-control" placeholder="Ingresar opción 1" autocomplete="off" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Opci&oacute;n 2</label>
+                                    <input type="checkbox" name="status_B" id="exampleCheckbox2">
+                                    <input type="" name="choice_B" id="choice_B" class="form-control" placeholder="Ingresar opción 2" autocomplete="off" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Opci&oacute;n 3</label>
+                                    <input type="checkbox" name="status_C" id="exampleCheckbox">
+                                    <input type="" name="choice_C" id="choice_C" class="form-control" placeholder="Ingresar opción 3" autocomplete="off" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Opci&oacute;n 4</label>
+                                    <input type="checkbox" name="status_D" id="exampleCheckbox">
+                                    <input type="" name="choice_D" id="choice_D" class="form-control" placeholder="Ingresar opción 4" autocomplete="off" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Opci&oacute;n 4</label>
+                                    <input type="checkbox" name="status_E" id="exampleCheckbox">
+                                    <input type="" name="choice_E" id="choice_E" class="form-control" placeholder="Ingresar opción 5" autocomplete="off" required>
+                                </div>
+								<div class="form-group">
+                                    <label>Opci&oacute;n 4</label>
+                                    <input type="checkbox" name="status_F" id="exampleCheckbox">
+                                    <input type="" name="choice_F" id="choice_F" class="form-control" placeholder="Ingresar opción 6" autocomplete="off" required>
+                                </div>
+                            </fieldset>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">CERRAR</button>
+                        <button type="submit" class="btn btn-primary">AGREGAR AHORA</button>
+                    </div>
+                </form>
+            </div>
+        </form>
+    </div>
+</div>
+
 
 <!-- Modal For Add Topic -->
 <div class="modal fade" id="modalForAddTopic" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -339,6 +565,10 @@
                                 <label>NIVEL DE ACTIVIDAD</label>
                                 <input type="number" name="num" id="num" class="form-control" placeholder="Ingresar nivel de tema" autocomplete="off" required>
                             </div>
+							<div class="form-group">
+								<label>Texto Tema</label>
+								 <textarea name="text" class="form-control" rows="2" required=""></textarea>
+							</div>
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -506,7 +736,7 @@
 							<div class="form-group">
                                 <label>CONFIGURACIONES EXTRAS</label><br>
 								<spam>agrega configuraciones para el EMBED como por ejemplo: width="600" height="400" type="application/pdf"</spam>
-                                <input type="text" name="conf" id="conf" class="form-control" placeholder="Ingresar Link" autocomplete="off" required>
+                                <input type="text" name="conf" id="conf" class="form-control" placeholder="Ingresar Configuracion" autocomplete="off" required>
                             </div>
                         </div>
                     </div>
