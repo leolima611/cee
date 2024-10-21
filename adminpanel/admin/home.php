@@ -71,9 +71,9 @@ if($selAcc->rowCount() > 0){
      {
       include("pages/manage-examinee.php");
      }
-     else if($page == "ranking-exam")
+     else if($page == "ranking-course")
      {
-      include("pages/ranking-exam.php");
+      include("pages/ranking-course.php");
      }
      else if($page == "feedbacks")
      {

@@ -138,7 +138,7 @@
 								
                                 <li class="app-sidebar__heading">EVALUACIONES</li>
                                 <li>
-                                    <a href="home.php?page=ranking-exam">
+                                    <a href="home.php?page=ranking-course">
                                         <i class="metismenu-icon pe-7s-cup">
                                         </i>VER EVALUACIONES
                                     </a>
