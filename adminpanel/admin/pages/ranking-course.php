@@ -27,6 +27,7 @@
                             <thead>
                             <tr>
                                 <th class="text-left pl-4">Examen</th>
+                                <th class="text-left ">Status</th>
                                 <th class="text-left ">Curso</th>
                                 <th class="text-left ">Descripci&oacute;n</th>
                                 <th class="text-center" width="8%">Opci&oacute;n</th>
@@ -40,6 +41,17 @@
                                     while ($selExamRow = $selExam->fetch(PDO::FETCH_ASSOC)) { ?>
                                         <tr>
                                             <td class="pl-4"><?php echo $selExamRow['ex_title']; ?></td>
+											<?php
+											$examid = $selExamRow['ex_id'];
+											$selActE = $conn->query("SELECT * FROM topic_cou WHERE cou_id='$course_id' AND acti_tipes = 8 AND valor='$examid'");
+											$selActERow = $selActE->fetch(PDO::FETCH_ASSOC);
+											if($selActE->rowCount() > 0){
+												$stratus = "Examen enlazado";$style = "background-color: green;color:white";}
+											else{$stratus = "Examen no enlazado";$style = "background-color: yellow;";}
+											?>
+											<td class="pl-4" style="<?=$style?>">
+												<?=$stratus?>
+											</td>
                                             <td>
                                                 <?php 
                                                     $courseId =  $selExamRow['cou_id']; 
