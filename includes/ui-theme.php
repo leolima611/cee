@@ -157,6 +157,9 @@
                                         </div>
                                         <div class="swatch-holder bg-happy-green switch-header-cs-class" data-class="bg-happy-green header-text-light">
                                         </div> -->
+                                        <div class="swatch-holder bg-arcoiris switch-header-cs-class" data-class="bg-arcoiris header-text-dark">
+                                        </div>
+
                                     </div>
                                 </li>
                             </ul>
@@ -247,6 +250,8 @@
                                         </div>
                                         <div class="swatch-holder bg-happy-green switch-sidebar-cs-class" data-class="bg-happy-green sidebar-text-light">
                                         </div> -->
+                                        <div class="swatch-holder bg-arcoiris switch-sidebar-cs-class" data-class="bg-arcoiris sidebar-text-dark">
+                                        </div>
                                     </div>
                                 </li>
                             </ul>
@@ -274,6 +279,7 @@
                                 </li>
                             </ul>
                         </div> -->
+<!-- -->
                     </div> 
                 </div> 
             </div> 
