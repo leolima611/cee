@@ -14,6 +14,8 @@
 	<link rel="stylesheet" type="text/css" href="login-ui/vendor/daterangepicker/daterangepicker.css">
 	<link rel="stylesheet" type="text/css" href="login-ui/css/util.css">
 	<link rel="stylesheet" type="text/css" href="login-ui/css/main.css">
+	<link href="./main.css" rel="stylesheet">
+    <link href="css/sweetalert.css" rel="stylesheet">
 </head>
 <body>
 	
@@ -25,7 +27,11 @@
 						INICIAR SESI&Oacute;N
 					</span>
 				</div>
-
+				<div>
+					<a href="../../index.php" class="metismenu-icon pe-7s-home">
+						home
+					</a>
+				</div>
 				<form method="post" id="adminLoginFrm" class="login100-form validate-form">
 					<div class="wrap-input100 validate-input m-b-26" data-validate="Usuario Requerido">
 						<span class="label-input100">Usuario</span>
