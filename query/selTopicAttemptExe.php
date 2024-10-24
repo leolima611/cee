@@ -1,6 +1,6 @@
 <?php 
- session_start();
- include("../conn.php");
+session_start();
+include("../conn.php");
 $exmneId = $_SESSION['examineeSession']['exmne_id'];
  
 
