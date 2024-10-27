@@ -22,7 +22,7 @@ $(document).on("click","#startQuiz", function(){
             {
               Swal.fire(
                 'Ya lo ha tomado',
-                'Ya has tomado este examen',
+                data.msg + ' <br> Ya se ha tomado',
                 'error'
               )
             }
@@ -30,6 +30,14 @@ $(document).on("click","#startQuiz", function(){
             {
               window.location.href="home.php?page=exam&id="+thisId;
               return false;
+            }
+			else if(data.res == "error")
+            {
+              Swal.fire(
+                'Error',
+                data.msg + ' <br>',
+                'error'
+              )
             }
           },
           error : function(xhr, ErrorStatus, error){

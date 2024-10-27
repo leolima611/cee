@@ -47,9 +47,17 @@
                         
                         if($selTopic->rowCount() > 0)
                         {
-                            while ($selTopicRow = $selTopic->fetch(PDO::FETCH_ASSOC)) { ?>
+                            while ($selTopicRow = $selTopic->fetch(PDO::FETCH_ASSOC)) {
+								$clasco = "";
+								$clasico = "";
+								if($selTopicRow['idtopic_cou'] == $selTopicRow['idtopic']){
+									$clasico = "pe-7s-check";
+									$clasco= "pl-4 text-success";
+								}
+					?>
                                  <li>
-                                 <a href="#" id="startTopic" data-id="<?php echo $selTopicRow['idtopic_cou']; ?>" data-cou="<?=$selCou['cou_id'];?>" data-ac="<?=$selTopicRow['activity_num'];?>">
+                                 <a class="<?=$clasco?>" href="#" id="startTopic" data-id="<?php echo $selTopicRow['idtopic_cou']; ?>" data-cou="<?=$selCou['cou_id'];?>" data-ac="<?=$selTopicRow['activity_num'];?>">
+									 <i class="<?=$clasico;?>"></i>
                                     <?php 
                                         $lenthOfTxt = strlen($selTopicRow['name']);
                                         if($lenthOfTxt >= 23)
@@ -76,10 +84,11 @@
 
                 </ul>
                 </li>
+				<li class="app-sidebar__heading">Examenes del curso</li>
                 <li>
                 <a href="#">
                      <i class="metismenu-icon pe-7s-display2"></i>
-                     Examenes por Realizar
+                     Todos los examenes
                     <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
                 </a>
                 <ul >
