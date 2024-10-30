@@ -75,7 +75,6 @@ $_SESSION['last_activity'] = time();
 
  ?> 
 <p>El tiempo que pases en esta página será registrado.</p>
-
     
 	<script>
     let startTime = Date.now();

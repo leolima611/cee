@@ -15,6 +15,12 @@ $selCou = $conn->query("SELECT * FROM course_tbl WHERE cou_id='$exmneCourse' ")-
 
 
 // info actividades 
-$selTopic = $conn->query("SELECT * FROM topic_cou tc LEFT JOIN rel_topic rt ON tc.idtopic_cou = rt.idtopic WHERE tc.cou_id='$exmneCourse' AND tc.acti_tipes!=8 ORDER BY tc.activity_num ASC;");
+$selTopic = $conn->query("SELECT * FROM topic_cou tc LEFT JOIN rel_topic rt ON tc.idtopic_cou = rt.idtopic WHERE tc.cou_id = '$exmneCourse' AND tc.acti_tipes != 8 AND (rt.exmne_id = '$exmneId' OR rt.exmne_id IS NULL) GROUP BY tc.idtopic_cou ORDER BY tc.activity_num ASC;");
+
+
+$selExamAct = $conn->query("SELECT * FROM exam_tbl et LEFT JOIN topic_cou tc ON et.ex_id = tc.valor WHERE et.cou_id='$exmneCourse' AND tc.acti_tipes=8;");
+
+
+$selReltop = $conn->query("SELECT COUNT(idrel_topic) as total FROM rel_topic WHERE exmne_id = '$exmneId';")->fetch(PDO::FETCH_ASSOC);
 
  ?>

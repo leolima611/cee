@@ -14,8 +14,14 @@ if($selTopiComplete){
 
 	if($selTopics->rowCount() > 0){
 		$infoselt = $selTopics->fetch(PDO::FETCH_ASSOC);
-		$topicSig = $infoselt['idtopic_cou'];
-		$res = array("res" => "registrado", "topico" => "$topicSig");
+		if($infoselt['acti_tipes'] == 8){
+			$infex = $conn->query("SELECT * FROM exam_tbl WHERE ex_id=".$infoselt['valor']." ")->fetch(PDO::FETCH_ASSOC);
+			$name = $infex['ex_title'];
+			$res = array("res" => "registrado", "topico" => "b", "name" => "$name");
+		}else{
+			$topicSig = $infoselt['idtopic_cou'];
+			$res = array("res" => "registrado", "topico" => "$topicSig");
+		}
 	}else{
 		$res = array("res" => "registrado", "topico" => "a");
 	}
