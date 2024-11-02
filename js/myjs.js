@@ -164,13 +164,13 @@ $(document).on("click","#resetExamFrm", function(){
 
 
 
-// Select Time Limit
+// Seleciona limite de tiempo
 var mins
 var secs;
 
 function cd() {
   var timeExamLimit = $('#timeExamLimit').val();
-  mins = 1 * m("" + timeExamLimit); // change minutes here
+  mins = 1 * m("" + timeExamLimit); // cambiar los minutos aqui
   secs = 0 + s(":01"); 
   redo();
 }
