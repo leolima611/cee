@@ -196,6 +196,37 @@ $(document).on("click", "#deleteFile", function(e){
   });
 
 
+// Delete file AUDIO
+$(document).on("click", "#deleteFileA", function(e){
+    e.preventDefault();
+    var file = $(this).data("file");
+     $.ajax({
+      type : "post",
+      url : "query/deleteFileAExe.php",
+      dataType : "json",  
+      data : {file:file},
+      cache : false,
+      success : function(data){
+        if(data.res == "success")
+        {
+          Swal.fire(
+            'Exitoso',
+            'El archivo ha sido eliminado',
+            'success'
+          )
+          refreshDiv();
+        }
+      },
+      error : function(xhr, ErrorStatus, error){
+        console.log(status.error);
+      }
+
+    });
+	
+  return false;
+  });
+
+
 // Add Exam 
 $(document).on("submit","#addExamFrm" , function(){
   $.post("query/addExamExe.php", $(this).serialize() , function(data){
@@ -642,6 +673,57 @@ $(document).on("submit", "#addPDFFrm", function (e) {
                     'success'
                 )
                 $('#addPDFFrm')[0].reset();
+                refreshDiv();
+            }
+        }
+    });
+    return false;
+});
+
+
+// Add Audio 
+$(document).on("submit", "#addAudFrm", function (e) {
+    e.preventDefault();  // Evita el envío por defecto del formulario
+    var formData = new FormData(this);
+    $.ajax({
+        url: "query/addTopicExe.php",
+        type: "POST",
+        data: formData,
+        contentType: false,
+        processData: false,
+        dataType: "json",
+        success: function (data) {
+            if (data.res == "nivelexist") {
+                Swal.fire(
+                    'Ya existe',
+                    data.msg + '<br>Este nivel de tema ya existe',
+                    'error'
+                )
+            } else if (data.res == "nivelno") {
+                Swal.fire(
+                    'Error de nivel',
+                    data.msg + '<br>Los niveles de temas deben ser sucesivos',
+                    'error'
+                )
+            } else if (data.res == "nivelce") {
+                Swal.fire(
+                    'Error de nivel',
+                    data.msg + '<br>El nivel no puede ser 0',
+                    'error'
+                )
+            }  else if (data.res == "error") {
+                Swal.fire(
+                    'error',
+                    data.msg + '',
+                    'error'
+                )
+            } else if (data.res == "success") {
+                Swal.fire(
+                    'Exitoso',
+                    data.msg + '<br>El nivel fue agregado exitosamente',
+                    'success'
+                )
+                $('#addAudFrm')[0].reset();
                 refreshDiv();
             }
         }

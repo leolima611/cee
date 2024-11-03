@@ -25,7 +25,8 @@
                             </tr>
                             </thead>
                             <tbody>
-                              <?php 
+                              <!--<?php 
+								/*
                                 $selExmne = $conn->query("SELECT * FROM examinee_tbl et INNER JOIN exam_attempt ea ON et.exmne_id = ea.exmne_id ORDER BY ea.examat_id DESC ");
                                 if($selExmne->rowCount() > 0)
                                 {
@@ -81,7 +82,7 @@
                                       </td>
                                     </tr>
                                 <?php }
-                               ?>
+                               */?>-->
                             </tbody>
                         </table>
                     </div>

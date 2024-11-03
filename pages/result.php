@@ -26,41 +26,60 @@
         	<h1 class="text-primary">RESULTADOS</h1>
         </div>
 
-        <div class="row col-md-6 float-left">
+        <div class="row col-md-12 float-left">
         	<div class="main-card mb-3 card">
                 <div class="card-body">
                 	<h5 class="card-title">TUS RESPUESTAS</h5>
         			<table class="align-middle mb-0 table table-borderless table-striped table-hover" id="tableList">
                     <?php 
-                    	$selQuest = $conn->query("SELECT * FROM exam_question_tbl eqt INNER JOIN exam_answers ea ON eqt.eqt_id = ea.quest_id WHERE eqt.exam_id='$examId' AND ea.axmne_id='$exmneId' AND ea.exans_status='new' ");
+						$selQuest = $conn->query("SELECT * FROM `exam_question_tbl` WHERE exam_id='$examId'");
+                    	//$selQuest = $conn->query("SELECT * FROM exam_question_tbl eqt INNER JOIN exam_answers ea ON eqt.eqt_id = ea.quest_id WHERE eqt.exam_id='$examId' AND ea.axmne_id='$exmneId' AND ea.exans_status='new' ");
                     	$i = 1;
-                    	while ($selQuestRow = $selQuest->fetch(PDO::FETCH_ASSOC)) { ?>
-                    		<tr>
-                    			<td>
-                    				<b><p><?php echo $i++; ?> .) <?php echo $selQuestRow['exam_question']; ?></p></b>
-                    				<label class="pl-4 text-success">
-                    					Respuesta : 
-                    					<?php 
-                    						if($selQuestRow['exam_answer'] != $selQuestRow['exans_answer'])
-                    						{ ?>
-                    							<span style="color:red"><?php echo $selQuestRow['exans_answer']; ?></span>
-                    						<?PHP }
-                    						else
-                    						{ ?>
-                    							<span class="text-success"><?php echo $selQuestRow['exans_answer']; ?></span>
-                    						<?php }
-                    					 ?>
-                    				</label>
-                    			</td>
-                    		</tr>
-                    	<?php }
+                    	while ($selQuestRow = $selQuest->fetch(PDO::FETCH_ASSOC)) { 
+							if($selQuestRow['id_tipeq'] == 2 || $selQuestRow['id_tipeq'] == 3){
+								$selAnsl = $conn->query("SELECT * FROM `exam_answers` where quest_id =".$selQuestRow['eqt_id']." AND exam_id='$examId' AND axmne_id='$exmneId' AND exans_status='new'");
+								while ($selAnslRow = $selAnsl->fetch(PDO::FETCH_ASSOC)) {	
+							?>
+								<tr>
+									<td>
+										<b><p><?php echo $i++; ?> .) <?php echo $selQuestRow['exam_question']; ?></p></b>
+										<label class="pl-4 ">
+											Respuesta : 
+													<span ><?php echo $selAnslRow['exans_answer']; ?></span>
+										</label>
+									</td>
+								</tr>
+							<?php 	
+								}
+							}
+							else{
+								$selAnsl = $conn->query("SELECT * FROM `exam_answers` where quest_id =".$selQuestRow['eqt_id']." AND exam_id='$examId' AND axmne_id='$exmneId' AND exans_status='new'");
+								while ($selAnslRow = $selAnsl->fetch(PDO::FETCH_ASSOC)) { 
+									$selAnsq = $conn->query("SELECT * FROM `question_answers` WHERE eqt_id =".$selQuestRow['eqt_id']." AND id_qAns = ".$selAnslRow['exans_answer']." ");
+									while ($selAnsqRow = $selAnsq->fetch(PDO::FETCH_ASSOC)) {
+										
+							?>
+								<tr>
+									<td>
+										<b><p><?php echo $i++; ?> .) <?php echo $selQuestRow['exam_question']; ?></p></b>
+										<label class="pl-4 ">
+											Respuesta : 
+													<span ><?php echo $selAnsqRow['answer']; ?></span>
+										</label>
+									</td>
+								</tr>
+					<?php 			}
+								}
+							}
+						}
                      ?>
 	                 </table>
                 </div>
             </div>
         </div>
 
-        <div class="col-md-6 float-left">
+        <!-- aun no eliminar en depuracion
+		<div class="col-md-6 float-left">
         	<div class="col-md-6 float-left">
         	<div class="card mb-3 widget-content bg-night-fade">
                 <div class="widget-content-wrapper text-white">
@@ -111,7 +130,7 @@
                 </div>
             </div>
             </div>
-        </div>
+        </div>-->
     </div>
 
 

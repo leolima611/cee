@@ -74,6 +74,20 @@
 		?>
 		<iframe width="100%" height="600" src="<?=$selTopic['valor'];?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 		<?php
+		}elseif($tipeac == 5){
+		?>
+		<div class="mb-3 card">
+            <div class="card-body">
+                <div class="tab-content">
+					<audio controls style="width: 100%; height: 50px;">
+						<source src="audio/<?=$selTopic['valor'];?>" type="audio/mpeg">
+						Tu navegador no soporta el elemento de audio.
+					</audio>
+				</div>
+			</div>
+		</div>
+		
+		<?php
 		}elseif($tipeac == 7){
 		?>
 		<embed src="<?=$selTopic['valor'];?>" <?=$selTopic['config'];?>>

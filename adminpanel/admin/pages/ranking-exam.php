@@ -48,6 +48,7 @@
                                             $exmneId = $selExmneRow['exmne_id'];
 
                                               $selAttempt = $conn->query("SELECT * FROM exam_attempt WHERE exmne_id='$exmneId' AND exam_id='$exam_id' ");
+											$ans =0;
 
                                          ?>
                                        <tr style="<?php 
@@ -94,17 +95,10 @@
                                           {
                                             echo "No respond&iacute;o";
                                           }
-                                          else if($selScore->rowCount() > 0)
-                                          {
-											  //aqui calificacion
-											  echo $totScore =  $selScore->rowCount();
-                                            echo " / ";
-                                          }
                                           else
                                           {
 											  //o aqui
-                                            echo $totScore =  $selScore->rowCount();
-                                            echo " / ";
+                                            echo "no calificado";
                                           }
 
                                             
@@ -120,7 +114,7 @@
                                                 }
                                                 else
                                                 {
-                                                    echo number_format($ans,2); ?>%<?php
+                                                    echo "no calificado";
                                                 }
                                            
                                           ?>

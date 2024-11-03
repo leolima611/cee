@@ -182,6 +182,87 @@ elseif($tipeAc == 4){
 	}
 	echo json_encode($res);
 }
+elseif($tipeAc == 5){
+	$target_dir = "../../../audio/";  // Carpeta donde se guardará el archivo
+	$target_file = $target_dir . basename($_FILES["audio_file"]["name"]);
+	$uploadOk = 1;
+	$fileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
+	
+	// Check if file is a actual audio or fake audio
+	$check = mime_content_type($_FILES["audio_file"]["tmp_name"]);
+	if ($check == "audio/mpeg") {
+    	$uploadOk = 1;
+	} else {
+    	$uploadOk = 0;    	echo json_encode(['res' => 'error', 'msg' => 'El archivo no es un audio.']);
+    	exit;
+	}
+
+	// Check if file already exists
+	if (file_exists($target_file)) {
+    	echo json_encode(['res' => 'error', 'msg' => 'Lo siento, el archivo ya existe.']);
+    	$uploadOk = 0;
+    	exit;
+	}
+
+	// Check file size
+	if ($_FILES["audio_file"]["size"] > 10000000) {  
+    	echo json_encode(['res' => 'error', 'msg' => 'Lo siento, tu archivo es demasiado grande.']);
+    	$uploadOk = 0;
+    	exit;
+	}
+
+	// Permitir ciertos formatos de archivo
+	$allowed_types = ['mp3'];
+	if (!in_array($fileType, $allowed_types)) {
+		echo json_encode(['res' => 'error', 'msg' => 'Solo se permiten archivos de audio (mp3).']);
+		$uploadOk = 0;
+		exit;
+	}
+
+	// Check if $uploadOk is set to 0 by an error
+	if ($uploadOk == 0) {
+    	echo json_encode(['res' => 'error', 'msg' => 'Tu archivo no fue subido.']);
+    	exit;
+		// if everything is ok, try to upload file
+	} else {
+    	if (move_uploaded_file($_FILES["audio_file"]["tmp_name"], $target_file)) {
+        	// Guardar el nombre del archivo en la base de datos
+        	$audio_name = $_FILES["audio_file"]["name"];
+			
+			$numtemp = $num -1;
+			$topicnum = $conn->query("SELECT * FROM topic_cou WHERE activity_num='$num' AND cou_id='$couId' ");
+			$niveltopic = $conn->query("SELECT * FROM `topic_cou` WHERE cou_id = '$couId' AND activity_num = $numtemp;");
+	
+			if($topicnum->rowCount() > 0){
+				echo json_encode(['res' => 'nivelexist', 'msg' => $num]);
+			}elseif($num < 1){
+				echo json_encode(['res' => 'nivelce', 'msg' => $num]);
+			}elseif($num > 1){
+				if($niveltopic->rowCount() > 0){
+					$insQuest = $conn->query("INSERT INTO `topic_cou` (`idtopic_cou`, `cou_id`, `name`, `activity_num`, `valor`, `config`, `acti_tipes`) VALUES (NULL, '$couId', '$name', '$num', '$audio_name', NULL, '$tipeAc')");
+
+					if($insQuest){
+       					echo json_encode(['res' => 'success', 'msg' => 'El archivo ha sido subido exitosamente.']);
+					}else{
+						echo json_encode(['res' => 'error', 'msg' => 'error al almacenar los datos']);
+					}
+				}else{
+					echo json_encode(['res' => 'nivelno', 'msg' => $num]);
+				}
+			}else{
+				$insQuest = $conn->query("INSERT INTO `topic_cou` (`idtopic_cou`, `cou_id`, `name`, `activity_num`, `valor`, `config`, `acti_tipes`) VALUES (NULL, '$couId', '$name', '$num', $audio_name, NULL, '$tipeAc')");
+
+				if($insQuest){
+					echo json_encode(['res' => 'success', 'msg' => 'El archivo ha sido subido exitosamente.']);
+				}else{
+					echo json_encode(['res' => 'error', 'msg' => 'error al almacenar los datos']);
+				}
+			}
+    	} else {
+        	echo json_encode(['res' => 'error', 'msg' => 'Lo siento, hubo un error al subir tu archivo.']);
+    	}
+	}
+}
 elseif($tipeAc == 7){
 	$numtemp = $num -1;
 	$topicnum = $conn->query("SELECT * FROM topic_cou WHERE activity_num='$num' AND cou_id='$couId' ");

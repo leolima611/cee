@@ -317,6 +317,10 @@ if($selAcc->rowCount() > 0){
 							 <br>
                           </div>
 						 <div class="card-header">
+							 <div class="btn-actions-pane-left">
+                                <button class="btn btn-sm btn-primary " data-toggle="modal" data-target="#modalForAddAud">Agregar audio</button>
+                              </div>
+							 <br>
                              <div class="btn-actions-pane-left">
                                 <button class="btn btn-sm btn-primary " data-toggle="modal" data-target="#modalForAddEmbed">Agregar Embed</button>
 								 <br>
@@ -404,6 +408,19 @@ if($selAcc->rowCount() > 0){
                                                         <td >
 															
                                                             <b><?php echo $i++ ; ?> .- <?php echo $selQuestionRow['name']; ?> YOUTUBE LINK</b>
+															<br>
+                                                                <span class="pl-4"> <?php echo $selQuestionRow['valor']; ?></span>
+															<br>
+                                                        </td>
+															<?php
+														   break;
+													   case 5:
+														   $hrefac = "facebox_modal/updateTopic.php?ac=5&id=";
+														   ?>
+													<tr>
+                                                        <td >
+															
+                                                            <b><?php echo $i++ ; ?> .- <?php echo $selQuestionRow['name']; ?> AUDIO</b>
 															<br>
                                                                 <span class="pl-4"> <?php echo $selQuestionRow['valor']; ?></span>
 															<br>

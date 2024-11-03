@@ -91,10 +91,14 @@ if($selAcc->rowCount() > 0){
      {
       include("pages/manage-time.php");
      }
-	   else if($page == "manage-files")
+	 else if($page == "manage-files")
      {
       include("pages/manage-files.php");
      }
+	 else if($page == "manage-aud")
+     {
+      include("pages/manage-aud.php");
+	 }
    }
  
    else

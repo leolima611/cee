@@ -623,6 +623,47 @@
 </div>
 
 
+<!-- Modal For Add Audio -->
+<div class="modal fade" id="modalForAddAud" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <form class="refreshFrm" id="addAudFrm" method="post">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">AGREGAR AUDIO AL CURSO <br><?php echo $selExamRow['cou_name']; ?></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form class="refreshFrm" method="post" id="addAudFrm">
+                    <div class="modal-body">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label>NOMBRE DEL TEMA</label>
+                                <input type="hidden" name="couId" value="<?php echo $exId; ?>">
+								<input type="hidden" name="tipeAc" value="5">
+                                <input type="" name="name" id="course_name" class="form-control" placeholder="Ingresa Titulo de AUDIO" autocomplete="off" required>
+                            </div>
+							<div class="form-group">
+                                <label>NIVEL DE ACTIVIDAD</label>
+                                <input type="number" name="num" id="num" class="form-control" placeholder="Ingresar nivel de tema" autocomplete="off" required>
+                            </div>
+							<div class="form-group">
+                				<label>SUBIR ARCHIVO AUDIO</label>
+                				<input type="file" name="audio_file" id="audio_file" class="form-control" accept="audio/mp3" required>
+							</div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">CERRAR</button>
+                        <button type="submit" class="btn btn-primary">AGREGAR AHORA</button>
+                    </div>
+                </form>
+            </div>
+        </form>
+    </div>
+</div>
+
+
 <!-- Modal For Add Link -->
 <div class="modal fade" id="modalForAddLink" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">

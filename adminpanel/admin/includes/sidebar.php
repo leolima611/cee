@@ -106,11 +106,17 @@
                                     </a>
                                 </li>
 								
-								<li class="app-sidebar__heading">Administradores</li>
+								<li class="app-sidebar__heading">Archivos</li>
                                 <li>
                                     <a href="home.php?page=manage-files">
                                         <i class="metismenu-icon pe-7s-folder">
                                         </i>ADMINISTRAR ARCHIVOS PDF
+                                    </a>
+                                </li>
+								<li>
+                                    <a href="home.php?page=manage-aud">
+                                        <i class="metismenu-icon pe-7s-folder">
+                                        </i>ADMINISTRAR ARCHIVOS DE AUDIO
                                     </a>
                                 </li>
 								
