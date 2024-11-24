@@ -19,7 +19,7 @@
                             <tr>
                                 <th>Nombre</th>
                                 <th>Examen</th>
-                                <th>Respuestas Correctas</th>
+                                <th>Actividades</th>
                                 <th>Calificaci&oacute;n</th>
                                 <!-- <th width="10%"></th> -->
                             </tr>

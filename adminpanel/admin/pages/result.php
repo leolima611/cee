@@ -1,7 +1,7 @@
  <?php 
-    $examId = $_GET['id'];
-    $selExam = $conn->query("SELECT * FROM exam_tbl WHERE ex_id='$examId' ")->fetch(PDO::FETCH_ASSOC);
-
+$examId = $_GET['ide'];
+$selExam = $conn->query("SELECT * FROM exam_tbl WHERE ex_id='$examId' ")->fetch(PDO::FETCH_ASSOC);
+$exmneId = $_GET['ida'];
  ?>
 
 <div class="app-main__outer">
@@ -57,12 +57,15 @@
 								while ($selAnslRow = $selAnsl->fetch(PDO::FETCH_ASSOC)) { 
 									$selAnsq = $conn->query("SELECT * FROM `question_answers` WHERE eqt_id =".$selQuestRow['eqt_id']." AND id_qAns = ".$selAnslRow['exans_answer']." ");
 									while ($selAnsqRow = $selAnsq->fetch(PDO::FETCH_ASSOC)) {
-										
+										$classrl = "pl-4 text-danger";
+										if($selAnsqRow['tipe'] == "si"){
+											$classrl = "pl-4 text-success";
+										}
 							?>
 								<tr>
 									<td>
 										<b><p><?php echo $i++; ?> .) <?php echo $selQuestRow['exam_question']; ?></p></b>
-										<label class="pl-4 ">
+										<label class="<?=$classrl?>">
 											Respuesta : 
 													<span ><?php echo $selAnsqRow['answer']; ?></span>
 										</label>
@@ -77,63 +80,6 @@
                 </div>
             </div>
         </div>
-
-        <!-- aun no eliminar en depuracion
-		<div class="col-md-6 float-left">
-        	<div class="col-md-6 float-left">
-        	<div class="card mb-3 widget-content bg-night-fade">
-                <div class="widget-content-wrapper text-white">
-                    <div class="widget-content-left">
-                        <div class="widget-heading"><h5>Puntaje</h5></div>
-                        <div class="widget-subheading" style="color: transparent;">/</div>
-                    </div>
-                    <div class="widget-content-right">
-                        <div class="widget-numbers text-white">
-                            <?php 
-								/*
-                                $selScore = $conn->query("SELECT * FROM exam_question_tbl eqt INNER JOIN exam_answers ea ON eqt.eqt_id = ea.quest_id AND eqt.exam_answer = ea.exans_answer  WHERE ea.axmne_id='$exmneId' AND ea.exam_id='$examId' AND ea.exans_status='new' ");
-                            ?>
-                            <span>
-                                <?php echo $selScore->rowCount(); ?>
-                                <?php 
-                                    $over  = $selExam['ex_questlimit_display'];
-                                 ?>
-                            </span> / <?php echo $over; ?>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        	</div>
-
-            <div class="col-md-6 float-left">
-            <div class="card mb-3 widget-content bg-happy-green">
-                <div class="widget-content-wrapper text-white">
-                    <div class="widget-content-left">
-                        <div class="widget-heading"><h5>Porcentaje</h5></div>
-                        <div class="widget-subheading" style="color: transparent;">/</div>
-                        </div>
-                        <div class="widget-content-right">
-                        <div class="widget-numbers text-white">
-                            <?php 
-                                $selScore = $conn->query("SELECT * FROM exam_question_tbl eqt INNER JOIN exam_answers ea ON eqt.eqt_id = ea.quest_id AND eqt.exam_answer = ea.exans_answer  WHERE ea.axmne_id='$exmneId' AND ea.exam_id='$examId' AND ea.exans_status='new' ");
-                            ?>
-                            <span>
-                                <?php 
-                                    $score = $selScore->rowCount();
-                                    $ans = $score / $over * 100;
-                                    echo number_format($ans,2);
-                                    echo "%";
-                                    */
-                                 ?>
-                            </span> 
-                        </div>
-                    </div>
-                </div>
-            </div>
-            </div>
-        </div>-->
     </div>
-
-
     </div>
 </div>

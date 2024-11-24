@@ -40,6 +40,7 @@
 									<th>Avance en curso</th>
                                     <th>Status</th>
                                     <th>Calificacion</th>
+									<th>Administrar</th>
                                 </tr>
                             </thead>
                             <?php 
@@ -115,6 +116,18 @@
                                                 else
                                                 {
                                                     echo "no calificado";
+                                                }
+                                           
+                                          ?>
+											
+                                        </td>
+										<td>
+											<?php 
+                                                if($selAttempt->rowCount()>0)
+                                                {
+                                          	?>
+											<a href="home.php?page=result&ide=<?=$exam_id?>&ida=<?=$exmneId?>" type="button" class="btn btn-primary btn-sm">Administrar</a>
+											<?php 
                                                 }
                                            
                                           ?>

@@ -99,6 +99,10 @@ if($selAcc->rowCount() > 0){
      {
       include("pages/manage-aud.php");
 	 }
+	  else if($page == "result")
+     {
+      include("pages/result.php");
+	 }
    }
  
    else
