@@ -164,7 +164,7 @@ if($selAcc->rowCount() > 0){
                                     </div>
                                     <br>
                                     <div class="btn-actions-pane-left">
-                                        <button class="btn btn-sm btn-primary " data-toggle="modal" data-target="#modalForAddQuestion3">Agregar respuyesta larga</button>
+                                        <button class="btn btn-sm btn-primary " data-toggle="modal" data-target="#modalForAddQuestion3">Agregar respuesta larga</button>
                                     </div>
                                     <br>
                                 </div>
@@ -180,7 +180,7 @@ if($selAcc->rowCount() > 0){
                                     </div>
                                     <br>
                                     <div class="btn-actions-pane-left">
-                                        <button class="btn btn-sm btn-primary " data-toggle="modal" data-target="#modalForAddQuestion1">Agregar opcion multiple</button>
+                                        <button class="btn btn-sm btn-primary " data-toggle="modal" data-target="#modalForAddQuestion1">Agregar opci&oacute;n multiple</button>
                                         <br>
                                     </div>
                                     <br>

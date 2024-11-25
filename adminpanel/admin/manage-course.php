@@ -327,7 +327,7 @@ if($selAcc->rowCount() > 0){
                               </div>
 							 <br>
 							 <div class="btn-actions-pane-left">
-                                <button class="btn btn-sm btn-primary " data-toggle="modal" data-target="#modalForAddExamA">Agregar Exam</button>
+                                <button class="btn btn-sm btn-primary " data-toggle="modal" data-target="#modalForAddExamA">Agregar Examen</button>
 								 <br>
                               </div>
 							 <br>
