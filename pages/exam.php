@@ -37,6 +37,7 @@ $selExamTimeLimit = $selExam['ex_time_limit'];
         <div class="col-md-12 p-0 mb-4">
             <form method="post" id="submitAnswerFrm">
                 <input type="hidden" name="exam_id" id="exam_id" value="<?php echo $examId; ?>">
+				<input type="hidden" name="course_id" id="exam_id" value="<?php echo $exmneCourse; ?>">
                 <input type="hidden" name="examAction" id="examAction">
                 <table class="align-middle mb-0 table table-borderless table-striped table-hover" id="tableList">
                     <?php

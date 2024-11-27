@@ -124,7 +124,7 @@ if($selQuest->rowCount() > 0){
 <tr>
     <td style="padding: 20px;">
         <button type="button" class="btn btn-xlg btn-warning p-3 pl-4 pr-4" id="resetExamFrm">Reiniciar</button>
-        <input name="submit" type="submit" value="Submit" class="btn btn-xlg btn-primary p-3 pl-4 pr-4 float-right" id="submitAnswerFrmBtn">
+        <input name="submit" type="submit" value="exmneCourse" class="btn btn-xlg btn-primary p-3 pl-4 pr-4 float-right" id="submitAnswerFrmBtn">
     </td>
 </tr>
 <?php
