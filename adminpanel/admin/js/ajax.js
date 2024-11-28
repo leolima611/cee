@@ -20,31 +20,80 @@ $(document).on("submit","#adminLoginFrm", function(){
 });
 
 
+// Submit Answer
+$(document).on('submit', '#submitCofrn', function() {
+    Swal.fire({
+        title: '¿Está seguro?',
+        text: "¿Desea enviar la evaluación?",
+        icon: 'warning',
+        showCancelButton: true,
+        allowOutsideClick: false,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Si, enviar'
+    }).then((result) => {
+        if (result.value) {
+
+            $.post("query/submitAnsCoExe.php", $(this).serialize(), function(data) {
+
+                if (data.res == "already") {
+                    Swal.fire(
+                        'Ya Calificado',
+                        "Ya Calificaste este examen",
+                        'error'
+                    )
+                } else if (data.res == "success") {
+                    Swal.fire({
+                        title: 'Exitoso',
+                        text: "La evaluación se ha enviado",
+                        icon: 'success',
+                        allowOutsideClick: false,
+                        confirmButtonColor: '#3085d6',
+                        confirmButtonText: 'OK!'
+                    }).then((result) => {
+                        if (result.value) {
+                            $('#submitCofrn')[0].reset();
+                            var exam_id = $('#exam_id').val();
+                            window.location.href = 'home.php?page=ranking-exam&exam_id=' + exam_id;
+                        }
+
+                    });
+                } else if (data.res == "failed") {
+                    Swal.fire(
+                        'Error',
+                        "Algo salio mal",
+                        'error'
+                    )
+                }
+            }, 'json');
+        }
+    });
+    return false;
+});
+
 
 // Add Course 
 $(document).on("submit","#addCourseFrm" , function(){
-  $.post("query/addCourseExe.php", $(this).serialize() , function(data){
-  	if(data.res == "exist")
-  	{
-  		Swal.fire(
-  			'Ya existe',
-  			data.course_name.toUpperCase() + '<br> Se sugiere que revise los cursos nuevamente',
-  			'error'
-  		)
-  	}
-  	else if(data.res == "success")
-  	{
-  		Swal.fire(
-  			'Exitoso',
-  			data.course_name.toUpperCase() + ' Agregado correctamente',
-  			'success'
-  		)
-          // $('#course_name').val("");
-          refreshDiv();
-            setTimeout(function(){ 
-                $('#body').load(document.URL);
-             }, 2000);
-  	}
+	$.post("query/addCourseExe.php", $(this).serialize() , function(data){
+		if(data.res == "exist"){
+			Swal.fire(
+				'Ya existe',
+				data.course_name.toUpperCase() + '<br> Se sugiere que revise los cursos nuevamente',
+				'error'
+			)
+		}
+		else if(data.res == "success"){
+			Swal.fire(
+				'Exitoso',
+				data.course_name.toUpperCase() + ' Agregado correctamente',
+				'success'
+			)
+			// $('#course_name').val("");
+			refreshDiv();
+			setTimeout(function(){
+				$('#body').load(document.URL);
+			}, 2000);
+		}
   },'json')
   return false;
 });
@@ -85,7 +134,14 @@ $(document).on("click", "#deleteCourse", function(e){
             'success'
           )
           refreshDiv();
-        }
+        }else if(data.res == "failE"){
+			Swal.fire(
+            'Error',
+            'tienes elementos asignados al curso',
+            'Error'
+          )
+          refreshDiv();
+		}
       },
       error : function(xhr, ErrorStatus, error){
         console.log(status.error);

@@ -30,6 +30,9 @@ $exmneId = $_GET['ida'];
         	<div class="main-card mb-3 card">
                 <div class="card-body">
                 	<h5 class="card-title">TUS RESPUESTAS</h5>
+					<form method="post" id="submitCofrn">
+						<input type="hidden" name="exam_id" id="exam_id" value="<?php echo $examId; ?>">
+						<input type="hidden" name="exmneId" id="exmneId" value="<?php echo $exmneId; ?>">
         			<table class="align-middle mb-0 table table-borderless table-striped table-hover" id="tableList">
                     <?php 
 						$selQuest = $conn->query("SELECT * FROM `exam_question_tbl` WHERE exam_id='$examId'");
@@ -47,6 +50,13 @@ $exmneId = $_GET['ida'];
 											Respuesta : 
 													<span ><?php echo $selAnslRow['exans_answer']; ?></span>
 										</label>
+										<div class="form-group">
+											<label>Valorar Respuesta</label>
+											<select class="form-control" name="correctAnswer[<?=$selAnslRow['exans_id']?>]" required>
+												<option value="si">Correcto</option>
+												<option value="no">Incorrecto</option>
+											</select>
+										</div>
 									</td>
 								</tr>
 							<?php 	
@@ -76,7 +86,13 @@ $exmneId = $_GET['ida'];
 							}
 						}
                      ?>
+						<tr>
+							<td style="padding: 20px;">
+								<input name="submit" type="submit" value="Calificar" class="btn btn-xlg btn-primary p-3 pl-4 pr-4 float-right" id="submitCofrn">
+							</td>
+						</tr>
 	                 </table>
+					</form>
                 </div>
             </div>
         </div>

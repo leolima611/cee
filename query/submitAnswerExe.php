@@ -51,7 +51,10 @@ else{
 					} else {
 						$statusr = "no"; 
 					}
-				} else { $statusr = null; }
+				}else{
+					
+					$statusr = null; 
+				}
 				
 				$insAns = $conn->query("INSERT INTO `exam_answers` (`exans_id`, `axmne_id`, `exam_id`, `quest_id`, `exans_answer`, `exans_status`, `tipea`, `exans_created`) VALUES (NULL, '$exmne_id', '$exam_id', '$key', '$correctAns', 'new', '$statusr',current_timestamp());");
 				if (!$insAns) {

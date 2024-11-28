@@ -17,6 +17,12 @@ para la actualizacion de el repo no olvidar los comandos:
 - git commit -m "ingresa un numero de version"
 - git push
 
+## 0.0.1.7
+- modificaciones en la base de datos (vercion actual: cee_dbv9.sql)
+- calificacion de examenes y avances de curso
+- solucionado bug de eliminacion de cursos
+nota: no tomar los examenes en panel de alumno
+
 ## 0.0.1.4 
 - modificaciones en la base de datos (vercion actual: cee_dbv8.sql)
 - pagina de inicio

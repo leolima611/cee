@@ -44,18 +44,32 @@
                                 </tr>
                             </thead>
                             <?php 
-                                while ($selExmneRow = $selExmne->fetch(PDO::FETCH_ASSOC)) { ?>
-                                    <?php 
-                                            $exmneId = $selExmneRow['exmne_id'];
-
-                                              $selAttempt = $conn->query("SELECT * FROM exam_attempt WHERE exmne_id='$exmneId' AND exam_id='$exam_id' ");
-											$ans =0;
-
-                                         ?>
+                                while ($selExmneRow = $selExmne->fetch(PDO::FETCH_ASSOC)) {
+									$exmneId = $selExmneRow['exmne_id'];
+									
+                                    $selAttempt = $conn->query("SELECT * FROM exam_attempt WHERE exmne_id='$exmneId' AND exam_id='$exam_id' ");
+									
+									if($selAttempt->rowCount() > 0){
+										
+										$totalans = $conn->query("SELECT COUNT(*) AS total FROM exam_answers WHERE axmne_id = '$exmneId' and exam_id = '$exam_id';")->fetch(PDO::FETCH_ASSOC);
+										$Cortotalans = $conn->query("SELECT COUNT(*) AS total FROM exam_answers WHERE axmne_id = '$exmneId' and exam_id = '$exam_id' and tipea = \"si\";")->fetch(PDO::FETCH_ASSOC);
+										$inctotalans = $conn->query("SELECT COUNT(*) AS total FROM exam_answers WHERE axmne_id = '$exmneId' and exam_id = '$exam_id' and tipea = \"no\";")->fetch(PDO::FETCH_ASSOC);
+										
+										if(($inctotalans['total']+$Cortotalans['total']) == $totalans['total']){
+											$ans = (100/$totalans['total'])*$Cortotalans['total'];
+										}else{
+											$ans = "pre";
+										}
+									}
+									
+							  ?>
                                        <tr style="<?php 
                                              if($selAttempt->rowCount() == 0)
                                              {
                                                 echo "background-color: #E9ECEE;color:black";
+                                             }
+											 else if($ans == "pre"){
+                                                echo "background-color: orange;color:white";
                                              }
                                              else if($ans >= 90)
                                              {
@@ -98,8 +112,11 @@
                                           }
                                           else
                                           {
-											  //o aqui
-                                            echo "no calificado";
+											  if(($inctotalans['total']+$Cortotalans['total']) == $totalans['total']){
+												  echo "calificado";
+											  }else{
+												  echo "no calificado";
+											  }
                                           }
 
                                             
@@ -115,9 +132,14 @@
                                                 }
                                                 else
                                                 {
-                                                    echo "no calificado";
+													if(($inctotalans['total']+$Cortotalans['total']) == $totalans['total']){
+														$ans = (100/$totalans['total'])*$Cortotalans['total'];
+														echo $ans;
+													}else{
+														$ans = (100/$totalans['total'])*$Cortotalans['total'];
+														echo "preliminar: ".$ans;
+													}
                                                 }
-                                           
                                           ?>
 											
                                         </td>
