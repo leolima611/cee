@@ -23,9 +23,10 @@
 				if($selTopicsig->rowCount()>0){
 					$selTcsig = $selTopicsig->fetch(PDO::FETCH_ASSOC);
 					
+					if($selTcsig['acti_tipes'] == 8){
 					$selRelex = $conn->query("SELECT * FROM `exam_attempt` WHERE exam_id = ".$selTcsig['valor']." and exmne_id = '$exmneId';");
 					
-					if($selTcsig['acti_tipes'] == 8 && $selRelex->rowCount()<1){
+					if( $selRelex->rowCount()<1){
 						$selExSig = $conn->query("SELECT * FROM exam_tbl WHERE ex_id=".$selTcsig['valor'].";")->fetch(PDO::FETCH_ASSOC);
 			?>
 			<div class="row">
@@ -48,7 +49,7 @@
 				</div>
             </div>
 			<?php
-					}
+					}}
 				}
 			}
 			?>
